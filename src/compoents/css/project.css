@@ -1,0 +1,246 @@
+.page-header {
+    color: white;
+    text-align: center;
+    margin: 0 0 0.5em;
+    border-bottom: 5px;
+}
+
+
+.page-subheader1 {
+    color: wheat;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: -1%;
+    margin-bottom: 2.5%;
+    margin-left: 26em;
+}
+
+.container {
+    width: 50%;
+    margin: 10% auto;
+    padding: 1em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+    background-color: rgba(255, 255, 255, 0.017);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.project {
+    width: 93%;
+    padding: 2em;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 2%);
+    background-color: rgba(255, 255, 255, 0.017);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    margin-top: 2%;
+}
+
+hr {
+    margin: -1.5% 42% 0%;
+    width: 16%;
+}
+
+.img-box {
+    width: 44%;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 0 5px;
+}
+
+.details {
+    width: 55%;
+    padding: 1em;
+}
+
+.project-box {
+    margin-bottom: 3%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.project-name {
+    color: white;
+    margin: 3% 0;
+    margin-top: -6%;
+}
+
+.project-name a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-details {
+    color: wheat;
+    margin: 2% 0;
+
+}
+
+.tech {
+    color: tomato;
+    margin: 1% 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    margin: 2% 0;
+    padding: 2%;
+}
+
+button a {
+    color: black;
+}
+
+@media only screen and (min-width: 1200px) {
+    .project-box {
+        margin-bottom: 3%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 92%;
+
+        margin: 11% auto;
+
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
+
+    .project {
+        width: 90%;
+        padding: 2em;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 2%);
+        background-color: rgba(255, 255, 255, 0.017);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        margin-top: 2%;
+        margin-left: 1%;
+    }
+
+    .project-box {
+        margin-bottom: 3%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1%;
+        flex-direction: column;
+    }
+
+    .page-subheader1 {
+        color: wheat;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-top: -1%;
+        margin-bottom: 2.5%;
+        margin-left: 22em;
+    }
+
+    .img-box {
+        width: 85%;
+    }
+
+    .details {
+        width: 89%;
+        padding: 1em;
+        margin-top: 4%;
+    }
+
+    .project-details {
+        color: wheat;
+        margin: 0% 0;
+    }
+
+    .project-name {
+        color: white;
+        margin: 1% 0;
+        margin-top: -6%;
+    }
+
+    button {
+        margin: 1% 0;
+        padding: 1%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        width: 82%;
+        padding: 2em;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 2%);
+        background-color: rgba(255, 255, 255, 0.017);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        margin-top: 2%;
+    }
+
+    .page-header {
+        color: white;
+        text-align: center;
+        margin: 0 0 0.5em;
+        border-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .page-subheader1 {
+        color: wheat;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-left: 12em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 85%;
+        margin: 3% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
+
+    .project-box {
+        margin-bottom: 3%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-box {
+        width: 100%;
+    }
+
+    .details {
+        width: 100%;
+        padding: 1em;
+        margin-top: 1em;
+    }
+
+    .tech {
+        color: tomato;
+        margin: 1% 0;
+        font-size: 13px;
+    }
+}

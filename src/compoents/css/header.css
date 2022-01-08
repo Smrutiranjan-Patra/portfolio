@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+
+
+#navigation {
+    width: 97%;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+    background-color: rgba(255, 255, 255, 0.017);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 0 3%;
+    box-sizing: border-box;
+    margin: 0% 1.5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+@media only screen and (min-width: 1200px) {
+    #sidebar {
+        display: none;
+    }
+}
+
+
+#navigation ul {
+    display: flex;
+    width: 36%;
+    justify-content: space-between;
+}
+
+#navigation ul li {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0.2%;
+    margin: 4.3% 0;
+}
+
+#navigation ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#navigation ul li a:hover {
+    color: chocolate;
+    font-size: 17px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo p {
+    margin: 0;
+}
+
+.code {
+    font-family: 'Vujahday Script', cursive;
+    font-size: 17px;
+    color: #FDD20EFF;
+}
+
+.first {
+    font-family: 'Vujahday Script', cursive;
+    font-size: 38px;
+    color: #FC766AFF;
+}
+
+.last {
+    font-family: 'Vujahday Script', cursive;
+    font-size: 22px;
+    color: #5B84B1FF;
+}
+
+#snavi {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    #navigation ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 47%;
+    }
+
+    #navigation ul li {
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 11px;
+        padding: 0.2%;
+        margin: 3.3% 3%;
+    }
+
+    #navigation ul li a:hover {
+        color: chocolate;
+        font-size: 13px;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #snavi {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    #navigation {
+        width: 93%;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+        background-color: rgba(255, 255, 255, 0.017);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 5px;
+        padding: 0 3%;
+        box-sizing: border-box;
+        margin: 1% 3.5% 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navigation ul {
+        display: none;
+    }
+
+
+    #navigation ul li:nth-child(1) {
+        margin-left: -8%;
+    }
+
+    .code {
+        font-family: 'Vujahday Script', cursive;
+        font-size: 13px;
+        color: #FDD20EFF;
+    }
+
+    .first {
+        font-family: 'Vujahday Script', cursive;
+        font-size: 38px;
+        color: #FC766AFF;
+    }
+
+    .last {
+        font-family: 'Vujahday Script', cursive;
+        font-size: 14px;
+        color: #5B84B1FF;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #snavi {
+        display: none;
+    }
+
+    #snavi {
+        width: 95%;
+        margin: -10% auto -2px;
+    }
+
+    #snavi ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #snavi ul li {
+        list-style-type: none;
+        margin: 0 auto 6%
+    }
+
+    #snavi ul li a {
+        color: white;
+
+    }
+
+    #snavi ul li a:hover {
+        color: chocolate;
+    }
+
+    .fas {
+        font-weight: 900;
+        color: white;
+        font-size: 24px;
+    }
+}

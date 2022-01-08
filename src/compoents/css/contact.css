@@ -1,0 +1,226 @@
+.contact {
+    width: 50%;
+    margin: 10% auto;
+    padding: 1em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+    background-color: rgba(255, 255, 255, 0.017);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+hr {
+    margin: -1.3% 42% 1.2%;
+    width: 16%;
+}
+
+
+.page-header {
+    color: white;
+    text-align: center;
+    margin: 0 0 0.5em;
+    border-bottom: 5px;
+}
+
+
+.page-subheader5 {
+    color: wheat;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-top: -1%;
+    margin-bottom: 1.5%;
+}
+
+.form {
+    width: 96%;
+    margin: 1% auto;
+    padding: 1em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+    background-color: rgba(255, 255, 255, 0.017);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.form form div {
+    width: 98%;
+    margin: 2%;
+}
+
+.form form {
+    width: 57em;
+}
+
+.form form div label {
+    color: white;
+    font-weight: bold;
+}
+
+.form form div input {
+    width: 90%;
+    height: 1.5em;
+    padding: 1%;
+    font-size: 14px;
+    margin-top: auto;
+    border-radius: 10px;
+    margin-top: 1%;
+    display: block;
+}
+
+textarea {
+    border-radius: 10px;
+    width: 90%;
+    resize: none;
+    height: 7em;
+    margin-top: 1%;
+    padding: 1%;
+    font-size: 14px;
+    display: block;
+}
+
+#submit-btn {
+    width: 20%;
+    margin: 2% 16%;
+    padding: 1.3%;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+.form form div:nth-child(4) {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 6em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact {
+        width: 90%;
+        margin: -5% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
+
+    .form {
+        width: 95%;
+        margin: 1% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .form form div input {
+        width: 90%;
+        height: 1.5em;
+        padding: 1%;
+        font-size: 14px;
+        margin-top: auto;
+        border-radius: 10px;
+        margin-top: 1%;
+    }
+
+    textarea {
+        border-radius: 10px;
+        width: 90%;
+        resize: none;
+        height: 7em;
+        margin-top: 1%;
+        padding: 1%;
+        font-size: 14px;
+        display: block;
+    }
+
+    .form form div:nth-child(4) {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 1em;
+    }
+
+    #submit-btn {
+        width: 16%;
+        margin: 0 41%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .page-header {
+        color: white;
+        text-align: center;
+        margin: 0 0 0.5em;
+        border-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .page-subheader5 {
+        color: wheat;
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: -1%;
+        margin-bottom: 2.5%;
+    }
+
+    .contact {
+        width: 85%;
+        margin: 3% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
+
+    .form {
+        width: 90%;
+        margin: 1% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .form form div {
+        width: 17em;
+        margin: 2%;
+    }
+
+    .form form div input {
+        width: 19em;
+        height: 1em;
+        padding: 1%;
+        font-size: 14px;
+        border-radius: 4px;
+        display: block;
+        margin-left: 0%;
+        margin-top: 1%;
+    }
+
+    textarea {
+        border-radius: 4px;
+        width: 19em;
+        resize: none;
+        height: 7em;
+        margin-top: 1%;
+        padding: 1%;
+        font-size: 14px;
+        display: block;
+    }
+
+    #submit-btn {
+        width: 30%;
+        margin: 1% 3%;
+    }
+}

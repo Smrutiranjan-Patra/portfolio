@@ -1,0 +1,135 @@
+.resume {
+    width: 50%;
+    margin: 11% auto;
+    padding: 1em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+    background-color: rgba(255, 255, 255, 0.017);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+
+
+.bdetails {
+    padding: 4%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+    background-color: rgba(255, 255, 0, 0.007);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+}
+
+.bdetails ul li {
+    list-style-type: square;
+    color: white;
+    margin-bottom: -5%;
+    font-size: 20px;
+}
+
+.bdetails ul h6 {
+    color: orangered;
+    font-size: 19px;
+    margin-bottom: -1%;
+}
+
+.year {
+    color: grey;
+    margin-bottom: 4%;
+}
+
+#resume-btn {
+    padding: 1%;
+    color: orangered;
+    margin-left: 86%;
+    margin-top: 2%;
+}
+
+.page-subheader3 {
+    color: wheat;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 0%;
+    margin-bottom: 2.5%;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .resume {
+        width: 90%;
+        margin: 11% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.017);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
+
+    .bdetails ul li {
+        list-style-type: square;
+        color: white;
+        margin-bottom: -4%;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .page-header {
+        color: white;
+        text-align: center;
+        margin: 0 0 0.5em;
+        border-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .page-subheader3 {
+        color: wheat;
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: 0%;
+        margin-bottom: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .resume {
+        width: 85%;
+        margin: 7% auto;
+        padding: 1em;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+        background-color: rgba(255, 255, 255, 0.007);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+    }
+
+    #resume-btn {
+        padding: 1%;
+        color: orangered;
+        margin-left: 80%;
+    }
+
+    .bdetails ul li {
+        list-style-type: square;
+        color: white;
+        margin-bottom: -4%;
+        font-size: 20px;
+    }
+
+    .bdetails ul h6 {
+        color: orangered;
+        font-size: 14px;
+        margin: 3% auto;
+    }
+
+    .year {
+        color: grey;
+        margin-bottom: 2%;
+        font-size: 12px;
+        margin-top: -6%;
+    }
+
+    .bdetails ul {
+        line-height: 2em;
+    }
+}

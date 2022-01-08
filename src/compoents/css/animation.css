@@ -1,0 +1,143 @@
+.bubbles {
+    position: absolute;
+    bottom: -442%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+.bubbles span {
+    height: 60px;
+    width: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: move 10s linear infinite;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .bubbles span {
+        height: 20px;
+        width: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        animation: move 10s linear infinite;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+@keyframes move {
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+.bubbles span.one {
+    animation-delay: 4.2s;
+    transform: scale(2.15)
+}
+
+.bubbles span.two {
+    animation-delay: 5.5s;
+    transform: scale(1.55)
+}
+
+.bubbles span.three {
+    animation-delay: 2.2s;
+    transform: scale(0.35)
+}
+
+.bubbles span.four {
+    animation-delay: 8s;
+    transform: scale(2.15)
+}
+
+.bubbles span.five {
+    animation-delay: 9s;
+    transform: scale(0.5)
+}
+
+.bubbles span.six {
+    animation-delay: 6s;
+    transform: scale(2.5)
+}
+
+.bubbles span.seven {
+    animation-delay: 5s;
+    transform: scale(1.5)
+}
+
+.bubbles span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 40%;
+    transform: skew(45deg) translateX(150px);
+    background: rgba(255, 255, 255, 0.15);
+    animation: mirror 3s linear infinite;
+}
+
+@keyframes mirror {
+    100% {
+        transform: translateX(-450px);
+    }
+}
+
+.bubbles span.one:before {
+    animation-delay: 1.5s;
+}
+
+.bubbles span.two:before {
+    animation-delay: 3.5s;
+}
+
+.bubbles span.three:before {
+    animation-delay: 2.5s;
+}
+
+.bubbles span.four:before {
+    animation-delay: 7.5s;
+}
+
+.bubbles span.five:before {
+    animation-delay: 4.5s;
+}
+
+.bubbles span.six:before {
+    animation-delay: 0.5s;
+}
+
+.bubbles span.seven:before {
+    animation-delay: 6s;
+}
+
+@media only screen and (max-width: 600px) {
+    .bubbles {
+        position: absolute;
+        bottom: -250%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .bubbles {
+        position: absolute;
+        bottom: -170%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        width: 100%;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=The+Nautigal:wght@700&family=Vujahday+Script&display=swap');
+
+#personal {
+    width: 57%;
+    margin: 12% auto;
+    padding: 5%;
+    gap: 1%;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+    background-color: rgba(255, 255, 255, 0.02);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    height: 29%;
+    z-index: 1;
+}
+
+#heading {
+    padding-top: "3rem";
+    margin: "auto 0";
+}
+
+#typingtext {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#data {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    box-sizing: content-box;
+}
+
+.fab {
+    font-size: 17px;
+}
+
+.icons i:hover {
+    font-size: 18px;
+}
+
+.icons {
+    padding: 1%;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons :nth-child(1) {
+    color: blue;
+}
+
+.icons :nth-child(2) {
+    color: white;
+}
+
+.icons :nth-child(3) {
+    color: blue;
+}
+
+.name {
+    color: whitesmoke;
+    margin: 1% 0;
+    line-height: 1.1em;
+    letter-spacing: 2px;
+}
+
+#self {
+    font-family: 'Vujahday Script', cursive;
+    color: tomato;
+}
+
+#typingtext {
+    font-family: 'The Nautigal', cursive;
+}
+
+#picture {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%
+}
+
+#picture img {
+    border-radius: 50%;
+    height: 130%;
+}
+
+.heading {
+    color: whitesmoke;
+    text-align: center;
+    padding: 1%;
+}
+
+.descriptions {
+    text-align: center;
+    color: whitesmoke;
+    line-height: 1.3em;
+    font-weight: 100;
+    margin: 1%;
+    line-break: auto;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-family: 'Luxurious Roman', cursive;
+}
+
+@media only screen and (min-width: 1200px) {
+    .tab-img {
+        display: none;
+    }
+
+    #personal {
+        display: flex;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+
+    #personal {
+        width: 85%;
+        margin: 12% auto;
+        padding: 5%;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+        background-color: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        height: 10%;
+    }
+
+    #data {
+        width: 100%;
+        padding: 2%;
+        box-sizing: content-box;
+    }
+
+    .name {
+        color: whitesmoke;
+        margin: 1% 0;
+        line-height: 1.1em;
+        letter-spacing: 2px;
+        font-size: 25px;
+    }
+
+    .descriptions {
+        text-align: center;
+        color: whitesmoke;
+        line-height: 1.3em;
+        font-size: 14px;
+        font-weight: 100;
+        margin: 1%;
+        line-break: auto;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .icons {
+        padding: 1%;
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #picture {
+        display: none;
+    }
+
+    .tab-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tab-img img {
+        border-radius: 50%;
+        height: 130%;
+    }
+
+    .icons {
+        padding: 1%;
+        width: 23%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: -4%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #personal {
+        width: 83%;
+        margin: 18% auto 0;
+        padding: 5%;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        height: 500px;
+    }
+
+    .icons {
+        padding: 1%;
+        width: 29%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: -4%;
+    }
+
+    .name {
+        color: whitesmoke;
+        margin: 1% 0;
+        line-height: 1.1em;
+        letter-spacing: 2px;
+        font-size: 21px;
+    }
+}
+
+
+
+#typing-text {
+    color: tomato;
+    font-weight: bold;
+}
