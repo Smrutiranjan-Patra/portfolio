@@ -3,6 +3,7 @@
     text-align: center;
     border-bottom: 5px;
     margin-bottom: 0;
+    margin-top: 0
 }
 
 
@@ -18,7 +19,7 @@
 
 .container {
     width: 65%;
-    margin: 10% auto;
+    margin: 8% auto 10%;
     padding: 1.5em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
     background-color: rgba(255, 255, 255, 0.017);

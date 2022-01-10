@@ -21,7 +21,7 @@ function App() {
     <Social />
     <br id="bar2" />
     <About />
-    <br id="bar3" />
+    <hr id="bar3" />
     <Project />
     <br id="bar4" />
     <Resume />
