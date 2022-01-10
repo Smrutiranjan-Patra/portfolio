@@ -44,6 +44,7 @@
 #navigation ul li a {
     color: whitesmoke;
     text-decoration: none;
+    animation: scroll 0.2s alternate ease;
 }
 
 #navigation ul li a:hover {

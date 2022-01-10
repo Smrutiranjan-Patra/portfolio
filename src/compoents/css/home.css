@@ -37,30 +37,31 @@
 }
 
 .fab {
-    font-size: 17px;
+    font-size: 2em;
 }
 
 .icons i:hover {
-    font-size: 18px;
+    font-size: 2.3em;
 }
 
 .icons {
     padding: 1%;
-    width: 20%;
+    width: 30%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 1%;
 }
 
-.icons :nth-child(1) {
-    color: blue;
+#twitter {
+    color: #1A8CD8;
 }
 
-.icons :nth-child(2) {
+#github {
     color: white;
 }
 
-.icons :nth-child(3) {
-    color: blue;
+#linkedin {
+    color: #0077B5;
 }
 
 .name {
@@ -71,12 +72,12 @@
 }
 
 #self {
-    font-family: 'Vujahday Script', cursive;
+    font-family: 'Luxurious Roman', cursive;
     color: tomato;
 }
 
 #typingtext {
-    font-family: 'The Nautigal', cursive;
+    font-family: cursive;
 }
 
 #picture {

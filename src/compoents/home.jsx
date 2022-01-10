@@ -11,9 +11,10 @@ const Home = () => {
             </div>
             <div id="data">
                 <div className="icons">
-                    <a href="https://twitter.com/Smrutir04608196"><i className="fab fa-twitter"></i></a>
-                    <a href="https://github.com/Smrutiranjan-Patra"><i className="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/"><i className="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/Smrutir04608196"><i className="fab fa-twitter" id="twitter"></i></a>
+                    <a href="https://github.com/Smrutiranjan-Patra"><i className="fab fa-github" id="github"></i></a>
+                    <a href="https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/">
+                    <i className="fab fa-linkedin-in" id="linkedin"></i></a>
                 </div>
                 <h1 className="name">Hello I'M, <span id="self">Smrutiranjan</span></h1>
                 <h2 className="name"> I'm a {' '}
