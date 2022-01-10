@@ -48,7 +48,7 @@
 }
 
 #navigation ul li a:hover {
-    color: chocolate;
+    color: #630000;
     font-size: 17px;
 }
 
@@ -101,7 +101,7 @@
     }
 
     #navigation ul li a:hover {
-        color: chocolate;
+        color: #630000;
         font-size: 13px;
     }
 
