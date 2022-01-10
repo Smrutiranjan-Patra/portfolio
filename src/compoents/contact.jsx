@@ -36,7 +36,7 @@ export const ContactUs = () => {
                     </div>
                     <div>
                         <label>Message</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="" cols="30" rows="10"></textarea>
                     </div>
                     <div>
                         <button id="submit-btn">submit</button>
