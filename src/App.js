@@ -9,6 +9,7 @@ import { About } from "./compoents/about.jsx";
 import { Project } from "./compoents/project";
 import { Resume } from "./compoents/resume.jsx";
 import { ContactUs } from "./compoents/contact";
+import { Social } from "./compoents/social"
 
 function App() {
   return <div className="App">
@@ -17,6 +18,7 @@ function App() {
     <Header />
     <br id="barhead" />
     <Home />
+    <Social />
     <br id="bar2" />
     <About />
     <br id="bar3" />

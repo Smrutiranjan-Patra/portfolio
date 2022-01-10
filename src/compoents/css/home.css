@@ -50,6 +50,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 1%;
+    display: none;
 }
 
 #twitter {
@@ -111,6 +112,9 @@
     font-family: 'Luxurious Roman', cursive;
 }
 
+
+
+
 @media only screen and (min-width: 1200px) {
     .tab-img {
         display: none;
@@ -118,6 +122,10 @@
 
     #personal {
         display: flex;
+    }
+
+    .icon {
+        display: none;
     }
 }
 
@@ -186,10 +194,15 @@
 
     .icons {
         padding: 1%;
-        width: 23%;
+        width: 25%;
         display: flex;
         justify-content: space-around;
         margin-left: -4%;
+        display: block;
+    }
+
+    .icons a {
+        margin: 0 8%;
     }
 }
 
@@ -207,10 +220,11 @@
 
     .icons {
         padding: 1%;
-        width: 29%;
+        width: 32%;
         display: flex;
         justify-content: space-around;
         margin-left: -4%;
+        display: block;
     }
 
     .name {
@@ -219,6 +233,11 @@
         line-height: 1.1em;
         letter-spacing: 2px;
         font-size: 21px;
+    }
+
+    .fab {
+        font-weight: 400;
+        font-size: 1.2em;
     }
 }
 

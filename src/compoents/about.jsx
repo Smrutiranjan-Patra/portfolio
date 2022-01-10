@@ -6,8 +6,8 @@ const About = () => {
     return (
         <div id="about">
             <h1 className="page-header">About</h1>
-            <hr />
             <h6 className="page-subheader">Why Choose Me?</h6>
+            <hr id="abouthr" />
             <div className="main">
                 <div className="image">
                     <img src={sideimg} alt="" />

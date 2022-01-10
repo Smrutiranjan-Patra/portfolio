@@ -43,32 +43,32 @@
 }
 
 .bubbles span.two {
-    animation-delay: 5.5s;
+    animation-delay: 3.5s;
     transform: scale(1.55)
 }
 
 .bubbles span.three {
-    animation-delay: 2.2s;
+    animation-delay: 0.2s;
     transform: scale(0.35)
 }
 
 .bubbles span.four {
-    animation-delay: 8s;
+    animation-delay: 6s;
     transform: scale(2.15)
 }
 
 .bubbles span.five {
-    animation-delay: 9s;
+    animation-delay: 7s;
     transform: scale(0.5)
 }
 
 .bubbles span.six {
-    animation-delay: 6s;
+    animation-delay: 4s;
     transform: scale(2.5)
 }
 
 .bubbles span.seven {
-    animation-delay: 5s;
+    animation-delay: 3s;
     transform: scale(1.5)
 }
 

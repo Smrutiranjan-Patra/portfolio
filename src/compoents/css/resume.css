@@ -1,5 +1,5 @@
 .resume {
-    width: 50%;
+    width: 65%;
     margin: 11% auto;
     padding: 1em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
@@ -22,7 +22,7 @@
 .bdetails ul li {
     list-style-type: square;
     color: white;
-    margin-bottom: -5%;
+    margin-bottom: -4%;
     font-size: 20px;
 }
 

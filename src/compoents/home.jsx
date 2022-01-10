@@ -24,7 +24,7 @@ const Home = () => {
                             cursor
                             cursorStyle="|"
                             typeSpeed={50}
-                            deleteSpeed={5}
+                            deleteSpeed={30}
                             delayedSpeed={1000}
                             words={["Developer", "Designer", "Programmer", "Ethusiastic Coder", "Problem Solver"]}
                         />
