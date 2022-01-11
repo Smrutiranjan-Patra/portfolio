@@ -80,7 +80,7 @@
     color: #5B84B1FF;
 }
 
-#snavi {
+#resume-btn1 {
     display: none;
 }
 
@@ -105,11 +105,7 @@
         font-size: 13px;
     }
 
-    #sidebar {
-        display: none;
-    }
-
-    #snavi {
+    #resume-btn1 {
         display: none;
     }
 }
@@ -130,6 +126,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    #resume-btn1 {
+        display: block;
+        padding: 5px;
+    }
+
+    #resume-btn1 a {
+        color: white;
+        align-self: flex-end;
     }
 
     #navigation ul {

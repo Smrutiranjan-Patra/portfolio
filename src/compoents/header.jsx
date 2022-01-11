@@ -27,6 +27,9 @@ const Header = () => {
                         <span className="code">&#x0002F;&#x0003E;</span>
                     </p>
                 </div>
+                <div id="resume-btn1">
+                    <a href="https://drive.google.com/file/d/12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU/view" target="_blank">Resume</a>
+                </div>
                 <ul>
                     <li><a href="#bar1">Home</a></li>
                     <li><a href="#bar2">About</a></li>
@@ -36,19 +39,6 @@ const Header = () => {
                     <li><a href="https://drive.google.com/file/d/12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU/view" target="_blank">Resume</a></li>
                 </ul>
 
-                <div id="sidebar" onClick={toggle}>
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-            <div id="snavi">
-                <ul>
-                    <li><a href="#bar1">Home</a></li>
-                    <li><a href="#bar2">About</a></li>
-                    <li><a href="#bar3">Projects</a></li>
-                    <li><a href="#bar4">Skills</a></li>
-                    <li><a href="#bar5">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU/view" target="_blank">Resume</a></li>
-                </ul>
             </div>
         </header>
     )
