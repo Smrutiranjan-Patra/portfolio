@@ -180,8 +180,9 @@
     }
 
     .tab-img img {
-        border-radius: 50%;
-        height: 130%;
+        width: 40%;
+        border-radius: 12px;
+        border: 2px solid whitesmoke;
     }
 
     .icons {
@@ -229,6 +230,14 @@
 
     .fab {
         font-weight: 400;
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .icons {
+        margin: auto
+    }
+
+    .icons i:hover {
+        font-size: 1.01em;
     }
 }

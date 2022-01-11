@@ -7,8 +7,7 @@ const Home = () => {
     return (
         <div id="personal">
             <div className="tab-img">
-                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHSwLOCMB956g/profile-displayphoto-shrink_200_200/0/1639149244258?e=1646870400&v=beta&t=7Shlo1wClvPbTdi122nwf5eN7LThqohWzL33561lrxI"
-                    alt="" />
+                <img src={profile} alt="" />
             </div>
             <div id="data">
                 <div className="icons">
