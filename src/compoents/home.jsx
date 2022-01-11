@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import "./css/home.css";
+import profile from './images/profile.png'
 
 const Home = () => {
     return (
@@ -14,9 +15,9 @@ const Home = () => {
                     <a href="https://twitter.com/Smrutir04608196"><i className="fab fa-twitter" id="twitter"></i></a>
                     <a href="https://github.com/Smrutiranjan-Patra"><i className="fab fa-github" id="github"></i></a>
                     <a href="https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/">
-                    <i className="fab fa-linkedin-in" id="linkedin"></i></a>
+                        <i className="fab fa-linkedin-in" id="linkedin"></i></a>
                 </div>
-                <h1 className="name">Hello I'M, <span id="self">Smrutiranjan</span></h1>
+                <h1 className="name">Hello I'M, Smrutiranjan</h1>
                 <h2 className="name"> I'm a {' '}
                     <span id="typingtext">
                         <Typewriter
@@ -37,8 +38,7 @@ const Home = () => {
                 </p>
             </div >
             <div id="picture">
-                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHSwLOCMB956g/profile-displayphoto-shrink_200_200/0/1639149244258?e=1646870400&v=beta&t=7Shlo1wClvPbTdi122nwf5eN7LThqohWzL33561lrxI"
-                    alt="" />
+                <img src={profile} alt="" />
             </div>
         </div >
     )

@@ -20,9 +20,9 @@ const About = () => {
                     <h2>Here are a Few Highlights: </h2>
                     <ul>
                         <li>Interactive Front End as per the design</li>
-                        <li>Full Stack web development</li>
+                        <li>Full Stack Web Development</li>
                         <li>Building REST API</li>
-                        <li>Managing database</li>
+                        <li>Managing Database</li>
                         <li>Frontend Designing</li>
                     </ul>
                 </div>

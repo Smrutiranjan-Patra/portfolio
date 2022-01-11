@@ -12,7 +12,7 @@ const Project = () => {
             <div className="project">
                 <div className="project-box">
                     <div className="img-box">
-                        <a href="https://hmclothing-n5ej6cq09-vipchoudhary13.vercel.app/">
+                        <a href="https://hmclothing-n5ej6cq09-vipchoudhary13.vercel.app/" target="_blank">
                             <img src={HM} alt="" />
                         </a>
                     </div>

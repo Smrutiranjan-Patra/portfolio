@@ -1,28 +1,40 @@
 import React from "react";
 import "./css/resume.css";
+import html from "./images/html-5.png";
+import css from "./images/css3.png";
+import js from "./images/javascript.png";
+import node from "./images/node-js.png";
+import express from "./images/express.png";
+import npm from "./images/npm.png";
+import mongo from "./images/mongodb.png";
+import react from "./images/react.png";
+import redux from "./images/redux.png";
+import github from "./images/github.png";
+import heroku from "./images/heroku.png";
 
 const Resume = () => {
 
     return (<div className="resume" id="Resume">
-        <h1 className="page-header">Resume</h1>
+        <h1 className="page-header">Skills</h1>
+        <h6 className="page-subheader3"> Tech Stack I Use</h6>
         <hr />
-        <h6 className="page-subheader3"> My formal Bio Details</h6>
 
         <div className="bdetails">
             <ul>
-                <li>Masai School</li>
-                <h6>Full Stack Web Development</h6>
-                <p className="year">2021-Present</p>
-                <li>Utkalmani Gopabandhu Smruti Mahavidalay</li>
-                <h6>Bachlore Of Commerce</h6>
-                <p className="year">2017-2021</p>
-                <li>Samanta Chandra Sekher Junior Collage</li>
-                <h6>Intermediate</h6>
-                <p className="year">2015-2015</p>
+                <li><img src={html} /></li>
+                <li><img src={css} /></li>
+                <li><img src={js} /></li>
+                <li><img src={node} /></li>
+                <li><img src={express} /></li>
+                <li><img src={mongo} /></li>
             </ul>
-            <a href="https://drive.google.com/file/d/12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU/view?usp=sharing">
-                <button id="resume-btn" target="_blank"> Resume</button>
-            </a>
+            <ul>
+                <li><img src={npm} /></li>
+                <li><img src={react} /></li>
+                <li><img src={redux} /></li>
+                <li><img src={github} /></li>
+                <li><img src={heroku} /></li>
+            </ul>
         </div>
     </div>
     )

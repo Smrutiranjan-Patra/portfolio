@@ -27,7 +27,7 @@ function App() {
     <Resume />
     <br id="bar5" />
     <ContactUs />
-    <p id="lovetext"> Created by Smrutiranjan With ❤️ </p>
+    <p id="lovetext"> Created With ❤️ by Smrutiranjan</p>
   </div>
 }
 

@@ -19,23 +19,20 @@
     border-radius: 12px;
 }
 
+.bdetails ul {
+    display: flex;
+    justify-content: space-evenly
+}
+
+
 .bdetails ul li {
-    list-style-type: square;
-    color: white;
-    margin-bottom: -4%;
-    font-size: 20px;
+    list-style-type: none;
 }
 
-.bdetails ul h6 {
-    color: orangered;
-    font-size: 19px;
-    margin-bottom: -1%;
+.bdetails ul li img {
+    width: 4em;
 }
 
-.year {
-    color: grey;
-    margin-bottom: 4%;
-}
 
 #resume-btn {
     padding: 1%;
