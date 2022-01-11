@@ -42,6 +42,12 @@ export const ContactUs = () => {
                         <button id="submit-btn">submit</button>
                     </div>
                 </form>
+                <div className="sidedetails">
+                    <h4><span><i class="fas fa-at"></i></span> <a href="mailto:guessme.smruti@gmail.com">guessme.smruti@gmail.com</a></h4>
+                    <h4> <span><i class="fas fa-phone-alt"></i></span> <a href="tel:9776444262">+91 9776444262</a></h4>
+                    <h4><span><i class="fas fa-map-marked-alt"></i></span>
+                        <a href="https://goo.gl/maps/TDDTGna6qYtZFVT17" target="_blank" >&nbsp;&nbsp;Puri,Odisha</a></h4>
+                </div>
             </div>
         </div>
     );

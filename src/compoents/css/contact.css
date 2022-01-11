@@ -95,6 +95,27 @@ textarea {
     margin-left: 6em;
 }
 
+.sidedetails {
+    padding: 2%;
+    box-sizing: border-box;
+    color: whitesmoke;
+    height: 23.5em;
+    border-radius: 12px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
+    background-color: rgba(255, 255, 255, 0.017);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+}
+
+.sidedetails h4 {
+    font-size: 97%;
+}
+
+.sidedetails h4 a {
+    color: whitesmoke;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1200px) {
     .contact {
         width: 90%;
