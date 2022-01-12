@@ -28,7 +28,7 @@ const Header = () => {
                     </p>
                 </div>
                 <div id="resume-btn1">
-                    <a href="https://drive.google.com/file/d/12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU/view" target="_blank">Resume</a>
+                    <a href="https://drive.google.com/uc?id=12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU&export=download" target="_blank">Resume</a>
                 </div>
                 <ul>
                     <li><a href="#bar1">Home</a></li>
@@ -36,7 +36,7 @@ const Header = () => {
                     <li><a href="#bar3">Projects</a></li>
                     <li><a href="#bar4">Skills</a></li>
                     <li><a href="#bar5">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU/view" target="_blank">Resume</a></li>
+                    <li><a href="https://drive.google.com/uc?id=12DQWhxr2c37QKJOyq8Xs8Kq5dbMdV_wU&export=download" target="_blank">Resume</a></li>
                 </ul>
 
             </div>
