@@ -17,22 +17,20 @@ const Home = () => {
                         <i className="fab fa-linkedin-in" id="linkedin"></i></a>
                 </div>
                 <h1 className="name">Hello I'M, Smrutiranjan</h1>
-                <h2 className="name"> I'm a {' '}
-                    <span id="typingtext">
-                        <Typewriter
-                            loop
-                            cursor
-                            cursorStyle="|"
-                            typeSpeed={50}
-                            deleteSpeed={30}
-                            delayedSpeed={1000}
-                            words={["Developer", "Designer", "Programmer", "Ethusiastic Coder", "Problem Solver"]}
-                        />
-                    </span>
+                <h2 className="name"> I'm a <span id="typingtext">
+                    <Typewriter
+                        loop
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={50}
+                        deleteSpeed={30}
+                        delayedSpeed={1000}
+                        words={["Developer", "Designer", "Programmer", "Ethusiastic Coder", "Problem Solver"]}
+                    />
+                </span>
                 </h2>
-                <p className="descriptions"> I've spent my time seeking and learning new technologies and forms of digital
-                    expression. This has led
-                    to me working on some amazing world-class projects, worked at some amazing places, and worked with some
+                <p className="descriptions"> I've spent my time seeking and learning new technologies and forms of digital expression.
+                    This has led me to work on some amazing world-class projects, worked at some amazing places, and I have worked with some
                     great people.
                 </p>
             </div >
@@ -41,7 +39,9 @@ const Home = () => {
             </div>
         </div >
     )
+
 }
+
 
 export { Home }
 
