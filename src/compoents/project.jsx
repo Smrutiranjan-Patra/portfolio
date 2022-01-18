@@ -42,13 +42,14 @@ const Project = () => {
             </a>
           </div>
           <div className="details">
-            <h3 className="project-name">ShopperStop</h3>
+            <h3 className="project-name">Shopper Stop</h3>
             <p className="project-details">
               Shoppers Stop is an Indian apparel store chain.
             </p>
             <p className="tech">
               HTML | CSS | JavaScript | Node js | Express js | MongoDB
             </p>
+
             <button className="github-btn">
               <a
                 href="https://github.com/Smrutiranjan-Patra/shopper-stop-clone-public"
