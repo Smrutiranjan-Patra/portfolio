@@ -62,7 +62,7 @@ const Project = () => {
         </div>
         <div className="project-box">
           <div className="img-box">
-            <a href="https://shopper-stop-clone.herokuapp.com/" target="_blank">
+            <a href="https://quora-roan.vercel.app/" target="_blank">
               <img
                 src="https://camo.githubusercontent.com/fa9d45e9b56a4643453d8b9d0930031de89bdfcfb3b12e29cff5950493ce81d5/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3730302f312a344a4545544c7651726e3457636833645179646969412e706e673f7261773d74727565"
                 alt=""
