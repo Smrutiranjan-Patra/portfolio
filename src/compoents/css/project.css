@@ -1,274 +1,115 @@
-.page-headerpro {
-    color: white;
-    text-align: center;
-    border-bottom: 5px;
-    margin-bottom: 0;
-    margin-top: 0
-}
-
-
-.page-subheader1 {
-    color: wheat;
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: 2px;
-    margin-top: 0%;
-    margin-bottom: 0.5%;
-}
-
-.container {
-    width: 65%;
-    margin: 8% auto 10%;
-    padding: 1.5em;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
-    background-color: rgba(255, 255, 255, 0.017);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
-    z-index: 1;
-}
-
 .project {
-    width: 95%;
-    padding: 2em;
-    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 2%);
-    background-color: rgba(255, 255, 255, 0.017);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
-    margin-top: 2%;
+    display: grid;
+    gap: 18px;
 }
 
-#projecthr {
-    margin: 1% 40% 0%;
-    width: 20%;
+.project-box {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
 }
 
 .img-box {
-    width: 44%;
+    min-height: 320px;
+    background: #222922;
 }
 
 .img-box img {
     width: 100%;
-    border-radius: 0 5px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 220ms ease;
+}
+
+.project-box:hover .img-box img {
+    transform: scale(1.03);
 }
 
 .details {
-    width: 55%;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
 }
 
-.project-box {
-    margin-bottom: 3%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1%;
+.project-label {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .project-name {
-    color: white;
-    margin: 3% 0;
-    margin-top: -6%;
-}
-
-.project-name a {
-    text-decoration: none;
-    color: white;
+    margin: 10px 0 0;
+    color: var(--text);
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    line-height: 1.1;
 }
 
 .project-details {
-    color: wheat;
-    margin: 2% 0;
-
-}
-
-
-
-.github-btn:hover {
-    background-color: transparent;
-}
-
-.github-btn a:hover {
-    color: white;
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .tech {
-    color: tomato;
-    margin: 1% 0;
+    margin: 18px 0 0;
+    color: var(--accent-2);
+    font-weight: 700;
+    line-height: 1.5;
 }
 
-a {
-    text-decoration: none;
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
 }
 
-button {
-    margin: 2% 0;
-    padding: 2%;
+.live-btn,
+.github-btn {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-weight: 800;
 }
 
-button a {
-    color: black;
+.live-btn {
+    background: var(--accent);
+    color: var(--ink);
 }
 
+.github-btn {
+    border: 1px solid var(--line);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.03);
+}
 
-
-@media only screen and (min-width: 1200px) {
+@media (max-width: 840px) {
     .project-box {
-        margin-bottom: 2%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 1%;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .container {
-        width: 92%;
-
-        margin: 11% auto;
-
-        padding: 1em;
-        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
-        background-color: rgba(255, 255, 255, 0.017);
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-        border-radius: 12px;
-    }
-
-    .project {
-        width: 90%;
-        padding: 2em;
-        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 2%);
-        background-color: rgba(255, 255, 255, 0.017);
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-        border-radius: 12px;
-        margin-top: 2%;
-        margin-left: 1%;
-    }
-
-    .project-box {
-        margin-bottom: 3%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 1%;
-        flex-direction: column;
-    }
-
-    .page-subheader1 {
-        color: wheat;
-        text-align: center;
-        font-size: 15px;
-        letter-spacing: 2px;
-        margin-top: -1%;
-        margin-bottom: 2.5%;
-        margin-left: 22em;
+        grid-template-columns: 1fr;
     }
 
     .img-box {
-        width: 85%;
-    }
-
-    .details {
-        width: 89%;
-        padding: 1em;
-        margin-top: 4%;
-    }
-
-    .project-details {
-        color: wheat;
-        margin: 0% 0;
-    }
-
-    .project-name {
-        color: white;
-        margin: 1% 0;
-        margin-top: -6%;
-    }
-
-    .page-headerpro {
-        color: white;
-        text-align: center;
-        border-bottom: 5px;
-        margin-bottom: 0;
-    }
-
-    #projecthr {
-        margin: 1.5% 37% 3%;
-        width: 28%;
-    }
-
-    button {
-        margin: 1% 0;
-        padding: 1%;
+        min-height: 240px;
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .project {
-        width: 82%;
-        padding: 2em;
-        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 2%);
-        background-color: rgba(255, 255, 255, 0.017);
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-        border-radius: 12px;
-        margin-top: 2%;
-    }
-
-    .page-headerpro {
-        color: white;
-        text-align: center;
-        margin: 0 0 0.5em;
-        border-bottom: 5px;
-        font-size: 16px;
-    }
-
-    .page-subheader1 {
-        color: wheat;
-        font-size: 10px;
-        margin: 0 0;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .container {
-        width: 85%;
-        margin: 3% auto;
-        padding: 1em;
-        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .017);
-        background-color: rgba(255, 255, 255, 0.017);
-        backdrop-filter: blur(5px);
-        border-radius: 12px;
-    }
-
-    .project-box {
-        margin-bottom: 3%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .img-box {
-        width: 100%;
-    }
-
+@media (max-width: 560px) {
     .details {
+        padding: 22px;
+    }
+
+    .project-actions a {
         width: 100%;
-        padding: 1em;
-        margin-top: 1em;
-    }
-
-    .tech {
-        color: tomato;
-        margin: 1% 0;
-        font-size: 13px;
-    }
-
-    #projecthr {
-        margin: 1.7% 28% 4.2%;
-        width: 47%;
     }
 }

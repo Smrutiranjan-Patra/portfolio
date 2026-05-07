@@ -1,46 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-#lovetext {
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  color: whitesmoke;
-  font-size: 1.5em;
-  margin-top: -6%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  position: relative;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 92px 0;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.page-header,
+.page-headerpro {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.page-subheader,
+.page-subheader1,
+.page-subheader3,
+.page-subheader5 {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 32px 0 44px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .section {
+    width: min(100% - 28px, 1120px);
+    padding: 68px 0;
   }
 
-  to {
-    transform: rotate(360deg);
+  .section-heading {
+    margin-bottom: 24px;
   }
 }

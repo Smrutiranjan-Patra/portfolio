@@ -4,30 +4,38 @@ import sideimg from "./images/side.jpg";
 
 const About = () => {
     return (
-        <div id="about">
-            <h1 className="page-header">About</h1>
-            <h6 className="page-subheader">Why Choose Me?</h6>
-            <hr id="abouthr" />
+        <section id="about" className="section">
+            <div className="section-heading">
+                <p className="eyebrow">About</p>
+                <h1 className="page-header">Developer with a product-first backend mindset.</h1>
+                <p className="page-subheader">I care about the parts users touch and the systems that keep them working.</p>
+            </div>
             <div className="main">
                 <div className="image">
-                    <img src={sideimg} alt="" />
+                    <img src={sideimg} alt="Developer workspace" />
                 </div>
                 <div className="text">
-                    <p className="description">Full stack web developer with background knowledge of MERN stacks with redux,
-                        along with a knack of
-                        building, testing and deploying applications with utmost efficiency. Willing to be an asset for an
-                        organization.</p>
-                    <h2>Here are a Few Highlights: </h2>
-                    <ul>
-                        <li>Interactive Front End as per the design</li>
-                        <li>Full Stack Web Development</li>
-                        <li>Building REST API</li>
-                        <li>Managing Database</li>
-                        <li>Frontend Designing</li>
-                    </ul>
+                    <p className="description">I design and build full-stack web applications with React, Node.js, Express, MongoDB, and Redux. My sweet spot is translating a product requirement into a complete flow: a usable interface, predictable state, secure API routes, and data models that are easy to evolve.</p>
+                    <div className="highlight-grid">
+                        <div>
+                            <span>01</span>
+                            <h2>Frontend systems</h2>
+                            <p>Responsive React screens, reusable components, clean state, and interfaces that feel natural to use.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <h2>Backend APIs</h2>
+                            <p>REST endpoints, Express services, authentication flows, validation, and database-backed features.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <h2>Delivery mindset</h2>
+                            <p>Git-based collaboration, deployment awareness, and practical decisions that keep projects shippable.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
