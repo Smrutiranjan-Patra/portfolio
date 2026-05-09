@@ -106,7 +106,12 @@
     color: var(--text);
 }
 
-#resume-btn1 a {
+.btn-div {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+#resume-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -119,24 +124,9 @@
     font-size: 0.9rem;
 }
 
-.header-actions {
-    display: flex;
-    align-items: center;
-}
-
-.theme-toggle {
-    min-height: 42px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 12px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--soft-fill);
-    color: var(--text);
-    cursor: pointer;
-    font-weight: 800;
-    font-size: 0.9rem;
+.theme-icon {
+    color: var(--accent);
+    font-size: 1.5em;
 }
 
 .toggle-track {
@@ -170,10 +160,6 @@
     #navigation {
         flex-wrap: wrap;
         gap: 10px;
-    }
-
-    .header-actions {
-        margin-left: auto;
     }
 
     #navigation ul {
