@@ -33,7 +33,7 @@ export const portfolio = {
   ],
 
   hero: {
-    eyebrow: "Frontend and product developer",
+    eyebrow: "Full Stack Engineer",
     headline: "I build enterprise React interfaces that stay fast, scalable, and maintainable.",
     rolePrefix: "Focused on",
     focusItems: [
@@ -266,7 +266,7 @@ export const portfolio = {
     {
       title: "Master of Computer Applications, AI and Machine Learning",
       place: "Amity University, Uttar Pradesh",
-      period: "2025 - Expected 2027",
+      period: "2025 - Present",
     },
     {
       title: "Bachelor of Commerce, Accounting",
