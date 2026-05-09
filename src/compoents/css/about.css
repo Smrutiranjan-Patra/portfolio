@@ -1,49 +1,104 @@
-.main {
+.about-snapshot {
     display: grid;
-    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
     gap: 18px;
     align-items: stretch;
 }
 
-.image {
+.about-story,
+.metric-card,
+.highlight-grid article,
+.workflow-panel {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.about-story {
+    position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    background: var(--surface);
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(24px, 4vw, 42px);
 }
 
-.image img {
-    width: 100%;
-    height: 100%;
-    min-height: 520px;
-    object-fit: cover;
+.about-story::before {
+    content: "</>";
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    color: var(--surface-2);
+    font-size: clamp(5rem, 12vw, 10rem);
+    font-weight: 800;
+    line-height: 1;
+    z-index: 0;
 }
 
-.text {
-    padding: 30px;
+.about-kicker,
+.description {
+    position: relative;
+    z-index: 1;
+}
+
+.about-kicker {
+    width: fit-content;
+    margin-bottom: 18px;
+    padding: 8px 12px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: var(--surface);
+    background: var(--soft-fill);
+    color: var(--accent-2);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .description {
+    max-width: 760px;
     margin: 0;
     color: var(--text);
-    font-size: 1.18rem;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
     line-height: 1.75;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.metric-card {
+    min-height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.metric-card strong {
+    color: var(--accent);
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    line-height: 0.9;
+}
+
+.metric-card span {
+    color: var(--muted);
+    line-height: 1.45;
+    font-weight: 700;
 }
 
 .highlight-grid {
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
-    margin-top: 28px;
+    margin-top: 18px;
 }
 
-.highlight-grid div {
-    padding: 20px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--surface-2);
+.highlight-grid article {
+    padding: 24px;
 }
 
 .highlight-grid span {
@@ -53,9 +108,10 @@
 }
 
 .highlight-grid h2 {
-    margin: 8px 0;
+    margin: 12px 0 10px;
     color: var(--text);
-    font-size: 1.12rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
 }
 
 .highlight-grid p {
@@ -64,23 +120,74 @@
     line-height: 1.65;
 }
 
-@media (max-width: 860px) {
-    .main {
+.workflow-panel {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    margin-top: 18px;
+    background: var(--line);
+}
+
+.workflow-panel article {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 24px;
+    background: var(--surface);
+}
+
+.workflow-index {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--ink);
+    font-weight: 800;
+}
+
+.workflow-panel h3 {
+    margin: 0 0 10px;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+.workflow-panel p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+    .about-snapshot,
+    .highlight-grid,
+    .workflow-panel {
         grid-template-columns: 1fr;
     }
 
-    .image img {
-        min-height: 320px;
-        max-height: 460px;
+    .workflow-panel article {
+        min-height: auto;
     }
 }
 
-@media (max-width: 560px) {
-    .text {
+@media (max-width: 620px) {
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-story,
+    .metric-card,
+    .highlight-grid article,
+    .workflow-panel article {
         padding: 20px;
     }
 
-    .description {
-        font-size: 1rem;
+    .about-story {
+        min-height: auto;
     }
 }

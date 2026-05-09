@@ -1,5 +1,4 @@
-import aboutImage from "../compoents/images/side.jpg";
-import hAndMPreview from "../compoents/images/Screenshot (207).png";
+import jsVisualizerPreview from "../compoents/images/jsVisualizerPreview.png";
 import html from "../compoents/images/html-5.png";
 import css from "../compoents/images/css3.png";
 import js from "../compoents/images/javascript.png";
@@ -85,10 +84,14 @@ export const portfolio = {
     eyebrow: "About",
     headline: "Product-minded frontend engineer with enterprise delivery experience.",
     subheadline: "I care about fast interfaces, reusable systems, clean code, and the developer experience behind the product.",
-    image: aboutImage,
-    imageAlt: "Developer workspace",
     description:
       "My work spans enterprise UI frameworks, reusable component systems, API lifecycle tooling, workflow automation, and performance-sensitive React applications. I have worked across EDI and e-commerce platforms, using React.js, Next.js, Redux Toolkit, Zustand, Jest, React Testing Library, and modern frontend practices to improve speed, maintainability, and team productivity.",
+    metrics: [
+      { value: "4+", label: "Years building production web apps" },
+      { value: "20%", label: "Application speed improvement delivered" },
+      { value: "40%", label: "Onboarding time reduction through docs" },
+      { value: "3", label: "Product roles across enterprise teams" },
+    ],
     highlights: [
       {
         number: "01",
@@ -107,6 +110,24 @@ export const portfolio = {
         title: "Reliability and DX",
         description:
           "Write unit tests, document internal APIs, mentor developers, and create patterns that reduce onboarding time.",
+      },
+    ],
+    workflow: [
+      {
+        title: "Map the product flow",
+        description: "Understand users, edge cases, data movement, and where the interface can reduce effort.",
+      },
+      {
+        title: "Design reusable pieces",
+        description: "Break screens into components, state boundaries, and patterns that other developers can extend.",
+      },
+      {
+        title: "Optimize the experience",
+        description: "Use code splitting, memoization, pagination, and testing to keep the product fast and reliable.",
+      },
+      {
+        title: "Document and hand off",
+        description: "Leave internal APIs, UI rules, and implementation decisions clear for the next person.",
       },
     ],
   },
@@ -164,45 +185,38 @@ export const portfolio = {
 
   projectsSection: {
     eyebrow: "Projects",
-    headline: "Selected full-stack builds",
-    subheadline: "Case-study style snapshots of products, data flows, and interface work.",
+    headline: "Selected builds with product thinking",
+    subheadline: "A closer look at interface work, full-stack flows, and the decisions behind each project.",
     label: "Featured build",
     liveLabel: "Live site",
     repoLabel: "GitHub",
+    detailLabel: "What it covers",
   },
 
   projects: [
     {
-      name: "H&M Clothings",
+      name: "JS Visualizer",
+      type: "Developer Tool / Educational Platform",
+      role: "Full Stack Developer",
+      outcome:
+        "Built an interactive JavaScript execution visualizer to simulate the event loop, call stack, and asynchronous behavior for better learning and debugging.",
       description:
-        "A shopping interface focused on category browsing, product discovery, and a familiar retail experience.",
-      tech: "HTML, CSS, JavaScript, Node.js",
-      image: hAndMPreview,
-      imageAlt: "H&M clothing store project preview",
-      live: "https://hmclothing-n5ej6cq09-vipchoudhary13.vercel.app/",
-      repo: "https://github.com/Smrutiranjan-Patra/H2M-Clone",
-    },
-    {
-      name: "Shopper Stop",
-      description:
-        "A MERN commerce clone with product pages, backend services, and database-backed shopping flows.",
-      tech: "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB",
-      image: "https://raw.githubusercontent.com/Smrutiranjan-Patra/shopper-stop-clone-public/main/images/home.png",
-      imageAlt: "Shopper Stop project preview",
-      live: "https://shopper-stop-clone.herokuapp.com/",
-      repo: "https://github.com/Smrutiranjan-Patra/shopper-stop-clone-public",
-    },
-    {
-      name: "Quora",
-      description:
-        "A question-and-answer platform with React views, Redux state, API integration, and content workflows.",
-      tech: "React, Redux, CSS, Chakra UI, Node.js, Express.js, MongoDB",
-      image:
-        "https://camo.githubusercontent.com/fa9d45e9b56a4643453d8b9d0930031de89bdfcfb3b12e29cff5950493ce81d5/68747470733a2f2f6d69726f2e6d656469756d2f6d61782f3730302f312a344a4545544c7651726e3457636833645179646969412e706e673f7261773d74727565",
-      imageAlt: "Quora clone project preview",
-      live: "https://quora-roan.vercel.app/",
-      repo: "https://github.com/Smrutiranjan-Patra/quora",
-    },
+        "An interactive JavaScript visualization tool inspired by runtime execution concepts. The application visually demonstrates how JavaScript handles synchronous and asynchronous operations including the call stack, Web APIs, microtask queue, and callback queue.",
+      tech: ["React", "JavaScript", "HTML", "CSS"],
+      features: [
+        "Event loop visualization",
+        "Call stack simulation",
+        "Microtask and callback queue handling",
+        "Async execution flow representation",
+        "Step-by-step execution understanding",
+        "Interactive learning interface",
+        "Responsive UI"
+      ],
+      image: jsVisualizerPreview,
+      imageAlt: "JavaScript Visualizer project preview",
+      live: "https://smrutiranjan-patra.github.io/js-visualizer/",
+      repo: "https://github.com/Smrutiranjan-Patra/js-visualizer",
+    }
   ],
 
   skillsSection: {
@@ -235,7 +249,6 @@ export const portfolio = {
     { name: "Jira", group: "Workflow" },
     { name: "Postman", group: "Tooling" },
     { name: "npm", icon: npm, group: "Tooling" },
-    { name: "Heroku", icon: heroku, group: "Deploy" },
   ],
 
   educationSection: {

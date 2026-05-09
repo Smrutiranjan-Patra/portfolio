@@ -4,6 +4,14 @@ import { portfolio } from "../data/portfolio";
 
 const Resume = () => {
     const { skills, skillsSection } = portfolio;
+    const skillGroups = skills.reduce((groups, skill) => {
+        if (!groups[skill.group]) {
+            groups[skill.group] = [];
+        }
+
+        groups[skill.group].push(skill);
+        return groups;
+    }, {});
 
     return (
         <section className="resume section" id="Resume">
@@ -13,19 +21,28 @@ const Resume = () => {
                 <p className="page-subheader3">{skillsSection.subheadline}</p>
             </div>
 
-            <div className="bdetails">
-                {skills.map((skill) => (
-                    <div className="skill-card" key={skill.name}>
-                        {skill.icon ? (
-                            <img src={skill.icon} alt={`${skill.name} logo`} />
-                        ) : (
-                            <span className="skill-initial">{skill.name.slice(0, 2)}</span>
-                        )}
-                        <div>
-                            <strong>{skill.name}</strong>
-                            <span>{skill.group}</span>
+            <div className="skill-groups">
+                {Object.entries(skillGroups).map(([group, groupSkills]) => (
+                    <article className="skill-group" key={group}>
+                        <div className="skill-group-heading">
+                            <span>{String(groupSkills.length).padStart(2, "0")}</span>
+                            <h2>{group}</h2>
                         </div>
-                    </div>
+                        <div className="bdetails">
+                            {groupSkills.map((skill) => (
+                                <div className="skill-card" key={skill.name}>
+                                    <div className="skill-icon" aria-hidden="true">
+                                        {skill.icon ? (
+                                            <img src={skill.icon} alt="" />
+                                        ) : (
+                                            <span className="skill-initial">{skill.name.slice(0, 2)}</span>
+                                        )}
+                                    </div>
+                                    <strong>{skill.name}</strong>
+                                </div>
+                            ))}
+                        </div>
+                    </article>
                 ))}
             </div>
         </section>

@@ -28,7 +28,7 @@ const Header = ({ theme, onThemeToggle }) => {
                         <span className="toggle-track" aria-hidden="true">
                             <span className="toggle-thumb"></span>
                         </span>
-                        <span>{isDark ? portfolio.themeSwitch.lightLabel : portfolio.themeSwitch.darkLabel}</span>
+                        <span>{isDark ? portfolio.themeSwitch.darkLabel : portfolio.themeSwitch.lightLabel}</span>
                     </button>
                 </div>
                 <div id="resume-btn1">
