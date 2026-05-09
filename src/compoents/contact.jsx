@@ -7,18 +7,19 @@ export const ContactUs = () => {
     const form = useRef();
     const { contact } = portfolio;
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    const sendEmail = async () => {
+        try {
+            const response = await emailjs.send(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                form.current,
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            );
 
-        emailjs.sendForm('service_5ljbno4', 'template_o30s3sm', form.current, 'user_MF9QHQ01x51CdnRf7iwJr')
-            .then((result) => {
-                console.log(result.text);
-                document.getElementById("form").reset();
-                alert(contact.form.successMessage);
-            }, (error) => {
-                console.log(error.text);
-                document.getElementById("form").reset()
-            });
+            console.log("SUCCESS!", response);
+        } catch (error) {
+            console.log("FAILED...", error);
+        }
     };
 
     return (
@@ -29,7 +30,7 @@ export const ContactUs = () => {
                 <p className="page-subheader5">{contact.subheadline}</p>
             </div>
             <div className="form">
-                <form ref={form} onSubmit={sendEmail} id="form">
+                <form ref={form} onSubmit={(e) => { e.preventDefault(); sendEmail(); }} id="form">
                     <div>
                         <label>{contact.form.nameLabel}</label>
                         <input type="text" name="user_name" placeholder={contact.form.namePlaceholder} required />

@@ -14,7 +14,7 @@ export const portfolio = {
   name: "Smrutiranjan Patra",
   shortName: "Smrutiranjan",
   initials: "SP",
-  role: "Full Stack Product developer",
+  role: "Full Stack Product Developer",
   resumeLabel: "Resume",
   resumeUrl: "/Smrutiranjan_Patra_Resume.pdf",
   footer: "Built by Smrutiranjan Patra",
@@ -34,42 +34,57 @@ export const portfolio = {
 
   hero: {
     eyebrow: "Full Stack Engineer",
-    headline: "I build enterprise React interfaces that stay fast, scalable, and maintainable.",
+    headline:
+      "I build scalable full-stack applications with modern frontend systems, backend services, and reliable architecture.",
     rolePrefix: "Focused on",
     focusItems: [
       {
-        label: "React and Next.js systems",
-        availability: "Open to senior engineer roles",
-      },
-      {
-        label: "performance optimization",
+        label: "full-stack application architecture",
         availability: "Open to product engineering roles",
       },
       {
-        label: "reusable UI architecture",
-        availability: "Open to design-system work",
+        label: "React and Next.js systems",
+        availability: "Open to frontend and full-stack roles",
       },
       {
-        label: "testing and reliability",
-        availability: "Open to quality-focused frontend roles",
+        label: "backend APIs and database design",
+        availability: "Open to backend-integrated product work",
       },
       {
-        label: "developer experience",
-        availability: "Open to platform UI roles",
+        label: "performance optimization and scalability",
+        availability: "Open to high-scale engineering teams",
+      },
+      {
+        label: "testing, reliability, and developer experience",
+        availability: "Open to quality-focused engineering roles",
       },
     ],
     description:
-      "I am Smrutiranjan Patra, a full-stack engineer with 4+ years of experience building scalable web applications using React.js, Node.js, Express.js, and MongoDB. I specialize in component architecture, API development, database optimization, and enterprise-grade systems.",
+      "I am Smrutiranjan Patra, a full-stack engineer with 4+ years of experience building scalable web applications using React.js, Node.js, Express.js, and MongoDB. I specialize in frontend architecture, backend APIs, database optimization, and enterprise-grade systems.",
     actions: [
       { label: "View projects", href: "#project", variant: "primary" },
-      { label: "Download resume", href: "resume", variant: "secondary", external: true },
+      {
+        label: "Download resume",
+        href: "resume",
+        variant: "secondary",
+        external: true,
+      },
     ],
     socialLinks: [
-      { label: "GitHub", href: "https://github.com/Smrutiranjan-Patra" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/" },
-      { label: "Email", href: "mailto:guessme.smruti@gmail.com" },
+      {
+        label: "GitHub",
+        href: "https://github.com/Smrutiranjan-Patra",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/",
+      },
+      {
+        label: "Email",
+        href: "mailto:guessme.smruti@gmail.com",
+      },
     ],
-    availability: "Open to senior frontend roles",
+    availability: "Open to full-stack and product engineering roles",
     illustrationLabel: "Full-stack developer workspace illustration",
     illustrationTitle: "Developer building a full-stack application",
     stats: [
@@ -81,12 +96,13 @@ export const portfolio = {
 
   about: {
     eyebrow: "About",
-    headline: "Product-minded frontend engineer with enterprise delivery experience.",
-    subheadline: "I care about fast interfaces, reusable systems, clean code, and the developer experience behind the product.",
+    headline: "Product-minded engineer with enterprise delivery experience.",
+    subheadline:
+      "I care about scalable systems, clean architecture, performant user experiences, and reliable backend services.",
     description:
-      "My work spans enterprise UI frameworks, reusable component systems, API lifecycle tooling, workflow automation, and performance-sensitive React and Node.js applications. I have worked across EDI and e-commerce platforms, using React.js, Next.js, Node.js, Express.js, MongoDB, and modern full-stack practices to improve speed, maintainability, and team productivity.",
+      "My work spans enterprise applications, reusable component systems, backend APIs, workflow automation, and performance-sensitive full-stack platforms. I have worked across EDI and e-commerce systems using React.js, Next.js, Node.js, Express.js, MongoDB, and modern engineering practices to improve scalability, maintainability, and team productivity.",
     metrics: [
-      { value: "4+", label: "Years building production web apps" },
+      { value: "4+", label: "Years building production apps" },
       { value: "20%", label: "Application speed improvement delivered" },
       { value: "40%", label: "Onboarding time reduction through docs" },
       { value: "3", label: "Product roles across enterprise teams" },
@@ -94,25 +110,25 @@ export const portfolio = {
     highlights: [
       {
         number: "01",
-        title: "Enterprise UI systems",
+        title: "Full-stack architecture",
         description:
-          "Architect modular React interfaces, reusable snippets, and shared components used across product lines.",
+          "Build scalable full-stack systems with reusable frontend components, backend services, and maintainable architecture.",
       },
       {
         number: "02",
-        title: "Performance and state",
+        title: "Performance and scalability",
         description:
-          "Improve rendering speed, pagination, memoization, code splitting, and predictable state management for large datasets.",
+          "Optimize frontend rendering, backend processing, database queries, and application scalability for large-scale systems.",
       },
       {
         number: "03",
         title: "Reliability and DX",
         description:
-          "Write unit tests, document internal APIs, mentor developers, and create patterns that reduce onboarding time.",
+          "Write unit tests, document internal APIs, mentor developers, and create patterns that improve engineering efficiency.",
       },
       {
         number: "04",
-        title: "Backend APIs and Databases",
+        title: "Backend APIs and databases",
         description:
           "Design and implement RESTful APIs, optimize database queries, and ensure secure and scalable backend systems.",
       },
@@ -120,19 +136,23 @@ export const portfolio = {
     workflow: [
       {
         title: "Map the product flow",
-        description: "Understand users, edge cases, data movement, and where the interface can reduce effort.",
+        description:
+          "Understand users, edge cases, data movement, and where the application can reduce effort.",
       },
       {
-        title: "Design reusable pieces",
-        description: "Break screens into components, state boundaries, and patterns that other developers can extend.",
+        title: "Design reusable systems",
+        description:
+          "Break applications into scalable frontend modules, backend services, and maintainable architecture patterns.",
       },
       {
         title: "Optimize the experience",
-        description: "Use code splitting, memoization, pagination, and testing to keep the product fast and reliable.",
+        description:
+          "Use caching, memoization, pagination, testing, and query optimization to keep systems fast and reliable.",
       },
       {
         title: "Document and hand off",
-        description: "Leave internal APIs, UI rules, and implementation decisions clear for the next person.",
+        description:
+          "Leave APIs, architecture decisions, workflows, and implementation details clear for the next developer.",
       },
     ],
   },
@@ -149,8 +169,8 @@ export const portfolio = {
       role: "Product Developer II",
       period: "July 2024 - Present",
       points: [
-        "Architected a modular, high-performance UI framework for enterprise-grade applications with a focus on maintainability and component reusability.",
-        "Implemented frontend performance improvements such as code splitting and memoization, delivering around 20% improvement in application speed.",
+        "Architected scalable full-stack application systems with reusable frontend architecture, backend integrations, and maintainable engineering patterns.",
+        "Implemented frontend and backend performance improvements such as code splitting, memoization, and API optimization, delivering around 20% improvement in application speed.",
         "Designed a custom system management utility for API versioning and deprecation, helping phase out legacy dependencies and reduce technical debt.",
       ],
     },
@@ -159,9 +179,9 @@ export const portfolio = {
       role: "Product Developer I",
       period: "August 2022 - July 2024",
       points: [
-        "Built a unified Projects module for managing shared and personal assets, improving workflow efficiency through simpler navigation and data access.",
+        "Built a unified Projects module for managing shared and personal assets, improving workflow efficiency through simpler navigation and optimized data handling.",
         "Created automated credential mapping plus import and export flows that reduced manual configuration effort for users.",
-        "Engineered reusable snippets and standardized error-handling patterns across the platform while improving UI stability for large datasets.",
+        "Engineered reusable frontend modules, backend integrations, and standardized error-handling patterns while improving stability for large datasets.",
       ],
     },
     {
@@ -170,7 +190,7 @@ export const portfolio = {
       period: "April 2022 - August 2022",
       points: [
         "Automated dynamic report generation from user inputs, reducing manual effort and improving operational efficiency.",
-        "Resolved production bugs to improve reliability and optimized build configuration with Babel for better maintainability.",
+        "Resolved production bugs, improved backend reliability, and optimized build configuration for better maintainability.",
       ],
     },
   ],
@@ -182,16 +202,17 @@ export const portfolio = {
   },
 
   achievements: [
-    "Awarded Employee of the Quarter for consistent delivery and high-quality frontend contributions.",
+    "Awarded Employee of the Quarter for consistent delivery and high-quality full-stack engineering contributions.",
     "Mentored junior developers and improved team productivity, code quality, and shared engineering standards.",
     "Implemented unit testing with Jest and React Testing Library to improve reliability and reduce production issues.",
-    "Established documentation standards for internal APIs and UI libraries, reducing onboarding time for new hires by about 40%.",
+    "Established documentation standards for internal APIs and engineering libraries, reducing onboarding time for new hires by about 40%.",
   ],
 
   projectsSection: {
     eyebrow: "Toy Projects",
     headline: "Selected builds with product thinking",
-    subheadline: "A closer look at interface work, full-stack flows, and the decisions behind each project.",
+    subheadline:
+      "A closer look at full-stack systems, application architecture, and the engineering decisions behind each project.",
     label: "Featured build",
     liveLabel: "Live site",
     repoLabel: "GitHub",
@@ -226,8 +247,10 @@ export const portfolio = {
 
   skillsSection: {
     eyebrow: "Skills",
-    headline: "Frontend depth with full-stack awareness",
-    subheadline: "React architecture, state management, testing, performance, backend APIs, databases, and delivery tooling.",
+    headline:
+      "Full-stack engineering across frontend, backend, and databases",
+    subheadline:
+      "Building scalable applications using modern frontend frameworks, backend APIs, databases, testing, and deployment tooling.",
   },
 
   skills: [
@@ -283,7 +306,8 @@ export const portfolio = {
   contact: {
     eyebrow: "Contact",
     headline: "Let us build something useful.",
-    subheadline: "Share a role, project, or collaboration idea and I will get back to you.",
+    subheadline:
+      "Share a role, project, or collaboration idea and I will get back to you.",
     form: {
       nameLabel: "Name",
       namePlaceholder: "Your name",
@@ -296,12 +320,22 @@ export const portfolio = {
     },
     directTitle: "Direct links",
     links: [
-      { label: "guessme.smruti@gmail.com", href: "mailto:guessme.smruti@gmail.com" },
-      { label: "+91 9776444262", href: "tel:9776444262" },
-      { label: "Puri, Odisha", href: "https://goo.gl/maps/TDDTGna6qYtZFVT17", external: true },
+      {
+        label: "guessme.smruti@gmail.com",
+        href: "mailto:guessme.smruti@gmail.com",
+      },
+      {
+        label: "+91 9776444262",
+        href: "tel:9776444262",
+      },
+      {
+        label: "Puri, Odisha",
+        href: "https://goo.gl/maps/TDDTGna6qYtZFVT17",
+        external: true,
+      },
     ],
     noteTitle: "Best fit",
     note:
-      "Senior frontend roles, product engineering, enterprise React applications, UI architecture, performance optimization, and testing-focused teams.",
+      "Full-stack engineering roles, product development, scalable web applications, backend systems, frontend architecture, and performance-focused teams.",
   },
 };
