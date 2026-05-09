@@ -7,20 +7,20 @@ export const ContactUs = () => {
     const form = useRef();
     const { contact } = portfolio;
 
-    const sendEmail = async () => {
-        try {
-            const response = await emailjs.send(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                form.current,
-                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-            );
+const sendEmail = async () => {
+         try {
+             const response = await emailjs.sendForm(
+                 process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                 process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                 form.current,
+                 process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+             );
 
-            console.log("SUCCESS!", response);
-        } catch (error) {
-            console.log("FAILED...", error);
-        }
-    };
+             console.log("SUCCESS!", response);
+         } catch (error) {
+             console.log("FAILED...", error);
+         }
+     };
 
     return (
         <section className="contact section" id="Contact">
