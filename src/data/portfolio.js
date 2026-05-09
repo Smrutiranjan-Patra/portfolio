@@ -9,7 +9,6 @@ import mongo from "../compoents/images/mongodb.png";
 import react from "../compoents/images/react.png";
 import redux from "../compoents/images/redux.png";
 import github from "../compoents/images/github.png";
-import heroku from "../compoents/images/heroku.png";
 
 export const portfolio = {
   name: "Smrutiranjan Patra",
@@ -40,7 +39,7 @@ export const portfolio = {
     focusItems: [
       {
         label: "React and Next.js systems",
-        availability: "Open to senior frontend roles",
+        availability: "Open to senior engineer roles",
       },
       {
         label: "performance optimization",
@@ -60,7 +59,7 @@ export const portfolio = {
       },
     ],
     description:
-      "I am Smrutiranjan Patra, a frontend-focused product developer with 4+ years of experience building scalable web applications with React.js, Next.js, TypeScript, and the MERN stack. I specialize in component architecture, performance optimization, state management, testing, and enterprise-grade UI systems.",
+      "I am Smrutiranjan Patra, a full-stack engineer with 4+ years of experience building scalable web applications using React.js, Node.js, Express.js, and MongoDB. I specialize in component architecture, API development, database optimization, and enterprise-grade systems.",
     actions: [
       { label: "View projects", href: "#project", variant: "primary" },
       { label: "Download resume", href: "resume", variant: "secondary", external: true },
@@ -85,7 +84,7 @@ export const portfolio = {
     headline: "Product-minded frontend engineer with enterprise delivery experience.",
     subheadline: "I care about fast interfaces, reusable systems, clean code, and the developer experience behind the product.",
     description:
-      "My work spans enterprise UI frameworks, reusable component systems, API lifecycle tooling, workflow automation, and performance-sensitive React applications. I have worked across EDI and e-commerce platforms, using React.js, Next.js, Redux Toolkit, Zustand, Jest, React Testing Library, and modern frontend practices to improve speed, maintainability, and team productivity.",
+      "My work spans enterprise UI frameworks, reusable component systems, API lifecycle tooling, workflow automation, and performance-sensitive React and Node.js applications. I have worked across EDI and e-commerce platforms, using React.js, Next.js, Node.js, Express.js, MongoDB, and modern full-stack practices to improve speed, maintainability, and team productivity.",
     metrics: [
       { value: "4+", label: "Years building production web apps" },
       { value: "20%", label: "Application speed improvement delivered" },
@@ -110,6 +109,12 @@ export const portfolio = {
         title: "Reliability and DX",
         description:
           "Write unit tests, document internal APIs, mentor developers, and create patterns that reduce onboarding time.",
+      },
+      {
+        number: "04",
+        title: "Backend APIs and Databases",
+        description:
+          "Design and implement RESTful APIs, optimize database queries, and ensure secure and scalable backend systems.",
       },
     ],
     workflow: [
