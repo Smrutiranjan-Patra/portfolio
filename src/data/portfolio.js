@@ -207,7 +207,7 @@ export const portfolio = {
         "Built an interactive JavaScript execution visualizer to simulate the event loop, call stack, and asynchronous behavior for better learning and debugging.",
       description:
         "An interactive JavaScript visualization tool inspired by runtime execution concepts. The application visually demonstrates how JavaScript handles synchronous and asynchronous operations including the call stack, Web APIs, microtask queue, and callback queue.",
-      tech: ["React", "JavaScript", "HTML", "CSS"],
+      tech: ["HTML", "CSS", , "JavaScript", "React JS", "Zustand"],
       features: [
         "Event loop visualization",
         "Call stack simulation",
