@@ -4,13 +4,14 @@ import React, { useState } from "react";
 import { Header } from "./compoents/header";
 import { Home } from "./compoents/home";
 import { About } from "./compoents/about.jsx";
+import { Experience } from "./compoents/experience.jsx";
 import { Project } from "./compoents/project";
 import { Resume } from "./compoents/resume.jsx";
 import { ContactUs } from "./compoents/contact";
 import { portfolio } from "./data/portfolio";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const nextTheme = theme === "dark" ? "light" : "dark";
 
   const toggleTheme = () => {
@@ -22,6 +23,7 @@ function App() {
     <main>
       <Home />
       <About />
+      <Experience />
       <Project />
       <Resume />
       <ContactUs />

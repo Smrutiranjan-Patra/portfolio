@@ -16,9 +16,9 @@ export const portfolio = {
   name: "Smrutiranjan Patra",
   shortName: "Smrutiranjan",
   initials: "SP",
-  role: "Full-stack developer",
+  role: "Full Stack Product developer",
   resumeLabel: "Resume",
-  resumeUrl: "https://drive.google.com/uc?export=download&id=105FYtsMijwfYrgpEOFkVlH7VtmVdLKmt",
+  resumeUrl: "/Smrutiranjan_Patra_Resume.pdf",
   footer: "Built by Smrutiranjan Patra",
   themeSwitch: {
     lightLabel: "Light",
@@ -28,24 +28,40 @@ export const portfolio = {
   navigation: [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#project" },
     { label: "Skills", href: "#Resume" },
     { label: "Contact", href: "#Contact" },
   ],
 
   hero: {
-    eyebrow: "Full-stack developer",
-    headline: "I build reliable web products from interface to API.",
+    eyebrow: "Frontend and product developer",
+    headline: "I build enterprise React interfaces that stay fast, scalable, and maintainable.",
     rolePrefix: "Focused on",
-    rotatingWords: [
-      "React experiences",
-      "Node.js services",
-      "MongoDB data models",
-      "clean product flows",
-      "production-ready systems",
+    focusItems: [
+      {
+        label: "React and Next.js systems",
+        availability: "Open to senior frontend roles",
+      },
+      {
+        label: "performance optimization",
+        availability: "Open to product engineering roles",
+      },
+      {
+        label: "reusable UI architecture",
+        availability: "Open to design-system work",
+      },
+      {
+        label: "testing and reliability",
+        availability: "Open to quality-focused frontend roles",
+      },
+      {
+        label: "developer experience",
+        availability: "Open to platform UI roles",
+      },
     ],
     description:
-      "I am Smrutiranjan Patra, a MERN stack developer who enjoys turning business ideas into fast, maintainable applications with thoughtful UX, dependable APIs, and clear deployment paths.",
+      "I am Smrutiranjan Patra, a frontend-focused product developer with 4+ years of experience building scalable web applications with React.js, Next.js, TypeScript, and the MERN stack. I specialize in component architecture, performance optimization, state management, testing, and enterprise-grade UI systems.",
     actions: [
       { label: "View projects", href: "#project", variant: "primary" },
       { label: "Download resume", href: "resume", variant: "secondary", external: true },
@@ -55,45 +71,96 @@ export const portfolio = {
       { label: "LinkedIn", href: "https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/" },
       { label: "Email", href: "mailto:guessme.smruti@gmail.com" },
     ],
-    availability: "Open to full-stack roles",
+    availability: "Open to senior frontend roles",
     illustrationLabel: "Full-stack developer workspace illustration",
     illustrationTitle: "Developer building a full-stack application",
     stats: [
-      { value: "MERN", label: "Primary stack" },
-      { value: "REST", label: "API design" },
-      { value: "UI", label: "Responsive apps" },
+      { value: "4+", label: "Years of experience" },
+      { value: "20%", label: "Speed improvement delivered" },
+      { value: "40%", label: "Onboarding time reduced" },
     ],
   },
 
   about: {
     eyebrow: "About",
-    headline: "Developer with a product-first backend mindset.",
-    subheadline: "I care about the parts users touch and the systems that keep them working.",
+    headline: "Product-minded frontend engineer with enterprise delivery experience.",
+    subheadline: "I care about fast interfaces, reusable systems, clean code, and the developer experience behind the product.",
     image: aboutImage,
     imageAlt: "Developer workspace",
     description:
-      "I design and build full-stack web applications with React, Node.js, Express, MongoDB, and Redux. My sweet spot is translating a product requirement into a complete flow: a usable interface, predictable state, secure API routes, and data models that are easy to evolve.",
+      "My work spans enterprise UI frameworks, reusable component systems, API lifecycle tooling, workflow automation, and performance-sensitive React applications. I have worked across EDI and e-commerce platforms, using React.js, Next.js, Redux Toolkit, Zustand, Jest, React Testing Library, and modern frontend practices to improve speed, maintainability, and team productivity.",
     highlights: [
       {
         number: "01",
-        title: "Frontend systems",
+        title: "Enterprise UI systems",
         description:
-          "Responsive React screens, reusable components, clean state, and interfaces that feel natural to use.",
+          "Architect modular React interfaces, reusable snippets, and shared components used across product lines.",
       },
       {
         number: "02",
-        title: "Backend APIs",
+        title: "Performance and state",
         description:
-          "REST endpoints, Express services, authentication flows, validation, and database-backed features.",
+          "Improve rendering speed, pagination, memoization, code splitting, and predictable state management for large datasets.",
       },
       {
         number: "03",
-        title: "Delivery mindset",
+        title: "Reliability and DX",
         description:
-          "Git-based collaboration, deployment awareness, and practical decisions that keep projects shippable.",
+          "Write unit tests, document internal APIs, mentor developers, and create patterns that reduce onboarding time.",
       },
     ],
   },
+
+  experienceSection: {
+    eyebrow: "Experience",
+    headline: "Professional work with measurable product impact",
+    subheadline: "A resume-backed snapshot of roles, ownership, and outcomes.",
+  },
+
+  experience: [
+    {
+      company: "DCKAP Technologies",
+      role: "Product Developer II",
+      period: "July 2024 - Present",
+      points: [
+        "Architected a modular, high-performance UI framework for enterprise-grade applications with a focus on maintainability and component reusability.",
+        "Implemented frontend performance improvements such as code splitting and memoization, delivering around 20% improvement in application speed.",
+        "Designed a custom system management utility for API versioning and deprecation, helping phase out legacy dependencies and reduce technical debt.",
+      ],
+    },
+    {
+      company: "DCKAP Technologies",
+      role: "Product Developer I",
+      period: "August 2022 - July 2024",
+      points: [
+        "Built a unified Projects module for managing shared and personal assets, improving workflow efficiency through simpler navigation and data access.",
+        "Created automated credential mapping plus import and export flows that reduced manual configuration effort for users.",
+        "Engineered reusable snippets and standardized error-handling patterns across the platform while improving UI stability for large datasets.",
+      ],
+    },
+    {
+      company: "Influx Worldwide",
+      role: "Associate Software Developer",
+      period: "April 2022 - August 2022",
+      points: [
+        "Automated dynamic report generation from user inputs, reducing manual effort and improving operational efficiency.",
+        "Resolved production bugs to improve reliability and optimized build configuration with Babel for better maintainability.",
+      ],
+    },
+  ],
+
+  achievementsSection: {
+    eyebrow: "Impact",
+    headline: "What I bring to teams",
+    subheadline: "Highlights from the resume that describe how I work, not just what I know.",
+  },
+
+  achievements: [
+    "Awarded Employee of the Quarter for consistent delivery and high-quality frontend contributions.",
+    "Mentored junior developers and improved team productivity, code quality, and shared engineering standards.",
+    "Implemented unit testing with Jest and React Testing Library to improve reliability and reduce production issues.",
+    "Established documentation standards for internal APIs and UI libraries, reducing onboarding time for new hires by about 40%.",
+  ],
 
   projectsSection: {
     eyebrow: "Projects",
@@ -140,22 +207,59 @@ export const portfolio = {
 
   skillsSection: {
     eyebrow: "Skills",
-    headline: "Stack for building and shipping",
-    subheadline: "Frontend polish, backend structure, data persistence, and deployment workflow.",
+    headline: "Frontend depth with full-stack awareness",
+    subheadline: "React architecture, state management, testing, performance, backend APIs, databases, and delivery tooling.",
   },
 
   skills: [
+    { name: "JavaScript ES6+", icon: js, group: "Language" },
+    { name: "TypeScript", group: "Language" },
+    { name: "React.js", icon: react, group: "Frontend" },
+    { name: "Next.js", group: "Frontend" },
+    { name: "Redux Toolkit", icon: redux, group: "State" },
+    { name: "Zustand", group: "State" },
     { name: "HTML5", icon: html, group: "Interface" },
-    { name: "CSS3", icon: css, group: "Interface" },
-    { name: "JavaScript", icon: js, group: "Language" },
-    { name: "React", icon: react, group: "Frontend" },
-    { name: "Redux", icon: redux, group: "State" },
+    { name: "CSS3 / SASS", icon: css, group: "Interface" },
+    { name: "Tailwind CSS", group: "Styling" },
+    { name: "Jest", group: "Testing" },
+    { name: "React Testing Library", group: "Testing" },
     { name: "Node.js", icon: node, group: "Backend" },
-    { name: "Express", icon: express, group: "Backend" },
+    { name: "Express.js", icon: express, group: "Backend" },
+    { name: "REST APIs", group: "Backend" },
+    { name: "PostgreSQL", group: "Database" },
     { name: "MongoDB", icon: mongo, group: "Database" },
-    { name: "npm", icon: npm, group: "Tooling" },
+    { name: "MySQL", group: "Database" },
     { name: "GitHub", icon: github, group: "Workflow" },
+    { name: "GitLab", group: "Workflow" },
+    { name: "Docker", group: "DevOps" },
+    { name: "Jira", group: "Workflow" },
+    { name: "Postman", group: "Tooling" },
+    { name: "npm", icon: npm, group: "Tooling" },
     { name: "Heroku", icon: heroku, group: "Deploy" },
+  ],
+
+  educationSection: {
+    eyebrow: "Education",
+    headline: "Learning path",
+    subheadline: "Formal education and focused web development training.",
+  },
+
+  education: [
+    {
+      title: "Master of Computer Applications, AI and Machine Learning",
+      place: "Amity University, Uttar Pradesh",
+      period: "2025 - Expected 2027",
+    },
+    {
+      title: "Bachelor of Commerce, Accounting",
+      place: "Utkal University, Odisha",
+      period: "2017 - 2021",
+    },
+    {
+      title: "MERN Stack Web Development Training",
+      place: "Masai School, India",
+      period: "2021 - 2022",
+    },
   ],
 
   contact: {
@@ -180,6 +284,6 @@ export const portfolio = {
     ],
     noteTitle: "Best fit",
     note:
-      "Full-stack roles, MERN applications, API integrations, and product-facing React work.",
+      "Senior frontend roles, product engineering, enterprise React applications, UI architecture, performance optimization, and testing-focused teams.",
   },
 };

@@ -15,10 +15,25 @@
     background: var(--surface);
 }
 
-.skill-card img {
+.skill-card img,
+.skill-initial {
     width: 44px;
     height: 44px;
+    flex: 0 0 44px;
+}
+
+.skill-card img {
     object-fit: contain;
+}
+
+.skill-initial {
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: var(--surface-2);
+    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .skill-card strong,

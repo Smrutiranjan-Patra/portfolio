@@ -38,6 +38,29 @@
     color: var(--accent-2);
 }
 
+.focus-word {
+    display: inline-block;
+    animation: focusFade 2400ms ease infinite;
+}
+
+@keyframes focusFade {
+    0% {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    14%,
+    78% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+}
+
 .descriptions {
     max-width: 620px;
     margin: 20px 0 0;
@@ -183,6 +206,27 @@
     color: var(--text);
     font-weight: 800;
     backdrop-filter: blur(12px);
+}
+
+.availability strong {
+    font-size: 0.95rem;
+    line-height: 1.25;
+    animation: badgeFade 2400ms ease infinite;
+}
+
+@keyframes badgeFade {
+    0% {
+        opacity: 0;
+    }
+
+    16%,
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .availability span {

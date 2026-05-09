@@ -1,10 +1,27 @@
-import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
+import React, { useEffect, useState } from 'react';
 import "./css/home.css";
 import { portfolio } from "../data/portfolio";
 
 const Home = () => {
     const { hero } = portfolio;
+    const [activeFocus, setActiveFocus] = useState(0);
+    const focusItems = hero.focusItems || [];
+    const currentFocus = focusItems[activeFocus] || {
+        label: "",
+        availability: hero.availability,
+    };
+
+    useEffect(() => {
+        if (focusItems.length < 2) {
+            return undefined;
+        }
+
+        const interval = setInterval(() => {
+            setActiveFocus((index) => (index + 1) % focusItems.length);
+        }, 2400);
+
+        return () => clearInterval(interval);
+    }, [focusItems.length]);
 
     return (
         <section id="home" className="hero section">
@@ -14,15 +31,7 @@ const Home = () => {
                     <h1 className="name">{hero.headline}</h1>
                     <h2 className="role-line">
                         {hero.rolePrefix} <span id="typingtext">
-                            <Typewriter
-                                loop
-                                cursor
-                                cursorStyle="|"
-                                typeSpeed={52}
-                                deleteSpeed={28}
-                                delaySpeed={1200}
-                                words={hero.rotatingWords}
-                            />
+                            <span className="focus-word" key={currentFocus.label}>{currentFocus.label}</span>
                         </span>
                     </h2>
                     <p className="descriptions">{hero.description}</p>
@@ -80,7 +89,7 @@ const Home = () => {
                         </svg>
                         <div className="availability">
                             <span></span>
-                            {hero.availability}
+                            <strong key={currentFocus.availability}>{currentFocus.availability}</strong>
                         </div>
                     </div>
                     <div className="hero-stats">

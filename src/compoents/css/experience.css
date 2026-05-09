@@ -1,0 +1,112 @@
+.experience-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.experience-card {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.experience-meta span,
+.education-list span {
+    color: var(--accent-2);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.experience-meta h2,
+.impact-layout h2,
+.education-layout h2 {
+    margin: 10px 0 8px;
+    color: var(--text);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    line-height: 1.1;
+}
+
+.experience-meta p,
+.impact-layout p,
+.education-layout p,
+.education-list p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.experience-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.experience-card li {
+    margin-bottom: 12px;
+    line-height: 1.65;
+}
+
+.experience-card li:last-child {
+    margin-bottom: 0;
+}
+
+.impact-layout,
+.education-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.impact-layout > div:first-child,
+.education-layout > div:first-child,
+.impact-list,
+.education-list {
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+}
+
+.impact-list,
+.education-list {
+    display: grid;
+    gap: 12px;
+}
+
+.impact-list div,
+.education-list article {
+    padding: 18px;
+    border-radius: 8px;
+    background: var(--surface-2);
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.education-list h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+@media (max-width: 860px) {
+    .experience-card,
+    .impact-layout,
+    .education-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .experience-card,
+    .impact-layout > div:first-child,
+    .education-layout > div:first-child,
+    .impact-list,
+    .education-list {
+        padding: 20px;
+    }
+}

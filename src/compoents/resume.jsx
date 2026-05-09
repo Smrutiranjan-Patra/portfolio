@@ -16,7 +16,11 @@ const Resume = () => {
             <div className="bdetails">
                 {skills.map((skill) => (
                     <div className="skill-card" key={skill.name}>
-                        <img src={skill.icon} alt={`${skill.name} logo`} />
+                        {skill.icon ? (
+                            <img src={skill.icon} alt={`${skill.name} logo`} />
+                        ) : (
+                            <span className="skill-initial">{skill.name.slice(0, 2)}</span>
+                        )}
                         <div>
                             <strong>{skill.name}</strong>
                             <span>{skill.group}</span>
