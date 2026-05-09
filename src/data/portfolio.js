@@ -1,26 +1,26 @@
-import jsVisualizerPreview from "../compoents/images/jsVisualizerPreview.png";
-import html from "../compoents/images/html-5.png";
-import css from "../compoents/images/css3.png";
-import js from "../compoents/images/javascript.png";
-import node from "../compoents/images/node-js.png";
-import express from "../compoents/images/Express.png";
-import npm from "../compoents/images/npm.png";
-import mongo from "../compoents/images/MongoDB.png";
-import psql from "../compoents/images/PostgresSQL.png";
-import msql from "../compoents/images/MySQL.png"
-import react from "../compoents/images/react.png";
-import redux from "../compoents/images/redux.png";
-import github from "../compoents/images/github.png";
-import typescript from "../compoents/images/TypeScript.png";
-import tailwind from "../compoents/images/Tailwind-CSS.png";
-import antd from "../compoents/images/Ant-Design.png";
-import next from "../compoents/images/Nextjs.png";
-import jest from "../compoents/images/Jest.png"
-import rtl from "../compoents/images/react-testing-library.png"
-import glab from "../compoents/images/GitLab.png"
-import jira from "../compoents/images/Jira.png"
-import postman from "../compoents/images/Postman.png"
-import docker from "../compoents/images/Docker.png"
+import jsVisualizerPreview from "../components/images/jsVisualizerPreview.png";
+import html from "../components/images/html-5.png";
+import css from "../components/images/css3.png";
+import js from "../components/images/javascript.png";
+import node from "../components/images/node-js.png";
+import express from "../components/images/Express.png";
+import npm from "../components/images/npm.png";
+import mongo from "../components/images/MongoDB.png";
+import psql from "../components/images/PostgresSQL.png";
+import msql from "../components/images/MySQL.png"
+import react from "../components/images/react.png";
+import redux from "../components/images/redux.png";
+import github from "../components/images/github.png";
+import typescript from "../components/images/TypeScript.png";
+import tailwind from "../components/images/Tailwind-CSS.png";
+import antd from "../components/images/Ant-Design.png";
+import next from "../components/images/Nextjs.png";
+import jest from "../components/images/Jest.png"
+import rtl from "../components/images/react-testing-library.png"
+import glab from "../components/images/GitLab.png"
+import jira from "../components/images/Jira.png"
+import postman from "../components/images/Postman.png"
+import docker from "../components/images/Docker.png"
 
 export const portfolio = {
   name: "Smrutiranjan Patra",
@@ -240,7 +240,7 @@ export const portfolio = {
         "Built an interactive JavaScript execution visualizer to simulate the event loop, call stack, and asynchronous behavior for better learning and debugging.",
       description:
         "An interactive JavaScript visualization tool inspired by runtime execution concepts. The application visually demonstrates how JavaScript handles synchronous and asynchronous operations including the call stack, Web APIs, microtask queue, and callback queue.",
-      tech: ["HTML", "CSS", , "JavaScript", "React JS", "Zustand"],
+      tech: ["HTML", "CSS", "JavaScript", "React JS", "Zustand"],
       features: [
         "Event loop visualization",
         "Call stack simulation",

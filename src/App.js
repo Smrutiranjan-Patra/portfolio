@@ -1,13 +1,13 @@
 import "./App.css";
 import React, { useState } from "react";
 
-import { Header } from "./compoents/header";
-import { Home } from "./compoents/home";
-import { About } from "./compoents/about.jsx";
-import { Experience } from "./compoents/experience.jsx";
-import { Project } from "./compoents/project";
-import { Resume } from "./compoents/resume.jsx";
-import { ContactUs } from "./compoents/contact";
+import { Header } from "./components/header.jsx";
+import { Home } from "./components/home.jsx";
+import { About } from "./components/about.jsx";
+import { Experience } from "./components/experience.jsx";
+import { Project } from "./components/project.jsx";
+import { Resume } from "./components/resume.jsx";
+import { ContactUs } from "./components/contact.jsx";
 import { portfolio } from "./data/portfolio";
 
 function App() {
