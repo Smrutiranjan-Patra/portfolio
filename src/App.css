@@ -107,6 +107,9 @@ main {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 @media (max-width: 720px) {

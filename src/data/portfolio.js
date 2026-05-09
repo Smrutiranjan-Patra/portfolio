@@ -189,7 +189,7 @@ export const portfolio = {
   ],
 
   projectsSection: {
-    eyebrow: "Projects",
+    eyebrow: "Toy Projects",
     headline: "Selected builds with product thinking",
     subheadline: "A closer look at interface work, full-stack flows, and the decisions behind each project.",
     label: "Featured build",

@@ -11,6 +11,9 @@ import { ContactUs } from "./compoents/contact";
 import { portfolio } from "./data/portfolio";
 
 function App() {
+
+  const currentYear = new Date().getFullYear();
+
   const [theme, setTheme] = useState("light");
   const nextTheme = theme === "dark" ? "light" : "dark";
 
@@ -28,7 +31,14 @@ function App() {
       <Resume />
       <ContactUs />
     </main>
-    <footer className="site-footer">{portfolio.footer}</footer>
+    <footer className="site-footer">
+      <div>
+        {portfolio.footer}
+      </div>
+      <div>
+        {`Copyright © ${currentYear} Smrutiranjan Patra`}
+      </div>
+    </footer>
   </div>
 }
 

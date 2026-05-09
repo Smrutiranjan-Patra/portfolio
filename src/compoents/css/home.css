@@ -114,6 +114,8 @@
 
 #picture {
     position: relative;
+    top: -12%;
+    left: 7%;
 }
 
 .vector-card {
