@@ -1,7 +1,7 @@
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 2000;
     padding: 16px 20px 0;
 }
 
@@ -18,6 +18,43 @@
     background: var(--glass);
     backdrop-filter: blur(16px);
     box-shadow: var(--shadow);
+}
+
+#navigation ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+#navigation ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover Effect */
+#navigation ul li a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Animated Underline */
+#navigation ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+#navigation ul li a:hover::after {
+    width: 100%;
 }
 
 #logo {
@@ -174,7 +211,7 @@
         width: 100%;
     }
 
-    .theme-toggle > span:last-child {
+    .theme-toggle>span:last-child {
         display: none;
     }
 }
