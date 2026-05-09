@@ -3,12 +3,24 @@ import html from "../compoents/images/html-5.png";
 import css from "../compoents/images/css3.png";
 import js from "../compoents/images/javascript.png";
 import node from "../compoents/images/node-js.png";
-import express from "../compoents/images/express.png";
+import express from "../compoents/images/Express.png";
 import npm from "../compoents/images/npm.png";
-import mongo from "../compoents/images/mongodb.png";
+import mongo from "../compoents/images/MongoDB.png";
+import psql from "../compoents/images/PostgresSQL.png";
+import msql from "../compoents/images/MySQL.png"
 import react from "../compoents/images/react.png";
 import redux from "../compoents/images/redux.png";
 import github from "../compoents/images/github.png";
+import typescript from "../compoents/images/TypeScript.png";
+import tailwind from "../compoents/images/Tailwind-CSS.png";
+import antd from "../compoents/images/Ant-Design.png";
+import next from "../compoents/images/Nextjs.png";
+import jest from "../compoents/images/Jest.png"
+import rtl from "../compoents/images/react-testing-library.png"
+import glab from "../compoents/images/GitLab.png"
+import jira from "../compoents/images/Jira.png"
+import postman from "../compoents/images/Postman.png"
+import docker from "../compoents/images/Docker.png"
 
 export const portfolio = {
   name: "Smrutiranjan Patra",
@@ -255,28 +267,32 @@ export const portfolio = {
 
   skills: [
     { name: "JavaScript ES6+", icon: js, group: "Language" },
-    { name: "TypeScript", group: "Language" },
+    { name: "TypeScript", icon: typescript, group: "Language" },
     { name: "React.js", icon: react, group: "Frontend" },
-    { name: "Next.js", group: "Frontend" },
+    { name: "Next.js", icon: next, group: "Frontend" },
     { name: "Redux Toolkit", icon: redux, group: "State" },
     { name: "Zustand", group: "State" },
     { name: "HTML5", icon: html, group: "Interface" },
     { name: "CSS3 / SASS", icon: css, group: "Interface" },
-    { name: "Tailwind CSS", group: "Styling" },
-    { name: "Jest", group: "Testing" },
-    { name: "React Testing Library", group: "Testing" },
+    { name: "Tailwind CSS", icon: antd, group: "Styling" },
+    { name: "Ant Design", icon: tailwind, group: "Styling" },
+    { name: "Jest", icon: jest, group: "Testing" },
+    { name: "React Testing Library", icon: rtl, group: "Testing" },
     { name: "Node.js", icon: node, group: "Backend" },
     { name: "Express.js", icon: express, group: "Backend" },
     { name: "REST APIs", group: "Backend" },
-    { name: "PostgreSQL", group: "Database" },
+    { name: "PostgreSQL", icon: psql, group: "Database" },
     { name: "MongoDB", icon: mongo, group: "Database" },
-    { name: "MySQL", group: "Database" },
+    { name: "MySQL", icon: msql, group: "Database" },
     { name: "GitHub", icon: github, group: "Workflow" },
-    { name: "GitLab", group: "Workflow" },
-    { name: "Docker", group: "DevOps" },
-    { name: "Jira", group: "Workflow" },
-    { name: "Postman", group: "Tooling" },
+    { name: "GitLab", icon: glab, group: "Workflow" },
+    { name: "Docker", icon: docker, group: "DevOps" },
+    { name: "Jira", icon: jira, group: "Workflow" },
+    { name: "Postman", icon: postman, group: "Tooling" },
     { name: "npm", icon: npm, group: "Tooling" },
+    { name: "copilot", group :"AI tools"},
+    { name: "Chatgpt", group :"AI tools"},
+    { name: "Gemini", group :"AI tools"},
   ],
 
   educationSection: {
