@@ -4,12 +4,18 @@
   --bg: #0d1110;
   --surface: #151b18;
   --surface-2: #1d2520;
+  --surface-3: #222922;
   --text: #f4f1e8;
   --muted: #b9c0b6;
   --line: rgba(244, 241, 232, 0.13);
+  --soft-line: rgba(244, 241, 232, 0.035);
   --accent: #7fd069;
   --accent-2: #ff8a5b;
   --ink: #101412;
+  --field: #101512;
+  --glass: rgba(13, 17, 16, 0.86);
+  --hover: rgba(127, 208, 105, 0.11);
+  --soft-fill: rgba(255, 255, 255, 0.03);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
@@ -27,20 +33,8 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--bg);
-  color: var(--text);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(244, 241, 232, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 241, 232, 0.035) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 78%);
+  background: #0d1110;
+  color: #f4f1e8;
 }
 
 a {

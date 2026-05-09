@@ -1,9 +1,11 @@
 import "./css/contact.css";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { portfolio } from "../data/portfolio";
 
 export const ContactUs = () => {
     const form = useRef();
+    const { contact } = portfolio;
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -12,7 +14,7 @@ export const ContactUs = () => {
             .then((result) => {
                 console.log(result.text);
                 document.getElementById("form").reset();
-                alert('Thanks for Contact Me');
+                alert(contact.form.successMessage);
             }, (error) => {
                 console.log(error.text);
                 document.getElementById("form").reset()
@@ -22,36 +24,40 @@ export const ContactUs = () => {
     return (
         <section className="contact section" id="Contact">
             <div className="section-heading">
-                <p className="eyebrow">Contact</p>
-                <h1 className="page-header">Let us build something useful.</h1>
-                <p className="page-subheader5">Share a role, project, or collaboration idea and I will get back to you.</p>
+                <p className="eyebrow">{contact.eyebrow}</p>
+                <h1 className="page-header">{contact.headline}</h1>
+                <p className="page-subheader5">{contact.subheadline}</p>
             </div>
             <div className="form">
                 <form ref={form} onSubmit={sendEmail} id="form">
                     <div>
-                        <label>Name</label>
-                        <input type="text" name="user_name" placeholder="Your name" required />
+                        <label>{contact.form.nameLabel}</label>
+                        <input type="text" name="user_name" placeholder={contact.form.namePlaceholder} required />
                     </div>
                     <div>
-                        <label>Email</label>
-                        <input type="email" name="user_email" placeholder="you@example.com" required />
+                        <label>{contact.form.emailLabel}</label>
+                        <input type="email" name="user_email" placeholder={contact.form.emailPlaceholder} required />
                     </div>
                     <div>
-                        <label>Message</label>
-                        <textarea name="message" placeholder="Tell me about the opportunity or project" required></textarea>
+                        <label>{contact.form.messageLabel}</label>
+                        <textarea name="message" placeholder={contact.form.messagePlaceholder} required></textarea>
                     </div>
                     <div>
-                        <button id="submit-btn" type="submit">Send message</button>
+                        <button id="submit-btn" type="submit">{contact.form.submitLabel}</button>
                     </div>
                 </form>
                 <div className="sidedetails">
-                    <h2>Direct links</h2>
-                    <a href="mailto:guessme.smruti@gmail.com">guessme.smruti@gmail.com</a>
-                    <a href="tel:9776444262">+91 9776444262</a>
-                    <a href="https://goo.gl/maps/TDDTGna6qYtZFVT17" target="_blank" rel="noreferrer">Puri, Odisha</a>
+                    <h2>{contact.directTitle}</h2>
+                    {contact.links.map((link) => {
+                        const externalProps = link.external
+                            ? { target: "_blank", rel: "noreferrer" }
+                            : {};
+
+                        return <a href={link.href} key={link.label} {...externalProps}>{link.label}</a>;
+                    })}
                     <div className="contact-note">
-                        <strong>Best fit</strong>
-                        <span>Full-stack roles, MERN applications, API integrations, and product-facing React work.</span>
+                        <strong>{contact.noteTitle}</strong>
+                        <span>{contact.note}</span>
                     </div>
                 </div>
             </div>

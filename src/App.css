@@ -1,6 +1,56 @@
 .App {
+  --bg: #0d1110;
+  --surface: #151b18;
+  --surface-2: #1d2520;
+  --surface-3: #222922;
+  --text: #f4f1e8;
+  --muted: #b9c0b6;
+  --line: rgba(244, 241, 232, 0.13);
+  --soft-line: rgba(244, 241, 232, 0.035);
+  --accent: #7fd069;
+  --accent-2: #ff8a5b;
+  --ink: #101412;
+  --field: #101512;
+  --glass: rgba(13, 17, 16, 0.86);
+  --hover: rgba(127, 208, 105, 0.11);
+  --soft-fill: rgba(255, 255, 255, 0.03);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
   min-height: 100vh;
   overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 220ms ease, color 220ms ease;
+}
+
+.App[data-theme="light"] {
+  --bg: #f7f5ef;
+  --surface: #ffffff;
+  --surface-2: #eeeadf;
+  --surface-3: #e7e1d3;
+  --text: #17201b;
+  --muted: #5e695f;
+  --line: rgba(23, 32, 27, 0.14);
+  --soft-line: rgba(23, 32, 27, 0.055);
+  --accent: #327a47;
+  --accent-2: #c95d35;
+  --ink: #ffffff;
+  --field: #fbfaf6;
+  --glass: rgba(247, 245, 239, 0.88);
+  --hover: rgba(50, 122, 71, 0.1);
+  --soft-fill: rgba(23, 32, 27, 0.04);
+  --shadow: 0 24px 70px rgba(37, 32, 19, 0.12);
+}
+
+.App::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--soft-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--soft-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 78%);
 }
 
 main {
@@ -9,13 +59,13 @@ main {
 }
 
 .section {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1280px, calc(100% - 64px));
   margin: 0 auto;
   padding: 92px 0;
 }
 
 .section-heading {
-  max-width: 720px;
+  max-width: 820px;
   margin-bottom: 34px;
 }
 
@@ -51,7 +101,7 @@ main {
 .site-footer {
   position: relative;
   z-index: 1;
-  width: min(1120px, calc(100% - 40px));
+  width: min(1280px, calc(100% - 64px));
   margin: 0 auto;
   padding: 32px 0 44px;
   border-top: 1px solid var(--line);
@@ -61,7 +111,7 @@ main {
 
 @media (max-width: 720px) {
   .section {
-    width: min(100% - 28px, 1120px);
+    width: min(100% - 28px, 1280px);
     padding: 68px 0;
   }
 

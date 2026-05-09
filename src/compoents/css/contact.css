@@ -36,7 +36,7 @@
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #101512;
+  background: var(--field);
   color: var(--text);
   outline: none;
 }
@@ -90,7 +90,7 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--soft-fill);
   overflow-wrap: anywhere;
 }
 

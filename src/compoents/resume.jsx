@@ -1,38 +1,16 @@
 import React from "react";
 import "./css/resume.css";
-import html from "./images/html-5.png";
-import css from "./images/css3.png";
-import js from "./images/javascript.png";
-import node from "./images/node-js.png";
-import express from "./images/express.png";
-import npm from "./images/npm.png";
-import mongo from "./images/mongodb.png";
-import react from "./images/react.png";
-import redux from "./images/redux.png";
-import github from "./images/github.png";
-import heroku from "./images/heroku.png";
-
-const skills = [
-    { name: "HTML5", icon: html, group: "Interface" },
-    { name: "CSS3", icon: css, group: "Interface" },
-    { name: "JavaScript", icon: js, group: "Language" },
-    { name: "React", icon: react, group: "Frontend" },
-    { name: "Redux", icon: redux, group: "State" },
-    { name: "Node.js", icon: node, group: "Backend" },
-    { name: "Express", icon: express, group: "Backend" },
-    { name: "MongoDB", icon: mongo, group: "Database" },
-    { name: "npm", icon: npm, group: "Tooling" },
-    { name: "GitHub", icon: github, group: "Workflow" },
-    { name: "Heroku", icon: heroku, group: "Deploy" },
-];
+import { portfolio } from "../data/portfolio";
 
 const Resume = () => {
+    const { skills, skillsSection } = portfolio;
+
     return (
         <section className="resume section" id="Resume">
             <div className="section-heading">
-                <p className="eyebrow">Skills</p>
-                <h1 className="page-header">Stack for building and shipping</h1>
-                <p className="page-subheader3">Frontend polish, backend structure, data persistence, and deployment workflow.</p>
+                <p className="eyebrow">{skillsSection.eyebrow}</p>
+                <h1 className="page-header">{skillsSection.headline}</h1>
+                <p className="page-subheader3">{skillsSection.subheadline}</p>
             </div>
 
             <div className="bdetails">

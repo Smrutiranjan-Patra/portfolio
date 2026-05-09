@@ -7,8 +7,8 @@
 
 #personal {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-    gap: 48px;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+    gap: clamp(32px, 6vw, 76px);
     align-items: center;
     width: 100%;
 }
@@ -76,7 +76,7 @@
     padding: 0 16px;
     border: 1px solid var(--line);
     color: var(--text);
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--soft-fill);
 }
 
 .icons {
@@ -93,7 +93,7 @@
     position: relative;
 }
 
-.portrait-card {
+.vector-card {
     position: relative;
     overflow: hidden;
     border: 1px solid var(--line);
@@ -102,10 +102,69 @@
     box-shadow: var(--shadow);
 }
 
-.portrait-card img {
+.developer-vector {
     width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
+    height: auto;
+    display: block;
+}
+
+.vector-bg {
+    fill: var(--surface-2);
+}
+
+.terminal-window,
+.server-card {
+    fill: var(--surface);
+    stroke: var(--line);
+    stroke-width: 2;
+}
+
+.window-dot.coral {
+    fill: var(--accent-2);
+}
+
+.window-dot.gold {
+    fill: #e0b84f;
+}
+
+.window-dot.green,
+.status-light {
+    fill: var(--accent);
+}
+
+.code-line,
+.bracket,
+.connector {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.code-line {
+    stroke-width: 18;
+}
+
+.accent-line {
+    stroke: var(--accent);
+}
+
+.muted-line {
+    stroke: var(--muted);
+    opacity: 0.52;
+}
+
+.short {
+    stroke-width: 16;
+}
+
+.bracket {
+    stroke: var(--accent-2);
+    stroke-width: 18;
+}
+
+.connector {
+    stroke: var(--line);
+    stroke-width: 5;
 }
 
 .availability {
@@ -120,7 +179,7 @@
     padding: 0 14px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: rgba(13, 17, 16, 0.86);
+    background: var(--glass);
     color: var(--text);
     font-weight: 800;
     backdrop-filter: blur(12px);
@@ -177,6 +236,7 @@
 
     #picture {
         max-width: 520px;
+        width: 100%;
     }
 }
 

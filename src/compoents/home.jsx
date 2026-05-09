@@ -1,17 +1,19 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import "./css/home.css";
-import profile from './images/profile.png'
+import { portfolio } from "../data/portfolio";
 
 const Home = () => {
+    const { hero } = portfolio;
+
     return (
         <section id="home" className="hero section">
             <div id="personal">
                 <div id="data">
-                    <p className="eyebrow">Full-stack developer</p>
-                    <h1 className="name">I build reliable web products from interface to API.</h1>
+                    <p className="eyebrow">{hero.eyebrow}</p>
+                    <h1 className="name">{hero.headline}</h1>
                     <h2 className="role-line">
-                        Focused on <span id="typingtext">
+                        {hero.rolePrefix} <span id="typingtext">
                             <Typewriter
                                 loop
                                 cursor
@@ -19,33 +21,72 @@ const Home = () => {
                                 typeSpeed={52}
                                 deleteSpeed={28}
                                 delaySpeed={1200}
-                                words={["React experiences", "Node.js services", "MongoDB data models", "clean product flows", "production-ready systems"]}
+                                words={hero.rotatingWords}
                             />
                         </span>
                     </h2>
-                    <p className="descriptions">I am Smrutiranjan Patra, a MERN stack developer who enjoys turning business ideas into fast, maintainable applications with thoughtful UX, dependable APIs, and clear deployment paths.</p>
+                    <p className="descriptions">{hero.description}</p>
                     <div className="hero-actions">
-                        <a className="primary-action" href="#project">View projects</a>
-                        <a className="secondary-action" href="https://drive.google.com/uc?export=download&id=105FYtsMijwfYrgpEOFkVlH7VtmVdLKmt" target="_blank" rel="noreferrer">Download resume</a>
+                        {hero.actions.map((action) => {
+                            const href = action.href === "resume" ? portfolio.resumeUrl : action.href;
+                            const externalProps = action.external
+                                ? { target: "_blank", rel: "noreferrer" }
+                                : {};
+
+                            return (
+                                <a
+                                    className={`${action.variant}-action`}
+                                    href={href}
+                                    key={action.label}
+                                    {...externalProps}
+                                >
+                                    {action.label}
+                                </a>
+                            );
+                        })}
                     </div>
                     <div className="icons" aria-label="Social links">
-                        <a href="https://github.com/Smrutiranjan-Patra" target="_blank" rel="noreferrer">GitHub</a>
-                        <a href="https://www.linkedin.com/in/smrutiranjan-patra-07385b1bb/" target="_blank" rel="noreferrer">LinkedIn</a>
-                        <a href="mailto:guessme.smruti@gmail.com">Email</a>
+                        {hero.socialLinks.map((link) => {
+                            const externalProps = link.href.startsWith("http")
+                                ? { target: "_blank", rel: "noreferrer" }
+                                : {};
+
+                            return <a href={link.href} key={link.label} {...externalProps}>{link.label}</a>;
+                        })}
                     </div>
                 </div>
                 <div id="picture">
-                    <div className="portrait-card">
-                        <img src={profile} alt="Smrutiranjan Patra" />
+                    <div className="vector-card" aria-label={hero.illustrationLabel}>
+                        <svg className="developer-vector" viewBox="0 0 720 560" role="img" aria-labelledby="developerVectorTitle">
+                            <title id="developerVectorTitle">{hero.illustrationTitle}</title>
+                            <rect className="vector-bg" x="28" y="28" width="664" height="504" rx="28" />
+                            <rect className="terminal-window" x="86" y="92" width="548" height="316" rx="18" />
+                            <circle className="window-dot coral" cx="122" cy="128" r="9" />
+                            <circle className="window-dot gold" cx="152" cy="128" r="9" />
+                            <circle className="window-dot green" cx="182" cy="128" r="9" />
+                            <path className="code-line accent-line" d="M126 188h168" />
+                            <path className="code-line muted-line" d="M126 230h270" />
+                            <path className="code-line muted-line short" d="M126 272h214" />
+                            <path className="code-line accent-line" d="M126 314h306" />
+                            <path className="bracket" d="M496 194l-54 58 54 58" />
+                            <path className="bracket" d="M548 194l54 58-54 58" />
+                            <rect className="server-card" x="138" y="438" width="150" height="54" rx="14" />
+                            <rect className="server-card" x="318" y="438" width="150" height="54" rx="14" />
+                            <rect className="server-card" x="498" y="438" width="84" height="54" rx="14" />
+                            <path className="connector" d="M213 438v-34M393 438v-34M540 438v-34" />
+                            <circle className="status-light" cx="168" cy="465" r="7" />
+                            <circle className="status-light" cx="348" cy="465" r="7" />
+                            <circle className="status-light" cx="524" cy="465" r="7" />
+                        </svg>
                         <div className="availability">
                             <span></span>
-                            Open to full-stack roles
+                            {hero.availability}
                         </div>
                     </div>
                     <div className="hero-stats">
-                        <div><strong>MERN</strong><span>Primary stack</span></div>
-                        <div><strong>REST</strong><span>API design</span></div>
-                        <div><strong>UI</strong><span>Responsive apps</span></div>
+                        {hero.stats.map((stat) => (
+                            <div key={stat.value}><strong>{stat.value}</strong><span>{stat.label}</span></div>
+                        ))}
                     </div>
                 </div>
             </div >
