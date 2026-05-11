@@ -3,26 +3,46 @@
     display: flex;
     align-items: center;
     padding-top: 56px;
+    overflow: hidden;
 }
 
 #personal {
     display: grid;
-    grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
     gap: clamp(32px, 6vw, 76px);
     align-items: center;
     width: 100%;
+    min-width: 0;
 }
 
 #data {
-    max-width: 720px;
+    max-width: 640px;
+    min-width: 0;
 }
 
 .name {
     margin: 0;
     color: var(--text);
-    font-size: clamp(2.8rem, 7vw, 6.8rem);
-    line-height: 0.95;
+    font-size: clamp(3rem, 7.5vw, 7.2rem);
+    line-height: 0.93;
     letter-spacing: 0;
+}
+
+.role-line {
+    min-height: 38px;
+    margin: 24px 0 0;
+    color: var(--muted);
+    font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.descriptions {
+    max-width: 640px;
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .role-line {
@@ -114,8 +134,10 @@
 
 #picture {
     position: relative;
-    top: -12%;
-    left: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .vector-card {
@@ -125,6 +147,8 @@
     border-radius: 8px;
     background: var(--surface);
     box-shadow: var(--shadow);
+    max-width: 560px;
+    width: 100%;
 }
 
 .developer-vector {
@@ -243,7 +267,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 16px;
+    width: 100%;
 }
 
 .hero-stats div {
@@ -274,21 +299,50 @@
 @media (max-width: 900px) {
     .hero {
         min-height: auto;
+        padding-top: 40px;
     }
 
     #personal {
         grid-template-columns: 1fr;
+        gap: clamp(24px, 4vw, 48px);
     }
 
     #picture {
-        max-width: 520px;
-        width: 100%;
+        max-width: 500px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 560px) {
+    .hero {
+        padding-top: 24px;
+    }
+
     .name {
-        font-size: 3.1rem;
+        font-size: 2.4rem;
+    }
+
+    .role-line {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        min-height: 32px;
+    }
+
+    .descriptions {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
     }
 
     .hero-actions a,
@@ -299,5 +353,9 @@
 
     .hero-stats {
         grid-template-columns: 1fr;
+    }
+
+    .vector-card {
+        max-width: 100%;
     }
 }
