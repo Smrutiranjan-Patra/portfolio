@@ -25,7 +25,6 @@ const Resume = () => {
                 {Object.entries(skillGroups).map(([group, groupSkills]) => (
                     <article className="skill-group" key={group}>
                         <div className="skill-group-heading">
-                            <span>{String(groupSkills.length).padStart(2, "0")}</span>
                             <h2>{group}</h2>
                         </div>
                         <div className="bdetails">
