@@ -4,7 +4,7 @@ import { portfolio } from "../data/portfolio";
 import { GiSunrise, GiSunset } from "react-icons/gi";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const Header = ({ theme, onThemeToggle }) => {
+const Header = ({ theme, onThemeToggle, onResumeOpen }) => {
     const isDark = theme === "dark";
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigationId = "primary-navigation";
@@ -42,7 +42,17 @@ const Header = ({ theme, onThemeToggle }) => {
                 </ul>
 
                 <div className="btn-div">
-                    <a href={portfolio.resumeUrl} id='resume-btn' target="_blank" rel="noreferrer" onClick={closeMenu}>{portfolio.resumeLabel}</a>
+                    <button
+                        type="button"
+                        id="resume-btn"
+                        className="resume-button"
+                        onClick={() => {
+                            onResumeOpen();
+                            closeMenu();
+                        }}
+                    >
+                        {portfolio.resumeLabel}
+                    </button>
                 </div>
             </nav>
         </header>

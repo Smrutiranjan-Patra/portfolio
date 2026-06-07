@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./css/home.css";
 import { portfolio } from "../data/portfolio";
 
-const Home = () => {
+const Home = ({ onResumeOpen }) => {
     const { hero } = portfolio;
     const [activeFocus, setActiveFocus] = useState(0);
     const focusItems = hero.focusItems || [];
@@ -37,7 +37,23 @@ const Home = () => {
                     <p className="descriptions">{hero.description}</p>
                     <div className="hero-actions">
                         {hero.actions.map((action) => {
-                            const href = action.href === "resume" ? portfolio.resumeUrl : action.href;
+                            if (action.href === "resume") {
+                                return (
+                                    <button
+                                        key={action.label}
+                                        type="button"
+                                        className={`${action.variant}-action`}
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            onResumeOpen();
+                                        }}
+                                    >
+                                        {action.label}
+                                    </button>
+                                );
+                            }
+
+                            const href = action.href;
                             const externalProps = action.external
                                 ? { target: "_blank", rel: "noreferrer" }
                                 : {};
