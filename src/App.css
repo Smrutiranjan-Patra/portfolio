@@ -22,6 +22,7 @@
   transition: background 220ms ease, color 220ms ease;
 }
 
+body[data-theme="light"],
 .App[data-theme="light"] {
   --bg: #f7f5ef;
   --surface: #ffffff;
@@ -56,12 +57,18 @@
 main {
   position: relative;
   z-index: 1;
+  perspective: 1200px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
 }
 
 .section {
   width: min(1280px, calc(100% - 64px));
   margin: 0 auto;
   padding: 92px 0;
+  transform-origin: center top;
+  will-change: transform;
+  transition: transform 220ms ease-out;
 }
 
 .section-heading {
