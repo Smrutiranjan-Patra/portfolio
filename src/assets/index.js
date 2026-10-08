@@ -1,4 +1,5 @@
 import jsVisualizerPreview from "../components/images/jsVisualizerPreview.png";
+import neoathlonPreview from "../components/images/neoathlonPreview.png";
 import html from "../components/images/html-5.png";
 import css from "../components/images/css3.png";
 import js from "../components/images/javascript.png";
@@ -27,6 +28,7 @@ import gemini from "../components/images/google-gemini-icon.png";
 
 export {
     jsVisualizerPreview,
+    neoathlonPreview,
     html,
     css,
     js,

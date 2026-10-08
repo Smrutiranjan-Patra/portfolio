@@ -15,8 +15,12 @@
   --hover: rgba(127, 208, 105, 0.11);
   --soft-fill: rgba(255, 255, 255, 0.03);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  --route-indent: 58px;
+  --rail-width: 4px;
+  --panel-glass: rgba(16, 22, 20, 0.62);
+  --panel-solid: rgba(16, 22, 20, 0.93);
+  --panel-edge: rgba(244, 241, 232, 0.16);
   min-height: 100vh;
-  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   transition: background 220ms ease, color 220ms ease;
@@ -40,6 +44,9 @@ body[data-theme="light"],
   --hover: rgba(50, 122, 71, 0.1);
   --soft-fill: rgba(23, 32, 27, 0.04);
   --shadow: 0 24px 70px rgba(37, 32, 19, 0.12);
+  --panel-glass: rgba(255, 255, 255, 0.74);
+  --panel-solid: rgba(252, 251, 247, 0.95);
+  --panel-edge: rgba(23, 32, 27, 0.14);
 }
 
 .App::before {
@@ -60,9 +67,10 @@ main {
 }
 
 .section {
+  position: relative;
   width: min(1280px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 92px 0;
+  padding: 92px 0 92px var(--route-indent);
   transform-origin: center top;
   will-change: transform;
   transition: transform 220ms ease-out;
@@ -107,7 +115,7 @@ main {
   z-index: 1;
   width: min(1280px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 32px 0 44px;
+  padding: 32px 0 44px var(--route-indent);
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.95rem;
@@ -117,9 +125,14 @@ main {
 }
 
 @media (max-width: 720px) {
+  .App {
+    --route-indent: 34px;
+    --rail-width: 3px;
+  }
+
   .section {
     width: min(100% - 28px, 1280px);
-    padding: 68px 0;
+    padding: 68px 0 68px var(--route-indent);
   }
 
   .section-heading {
@@ -128,6 +141,7 @@ main {
 
   .site-footer {
     width: min(100% - 28px, 1280px);
+    padding-left: var(--route-indent);
     flex-direction: column-reverse;
     gap: 8px;
     text-align: left;

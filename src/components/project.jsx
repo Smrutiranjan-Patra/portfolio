@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/project.css";
 import { portfolio } from "../data/portfolio";
+import { RouteStop } from "./route.jsx";
 
 const Project = () => {
   const { projects, projectsSection } = portfolio;
@@ -8,42 +9,67 @@ const Project = () => {
   return (
     <section className="container section" id="project">
       <div className="section-heading">
-        <p className="eyebrow">{projectsSection.eyebrow}</p>
+        <RouteStop mile={portfolio.stops.project.mile} label={portfolio.stops.project.label} />
         <h1 className="page-headerpro">{projectsSection.headline}</h1>
         <p className="page-subheader1">{projectsSection.subheadline}</p>
       </div>
-      <div className="project">
+
+      <div className="project-grid">
         {projects.map((project) => (
-          <article className="project-box" key={project.name}>
-            <div className="project-preview">
-              <a className="img-box" href={project.live} target="_blank" rel="noreferrer">
-                <img src={project.image} alt={project.imageAlt} />
-              </a>
-              <div className="project-quick-facts">
-                <span>{project.type}</span>
-                <strong>{project.role}</strong>
-              </div>
-            </div>
-            <div className="details">
-              <span className="project-label">{projectsSection.label}</span>
+          <article className="project-card" key={project.name}>
+            <a
+              className="project-media"
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              tabIndex={-1}
+              aria-hidden="true"
+            >
+              <img src={project.image} alt="" loading="lazy" />
+              <span className="project-chips">
+                <span className="project-chip project-chip--label">
+                  {project.label || projectsSection.label}
+                </span>
+                {project.status && (
+                  <span className="project-chip project-chip--status">{project.status}</span>
+                )}
+              </span>
+            </a>
+
+            <div className="project-body">
               <h3 className="project-name">{project.name}</h3>
+              <p className="project-meta">
+                <span>{project.role}</span>
+                <span>{project.type}</span>
+              </p>
               <p className="project-details">{project.outcome || project.description}</p>
+
               <div className="project-feature-list">
-                <span>{projectsSection.detailLabel}</span>
+                <span className="project-feature-title">{projectsSection.detailLabel}</span>
                 <ul>
                   {project.features.map((feature) => (
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
               </div>
+
               <div className="tech-stack">
                 {project.tech.map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))}
               </div>
+
               <div className="project-actions">
-                <a className="live-btn" href={project.live} target="_blank" rel="noreferrer">{projectsSection.liveLabel}</a>
-                <a className="github-btn" href={project.repo} target="_blank" rel="noreferrer">{projectsSection.repoLabel}</a>
+                <a className="live-btn" href={project.live} target="_blank" rel="noreferrer">
+                  {project.liveLabel || projectsSection.liveLabel}
+                  <span className="sr-only"> for {project.name}</span>
+                </a>
+                {project.repo && (
+                  <a className="github-btn" href={project.repo} target="_blank" rel="noreferrer">
+                    {projectsSection.repoLabel}
+                    <span className="sr-only"> for {project.name}</span>
+                  </a>
+                )}
               </div>
             </div>
           </article>

@@ -8,7 +8,7 @@
 .about-story,
 .metric-card,
 .highlight-grid article,
-.workflow-panel {
+.workflow-panel article {
     border: 1px solid var(--line);
     border-radius: 8px;
     background: var(--surface);
@@ -123,30 +123,43 @@
 .workflow-panel {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1px;
-    overflow: hidden;
+    gap: 14px;
     margin-top: 18px;
-    background: var(--line);
 }
 
 .workflow-panel article {
-    min-height: 220px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 18px;
+    gap: 14px;
     padding: 24px;
-    background: var(--surface);
+}
+
+/* These four are a sequence, not a set: bridge the gap so they read in order
+   without going back to one undivided slab. */
+.workflow-panel article::after {
+    content: "";
+    position: absolute;
+    top: 46px;
+    right: -15px;
+    width: 15px;
+    height: 2px;
+    background: var(--line);
+}
+
+.workflow-panel article:last-child::after {
+    display: none;
 }
 
 .workflow-index {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     display: grid;
     place-items: center;
-    border-radius: 8px;
+    border-radius: 50%;
     background: var(--accent);
     color: var(--ink);
+    font-size: 0.82rem;
     font-weight: 800;
 }
 
@@ -170,8 +183,8 @@
         grid-template-columns: 1fr;
     }
 
-    .workflow-panel article {
-        min-height: auto;
+    .workflow-panel article::after {
+        display: none;
     }
 }
 

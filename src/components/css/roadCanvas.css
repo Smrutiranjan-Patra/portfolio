@@ -1,0 +1,133 @@
+/* The WebGL road sits behind everything, fixed to the viewport. */
+.road-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 900ms ease;
+}
+
+body[data-road="ready"] .road-canvas {
+    opacity: 1;
+}
+
+/* ---------------------------------------------------------------------------
+   When the 3D road is active the page becomes an overlay on top of it: the
+   flat background is dropped, panels turn to glass, and the 2D rail retires
+   because the real road has taken its job.
+
+   Every rule here is scoped to [data-3d="on"], so the 2D layout is untouched
+   on devices that fall back.
+--------------------------------------------------------------------------- */
+
+.App[data-3d="on"] {
+    background: transparent;
+}
+
+.App[data-3d="on"]::before {
+    display: none;
+}
+
+.App[data-3d="on"] main,
+.App[data-3d="on"] .site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* The rail, its caps and every marker that hung off it. */
+.App[data-3d="on"] .route-rail,
+.App[data-3d="on"] .route-stop-marker,
+.App[data-3d="on"] .journey-marker {
+    display: none;
+}
+
+.App[data-3d="on"] {
+    --route-indent: 0px;
+}
+
+/* Panels need their own background now that the page has none. */
+.App[data-3d="on"] .journey-card,
+.App[data-3d="on"] .about-story,
+.App[data-3d="on"] .metric-card,
+.App[data-3d="on"] .highlight-grid article,
+.App[data-3d="on"] .workflow-panel article,
+.App[data-3d="on"] .impact-layout > div:first-child,
+.App[data-3d="on"] .impact-list,
+.App[data-3d="on"] .skill-group,
+.App[data-3d="on"] .project-card,
+.App[data-3d="on"] .form form,
+.App[data-3d="on"] .sidedetails,
+.App[data-3d="on"] .route-map,
+.App[data-3d="on"] .hero-stats div {
+    background: var(--panel-glass);
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+    border-color: var(--panel-edge);
+}
+
+/* Section headings sit directly on the scene, so they need a readable scrim. */
+.App[data-3d="on"] .section-heading {
+    padding: 22px 24px;
+    border-radius: 12px;
+    background: var(--panel-glass);
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+    border: 1px solid var(--panel-edge);
+}
+
+.App[data-3d="on"] #data {
+    padding: 26px 28px;
+    border-radius: 14px;
+    background: var(--panel-glass);
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+    border: 1px solid var(--panel-edge);
+}
+
+.App[data-3d="on"] .site-footer {
+    border-top-color: var(--panel-edge);
+}
+
+/* Backdrop-filter is expensive; drop the blur but keep panels opaque enough to
+   read if the browser cannot composite it. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .App[data-3d="on"] .journey-card,
+    .App[data-3d="on"] .skill-group,
+    .App[data-3d="on"] .section-heading,
+    .App[data-3d="on"] #data,
+    .App[data-3d="on"] .project-card,
+    .App[data-3d="on"] .form form,
+    .App[data-3d="on"] .sidedetails,
+    .App[data-3d="on"] .route-map {
+        background: var(--panel-solid);
+    }
+}
+
+@media (max-width: 720px) {
+    /* Blur over a moving 3D scene is the most expensive thing on the page;
+       phones get flat translucency instead. */
+    .App[data-3d="on"] .journey-card,
+    .App[data-3d="on"] .about-story,
+    .App[data-3d="on"] .metric-card,
+    .App[data-3d="on"] .highlight-grid article,
+    .App[data-3d="on"] .workflow-panel,
+    .App[data-3d="on"] .workflow-panel article,
+    .App[data-3d="on"] .impact-layout > div:first-child,
+    .App[data-3d="on"] .impact-list,
+    .App[data-3d="on"] .skill-group,
+    .App[data-3d="on"] .project-card,
+    .App[data-3d="on"] .form form,
+    .App[data-3d="on"] .sidedetails,
+    .App[data-3d="on"] .route-map,
+    .App[data-3d="on"] .section-heading,
+    .App[data-3d="on"] #data,
+    .App[data-3d="on"] .hero-stats div {
+        background: var(--panel-solid);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}

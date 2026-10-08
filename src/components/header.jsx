@@ -4,7 +4,7 @@ import { portfolio } from "../data/portfolio";
 import { GiSunrise, GiSunset } from "react-icons/gi";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const Header = ({ theme, onThemeToggle, onResumeOpen }) => {
+const Header = ({ theme, onThemeToggle, onResumeOpen, hidden }) => {
     const isDark = theme === "dark";
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigationId = "primary-navigation";
@@ -12,7 +12,7 @@ const Header = ({ theme, onThemeToggle, onResumeOpen }) => {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <header className="site-header">
+        <header className="site-header" data-hidden={hidden && !isMenuOpen ? "yes" : "no"}>
             <nav id="navigation" aria-label="Primary navigation">
                 <a id="logo" href="#home" aria-label={`${portfolio.name} home`}>
                     <span className="logo-mark">{portfolio.initials}</span>

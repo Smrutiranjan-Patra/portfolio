@@ -1,0 +1,167 @@
+/* ---------------------------------------------------------------------------
+   The road.
+
+   .route-rail is absolutely positioned inside <main> and must land on the same
+   x as the left edge of the .section container, which is
+   `width: min(1280px, 100% - 64px)` centred. Sections then pad themselves by
+   --route-indent so their content clears the rail, and any marker can sit back
+   on it with `left: calc(var(--route-indent) * -1)`.
+--------------------------------------------------------------------------- */
+
+.route-rail {
+    position: absolute;
+    top: 8px;
+    bottom: 14px;
+    left: max(32px, calc((100% - 1280px) / 2));
+    width: var(--rail-width);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.route-rail-line {
+    position: absolute;
+    inset: 0;
+    border-radius: 2px;
+    background: var(--surface-3);
+}
+
+/* Dashed centre line, like a carriageway. */
+.route-rail-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background-image: linear-gradient(var(--line) 55%, transparent 0);
+    background-size: 2px 16px;
+    opacity: 0.75;
+}
+
+/* Filled as the page scrolls: the distance already driven. */
+.route-rail-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-radius: 2px;
+    background: var(--accent);
+    will-change: height;
+}
+
+/* Where you are on the road right now. */
+.route-rail-progress::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent-2);
+    box-shadow: 0 0 0 4px rgba(201, 93, 53, 0.18);
+    transform: translate(-50%, 50%);
+}
+
+.route-rail-cap {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.route-rail-start {
+    top: 0;
+    border: 3px solid var(--accent);
+    background: var(--bg);
+}
+
+.route-rail-end {
+    bottom: 0;
+    border: 3px solid var(--accent-2);
+    background: var(--bg);
+}
+
+/* --- Section signpost ---------------------------------------------------- */
+
+.route-stop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 14px;
+}
+
+.route-stop-marker {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--route-indent) * -1 + (var(--rail-width) / 2));
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    background: var(--bg);
+    transform: translate(-50%, -50%);
+}
+
+/* Short spur connecting the marker on the rail to its label. */
+.route-stop-marker::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(var(--route-indent) - 26px);
+    height: 2px;
+    background: var(--line);
+    transform: translateY(-50%);
+}
+
+.route-stop-mile {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--ink);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.route-stop-label {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+    .route-rail {
+        left: 14px;
+    }
+
+    .route-stop-marker {
+        width: 13px;
+        height: 13px;
+        border-width: 2px;
+    }
+
+    .route-stop-marker::after {
+        width: calc(var(--route-indent) - 22px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .route-rail-progress {
+        transition: none;
+    }
+}

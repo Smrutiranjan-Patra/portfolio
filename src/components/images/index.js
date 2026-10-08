@@ -1,4 +1,5 @@
 export { default as jsVisualizerPreview } from './jsVisualizerPreview.png';
+export { default as neoathlonPreview } from './neoathlonPreview.png';
 export { default as html } from './html-5.png';
 export { default as css } from './css3.png';
 export { default as js } from './javascript.png';

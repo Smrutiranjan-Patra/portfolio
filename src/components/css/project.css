@@ -1,115 +1,170 @@
-.project {
+/* ---------------------------------------------------------------------------
+   Detours.
+
+   Previously each project was a full-width slab with a tall portrait-cropped
+   image, so two builds made an enormous section. They are cards in a grid now:
+   a landscape banner, then the detail underneath, with every card the same
+   height and its buttons on a shared baseline.
+--------------------------------------------------------------------------- */
+
+.project-grid {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     gap: 18px;
 }
 
-.project-box {
-    display: grid;
-    grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
-    align-items: stretch;
+.project-card {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: 12px;
     background: var(--surface);
     box-shadow: var(--shadow);
+    transition: transform 220ms ease, border-color 220ms ease;
 }
 
-.project-preview {
-    display: grid;
-    grid-template-rows: minmax(300px, 1fr) auto;
-    min-width: 0;
+.project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+/* --- banner -------------------------------------------------------------- */
+
+.project-media {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
     background: var(--surface-3);
 }
 
-.img-box {
-    position: relative;
-    overflow: hidden;
-    min-height: 300px;
-}
-
-.img-box::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.34), transparent 45%);
-    opacity: 0.7;
-}
-
-.img-box img {
+.project-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 220ms ease;
+    transition: transform 320ms ease;
 }
 
-.project-box:hover .img-box img {
-    transform: scale(1.03);
+.project-card:hover .project-media img {
+    transform: scale(1.04);
 }
 
-.project-quick-facts {
-    display: grid;
-    gap: 8px;
-    padding: 22px;
-    border-top: 1px solid var(--line);
-    background: var(--surface-2);
+/* Keeps the chips legible over a light or busy screenshot. */
+.project-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 14, 12, 0.55) 0%, transparent 42%);
 }
 
-.project-quick-facts span,
-.project-label,
-.project-feature-list > span {
-    color: var(--accent-2);
-    font-size: 0.78rem;
+.project-chips {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.project-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 0.68rem;
     font-weight: 800;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
-.project-quick-facts strong {
-    color: var(--text);
-    font-size: 1rem;
-    line-height: 1.45;
+.project-chip--label {
+    background: var(--accent);
+    color: var(--ink);
 }
 
-.details {
+.project-chip--status {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+/* --- body ---------------------------------------------------------------- */
+
+.project-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: clamp(24px, 4vw, 42px);
+    flex: 1;
+    padding: 22px;
 }
 
 .project-name {
-    margin: 10px 0 0;
+    margin: 0;
     color: var(--text);
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
-    line-height: 1;
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    line-height: 1.15;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 0;
+    color: var(--accent-2);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.project-meta span + span::before {
+    content: "\00b7";
+    margin-right: 8px;
+    color: var(--muted);
 }
 
 .project-details {
-    margin: 18px 0 0;
+    margin: 12px 0 0;
     color: var(--muted);
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.65;
 }
 
 .project-feature-list {
-    margin-top: 22px;
-    padding: 18px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--soft-fill);
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+}
+
+.project-feature-title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent-2);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .project-feature-list ul {
     display: grid;
-    gap: 8px;
-    margin: 12px 0 0;
+    gap: 7px;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .project-feature-list li {
     position: relative;
-    padding-left: 18px;
+    padding-left: 17px;
     color: var(--muted);
+    font-size: 0.9rem;
     line-height: 1.45;
 }
 
@@ -117,9 +172,9 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 0.62em;
-    width: 7px;
-    height: 7px;
+    top: 0.52em;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: var(--accent);
 }
@@ -127,39 +182,47 @@
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 7px;
+    margin-top: 16px;
 }
 
 .tech-stack span {
-    min-height: 34px;
+    min-height: 30px;
     display: inline-flex;
     align-items: center;
-    padding: 0 11px;
+    padding: 0 10px;
     border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--surface-2);
+    border-radius: 999px;
+    background: var(--soft-fill);
     color: var(--text);
-    font-size: 0.86rem;
-    font-weight: 800;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
+/* Pushed to the bottom so buttons line up across cards of unequal content. */
 .project-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 26px;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 .live-btn,
 .github-btn {
-    min-height: 44px;
+    min-height: 42px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0 16px;
     border-radius: 8px;
     font-weight: 800;
+    transition: transform 180ms ease;
+}
+
+.live-btn:hover,
+.github-btn:hover {
+    transform: translateY(-1px);
 }
 
 .live-btn {
@@ -173,22 +236,61 @@
     background: var(--soft-fill);
 }
 
-@media (max-width: 900px) {
-    .project-box {
-        grid-template-columns: 1fr;
-    }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
-    .project-preview {
-        grid-template-rows: minmax(240px, 360px) auto;
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 560px) {
-    .project-preview {
-        grid-template-rows: minmax(210px, 280px) auto;
+    .project-body {
+        padding: 18px;
+    }
+
+    /* Role and type stack here, so the separator would be left dangling at
+       the start of the wrapped line. */
+    .project-meta {
+        gap: 2px;
+    }
+
+    .project-meta span + span::before {
+        content: none;
+    }
+
+    .project-media {
+        aspect-ratio: 16 / 11;
     }
 
     .project-actions a {
         width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-media img,
+    .live-btn,
+    .github-btn {
+        transition: none;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+
+    .project-card:hover .project-media img {
+        transform: none;
     }
 }

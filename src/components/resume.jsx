@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./css/resume.css";
 import { portfolio } from "../data/portfolio";
+import { RouteStop } from "./route.jsx";
 
 const renderSkillIcon = (skill) => {
     if (skill.icon) {
@@ -17,7 +18,7 @@ const renderSkillIcon = (skill) => {
 };
 
 const Resume = ({ showPreview, onPreviewClose }) => {
-    const { skills, skillsSection, resumeUrl } = portfolio;
+    const { skills, skillsSection, skillGroupNotes, resumeUrl, stops } = portfolio;
     const skillGroups = skills.reduce((groups, skill) => {
         if (!groups[skill.group]) {
             groups[skill.group] = [];
@@ -30,7 +31,7 @@ const Resume = ({ showPreview, onPreviewClose }) => {
     return (
         <section className="resume section" id="Resume">
             <div className="section-heading">
-                <p className="eyebrow">{skillsSection.eyebrow}</p>
+                <RouteStop mile={stops.skills.mile} label={stops.skills.label} />
                 <h1 className="page-header">{skillsSection.headline}</h1>
                 <p className="page-subheader3">{skillsSection.subheadline}</p>
             </div>
@@ -70,6 +71,9 @@ const Resume = ({ showPreview, onPreviewClose }) => {
                     <article className="skill-group" key={group}>
                         <div className="skill-group-heading">
                             <h2>{group}</h2>
+                            {skillGroupNotes[group] && (
+                                <span className="skill-group-note">{skillGroupNotes[group]}</span>
+                            )}
                         </div>
                         <div className="bdetails">
                             {groupSkills.map((skill) => (

@@ -2,6 +2,7 @@ import "./css/contact.css";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { portfolio } from "../data/portfolio";
+import { RouteStop } from "./route.jsx";
 
 export const ContactUs = () => {
     const form = useRef();
@@ -25,7 +26,7 @@ const sendEmail = async () => {
     return (
         <section className="contact section" id="Contact">
             <div className="section-heading">
-                <p className="eyebrow">{contact.eyebrow}</p>
+                <RouteStop mile={portfolio.stops.contact.mile} label={portfolio.stops.contact.label} />
                 <h1 className="page-header">{contact.headline}</h1>
                 <p className="page-subheader5">{contact.subheadline}</p>
             </div>

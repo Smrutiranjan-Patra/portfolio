@@ -1,41 +1,55 @@
 import React from "react";
 import { portfolio } from "../data/portfolio";
+import { RouteStop } from "./route.jsx";
 import "./css/experience.css";
 
 const Experience = () => {
     const {
-        experienceSection,
-        experience,
+        stops,
+        journeySection,
+        journey,
         achievementsSection,
         achievements,
-        educationSection,
-        education,
     } = portfolio;
 
     return (
         <section id="experience" className="experience-section section">
             <div className="section-heading">
-                <p className="eyebrow">{experienceSection.eyebrow}</p>
-                <h1 className="page-header">{experienceSection.headline}</h1>
-                <p className="page-subheader">{experienceSection.subheadline}</p>
+                <RouteStop mile={stops.experience.mile} label={stops.experience.label} />
+                <h1 className="page-header">{journeySection.headline}</h1>
+                <p className="page-subheader">{journeySection.subheadline}</p>
             </div>
 
-            <div className="experience-grid">
-                {experience.map((item) => (
-                    <article className="experience-card" key={`${item.company}-${item.role}`}>
-                        <div className="experience-meta">
-                            <span>{item.period}</span>
-                            <h2>{item.role}</h2>
-                            <p>{item.company}</p>
-                        </div>
-                        <ul>
-                            {item.points.map((point) => (
-                                <li key={point}>{point}</li>
-                            ))}
-                        </ul>
-                    </article>
+            <ol className="journey">
+                {journey.map((leg) => (
+                    <li className={`journey-leg journey-leg--${leg.kind}`} key={`${leg.title}-${leg.period}`}>
+                        <span className="journey-marker" aria-hidden="true">
+                            <span className="journey-marker-year">{leg.marker}</span>
+                        </span>
+
+                        <article className="journey-card">
+                            <header className="journey-head">
+                                <span className="journey-period" data-year={leg.marker}>
+                                    {leg.period}
+                                    {leg.current && <span className="journey-now">Here now</span>}
+                                </span>
+                                <h2>{leg.title}</h2>
+                                <p className="journey-place">{leg.place}</p>
+                            </header>
+
+                            <p className="journey-narrative">{leg.narrative}</p>
+
+                            {leg.points.length > 0 && (
+                                <ul className="journey-points">
+                                    {leg.points.map((point) => (
+                                        <li key={point}>{point}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </article>
+                    </li>
                 ))}
-            </div>
+            </ol>
 
             <div className="impact-layout">
                 <div>
@@ -46,23 +60,6 @@ const Experience = () => {
                 <div className="impact-list">
                     {achievements.map((achievement) => (
                         <div key={achievement}>{achievement}</div>
-                    ))}
-                </div>
-            </div>
-
-            <div className="education-layout">
-                <div>
-                    <p className="eyebrow">{educationSection.eyebrow}</p>
-                    <h2>{educationSection.headline}</h2>
-                    <p>{educationSection.subheadline}</p>
-                </div>
-                <div className="education-list">
-                    {education.map((item) => (
-                        <article key={`${item.title}-${item.period}`}>
-                            <h3>{item.title}</h3>
-                            <p>{item.place}</p>
-                            <span>{item.period}</span>
-                        </article>
                     ))}
                 </div>
             </div>

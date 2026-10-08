@@ -1,6 +1,7 @@
 import React from 'react';
 import "./css/about.css";
 import { portfolio } from "../data/portfolio";
+import { RouteStop } from "./route.jsx";
 
 const About = () => {
     const { about } = portfolio;
@@ -8,7 +9,7 @@ const About = () => {
     return (
         <section id="about" className="section">
             <div className="section-heading">
-                <p className="eyebrow">{about.eyebrow}</p>
+                <RouteStop mile={portfolio.stops.about.mile} label={portfolio.stops.about.label} />
                 <h1 className="page-header">{about.headline}</h1>
                 <p className="page-subheader">{about.subheadline}</p>
             </div>

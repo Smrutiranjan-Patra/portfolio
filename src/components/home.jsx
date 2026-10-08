@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./css/home.css";
 import { portfolio } from "../data/portfolio";
+import { RouteStop } from "./route.jsx";
 
 const Home = ({ onResumeOpen }) => {
     const { hero } = portfolio;
@@ -27,8 +28,9 @@ const Home = ({ onResumeOpen }) => {
         <section id="home" className="hero section">
             <div id="personal">
                 <div id="data">
-                    <p className="eyebrow">{hero.eyebrow}</p>
+                    <RouteStop mile={portfolio.stops.home.mile} label={portfolio.stops.home.label} />
                     <h1 className="name">{hero.headline}</h1>
+                    <p className="hero-role">{hero.eyebrow} <span>{hero.location}</span></p>
                     <h2 className="role-line">
                         {hero.rolePrefix} <span id="typingtext">
                             <span className="focus-word" key={currentFocus.label}>{currentFocus.label}</span>
@@ -81,32 +83,28 @@ const Home = ({ onResumeOpen }) => {
                     </div>
                 </div>
                 <div id="picture">
-                    <div className="vector-card" aria-label={hero.illustrationLabel}>
-                        <svg className="developer-vector" viewBox="0 0 720 560" role="img" aria-labelledby="developerVectorTitle">
-                            <title id="developerVectorTitle">{hero.illustrationTitle}</title>
-                            <rect className="vector-bg" x="28" y="28" width="664" height="504" rx="28" />
-                            <rect className="terminal-window" x="86" y="92" width="548" height="316" rx="18" />
-                            <circle className="window-dot coral" cx="122" cy="128" r="9" />
-                            <circle className="window-dot gold" cx="152" cy="128" r="9" />
-                            <circle className="window-dot green" cx="182" cy="128" r="9" />
-                            <path className="code-line accent-line" d="M126 188h168" />
-                            <path className="code-line muted-line" d="M126 230h270" />
-                            <path className="code-line muted-line short" d="M126 272h214" />
-                            <path className="code-line accent-line" d="M126 314h306" />
-                            <path className="bracket" d="M496 194l-54 58 54 58" />
-                            <path className="bracket" d="M548 194l54 58-54 58" />
-                            <rect className="server-card" x="138" y="438" width="150" height="54" rx="14" />
-                            <rect className="server-card" x="318" y="438" width="150" height="54" rx="14" />
-                            <rect className="server-card" x="498" y="438" width="84" height="54" rx="14" />
-                            <path className="connector" d="M213 438v-34M393 438v-34M540 438v-34" />
-                            <circle className="status-light" cx="168" cy="465" r="7" />
-                            <circle className="status-light" cx="348" cy="465" r="7" />
-                            <circle className="status-light" cx="524" cy="465" r="7" />
-                        </svg>
-                        <div className="availability">
-                            <span></span>
-                            <strong key={currentFocus.availability}>{currentFocus.availability}</strong>
-                        </div>
+                    <div className="route-map" aria-label={hero.illustrationLabel}>
+                        <p className="route-map-caption">{hero.routeMap.caption}</p>
+                        <ol className="route-map-list">
+                            {hero.routeMap.stops.map((stop) => (
+                                <li className="route-map-stop" key={`${stop.year}-${stop.label}`}>
+                                    <span className="route-map-dot" aria-hidden="true" />
+                                    <span className="route-map-year">{stop.year}</span>
+                                    <span className="route-map-body">
+                                        <strong>{stop.label}</strong>
+                                        <span>{stop.note}</span>
+                                    </span>
+                                </li>
+                            ))}
+                            <li className="route-map-stop route-map-stop--here">
+                                <span className="route-map-dot" aria-hidden="true" />
+                                <span className="route-map-year">Now</span>
+                                <span className="route-map-body">
+                                    <strong key={currentFocus.availability}>{currentFocus.availability}</strong>
+                                    <span>{hero.routeMap.hereLabel}</span>
+                                </span>
+                            </li>
+                        </ol>
                     </div>
                     <div className="hero-stats">
                         {hero.stats.map((stat) => (

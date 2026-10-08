@@ -3,6 +3,25 @@
     top: 0;
     z-index: 2000;
     padding: 16px 20px 0;
+    transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1), opacity 240ms ease;
+}
+
+/* Slides away while you read downwards; any upward scroll brings it back. */
+.site-header[data-hidden="yes"] {
+    transform: translateY(calc(-100% - 18px));
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header {
+        transition: none;
+    }
+
+    /* Never move it for people who asked for no motion. */
+    .site-header[data-hidden="yes"] {
+        transform: none;
+        opacity: 1;
+    }
 }
 
 #navigation {

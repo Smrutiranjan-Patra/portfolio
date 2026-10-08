@@ -1,5 +1,5 @@
 import {
-  jsVisualizerPreview, html, css, js, node, express, npm, mongo, psql, msql, react, redux, github, typescript, tailwind, antd, next, jest, rtl, glab, jira, postman, docker, copilot, chatgpt, gemini
+  jsVisualizerPreview, neoathlonPreview, html, css, js, node, express, npm, mongo, psql, msql, react, redux, github, typescript, tailwind, antd, next, jest, rtl, glab, jira, postman, docker, copilot, chatgpt, gemini
 } from "../assets/index.js"
 import {
   SiPython, SiFlask, SiSqlalchemy, SiGunicorn, SiCelery, SiRedis, SiJsonwebtokens,
@@ -14,6 +14,35 @@ export const portfolio = {
   initials: "SP",
   role: "Full Stack Developer",
   resumeLabel: "Resume",
+
+  // The little road buddy that hops along beside you. One short line per
+  // section, in his voice rather than Smrutiranjan's.
+  mascot: {
+    name: "Pit",
+    label: "Pit, your road buddy",
+    dismissLabel: "Send Pit home",
+    greeting: "Hop in.",
+    messages: {
+      home: "Buckle up. Five years of road ahead.",
+      about: "That is the driver. He will talk about Flask if you let him.",
+      experience: "This is the good bit. Watch the signs.",
+      project: "Quick detour. He took it because the problem was fun.",
+      skills: "Everything he packed, and where he picked it up.",
+      contact: "End of the road. Go on, say hello.",
+    },
+  },
+
+  // Every section is a stop on one continuous road. `mile` is the marker that
+  // sits on the rail; `label` is the signpost next to it.
+  stops: {
+    home: { mile: "00", label: "Start of the route" },
+    about: { mile: "01", label: "Who is driving" },
+    experience: { mile: "02", label: "The road so far" },
+    project: { mile: "03", label: "Detours" },
+    skills: { mile: "04", label: "What is in the pack" },
+    contact: { mile: "05", label: "Next stop" },
+  },
+
   resumeUrl: "/Smrutiranjan_Patra_Resume.pdf",
   footer: "Built by Smrutiranjan Patra",
   themeSwitch: {
@@ -22,9 +51,9 @@ export const portfolio = {
   },
 
   navigation: [
-    { label: "Home", href: "#home" },
+    { label: "Start", href: "#home" },
     { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
+    { label: "Journey", href: "#experience" },
     { label: "Projects", href: "#project" },
     { label: "Skills", href: "#Resume" },
     { label: "Contact", href: "#Contact" },
@@ -32,6 +61,7 @@ export const portfolio = {
 
   hero: {
     eyebrow: "Full Stack Developer",
+    location: "Bhubaneswar, India",
     headline:
       "I build scalable web applications end to end, from Python APIs and async pipelines to React interfaces.",
     rolePrefix: "Focused on",
@@ -83,8 +113,18 @@ export const portfolio = {
       },
     ],
     availability: "Open to full-stack engineering roles",
-    illustrationLabel: "Full-stack developer workspace illustration",
-    illustrationTitle: "Developer building APIs, services, and interfaces",
+    illustrationLabel: "Map of the route from bootcamp to full-stack developer",
+    illustrationTitle: "The route so far",
+    routeMap: {
+      caption: "The route so far",
+      stops: [
+        { year: "2021", label: "Masai School", note: "Learned to build" },
+        { year: "2022", label: "Influx Worldwide", note: "First production miles" },
+        { year: "2022", label: "DCKAP \u2014 Developer I", note: "Took on the backend" },
+        { year: "2024", label: "DCKAP \u2014 Developer II", note: "Owning the platform" },
+      ],
+      hereLabel: "You are here",
+    },
     stats: [
       { value: "4+", label: "Years of experience" },
       { value: "20%", label: "Application performance gained" },
@@ -155,28 +195,58 @@ export const portfolio = {
     ],
   },
 
-  experienceSection: {
-    eyebrow: "Experience",
-    headline: "Professional work with measurable product impact",
-    subheadline: "A resume-backed snapshot of roles, ownership, and outcomes.",
+  journeySection: {
+    eyebrow: "The road so far",
+    headline: "From a commerce degree to owning an iPaaS platform end to end",
+    subheadline:
+      "Five years of road, in the order it actually happened. Every leg below is a real stop, with what I was handed and what I shipped.",
   },
 
-  experience: [
+  // Chronological on purpose: the road runs forwards. The resume PDF keeps the
+  // conventional reverse-chronological order.
+  journey: [
     {
-      company: "DCKAP Technologies — DCKAP Integrator (iPaaS)",
-      role: "Product Developer II",
-      period: "July 2024 - Present",
+      kind: "origin",
+      marker: "2017",
+      period: "2017 - 2021",
+      title: "Bachelor of Commerce, Accounting",
+      place: "Utkal University, Odisha",
+      narrative:
+        "The road does not start in a computer science department. I spent four years on ledgers and balance sheets, and everything I know about building software I picked up afterwards, at a keyboard.",
+      points: [],
+    },
+    {
+      kind: "training",
+      marker: "2021",
+      period: "2021 - 2022",
+      title: "MERN Stack Web Development Training",
+      place: "Masai School, India",
+      narrative:
+        "A full year of nothing but building \u2014 JavaScript, React, Node and Express, every day, until the stack stopped feeling like magic and started feeling like tools I could pick up.",
+      points: [],
+    },
+    {
+      kind: "role",
+      marker: "2022",
+      period: "April 2022 - August 2022",
+      title: "Associate Software Developer",
+      place: "Influx Worldwide",
+      narrative:
+        "First professional miles. Four months is a short stretch, but it is where I learned what production actually costs: a bug you ship is a bug somebody else has to live with.",
       points: [
-        "Designed and built a system versioning and deprecation management service, reducing technical debt through the controlled phase-out of legacy endpoints and dependencies.",
-        "Boosted application performance by around 20% through modular splitting, lazy loading, and memoization on the frontend, alongside database query optimization.",
-        "Implemented secure authentication and authorization flows using JWT for user sessions and third-party connector integrations.",
-        "Containerized services with Docker and maintained Jenkins CI/CD pipelines for automated test runs and deployment to AWS.",
+        "Automated dynamic report generation based on user inputs, reducing manual effort and streamlining operational workflows.",
+        "Identified and resolved critical production bugs, strengthening platform uptime.",
+        "Optimized build configuration with Babel, improving bundle execution speed and maintainability.",
       ],
     },
     {
-      company: "DCKAP Technologies — DCKAP Integrator (iPaaS)",
-      role: "Product Developer I",
+      kind: "role",
+      marker: "2022",
       period: "August 2022 - July 2024",
+      title: "Product Developer I",
+      place: "DCKAP Technologies \u2014 DCKAP Integrator (iPaaS)",
+      narrative:
+        "I joined DCKAP to work on Integrator, a platform that moves data between ERPs, e-commerce storefronts and EDI partners for B2B distributors. I arrived writing React. I left this role owning features end to end \u2014 the Flask API, the schema underneath it, the Celery workers beside it, and the interface on top.",
       points: [
         "Built a unified Projects module end to end, covering Flask APIs, the database schema for shared and personal assets with access control, and the React interface on top.",
         "Developed automated credential mapping and bulk import/export of integration configurations, using Celery and Redis to process long-running jobs asynchronously.",
@@ -187,21 +257,37 @@ export const portfolio = {
       ],
     },
     {
-      company: "Influx Worldwide",
-      role: "Associate Software Developer",
-      period: "April 2022 - August 2022",
+      kind: "role",
+      marker: "2024",
+      period: "July 2024 - Present",
+      title: "Product Developer II",
+      place: "DCKAP Technologies \u2014 DCKAP Integrator (iPaaS)",
+      current: true,
+      narrative:
+        "The promotion moved the work up a layer: versioning and deprecation across the whole platform, authentication for third-party connectors, and the pipelines that ship all of it. Employee of the Quarter in Q3 2025.",
       points: [
-        "Automated dynamic report generation based on user inputs, reducing manual effort and streamlining operational workflows.",
-        "Identified and resolved critical production bugs, strengthening platform uptime.",
-        "Optimized build configuration with Babel, improving bundle execution speed and maintainability.",
+        "Designed and built a system versioning and deprecation management service, reducing technical debt through the controlled phase-out of legacy endpoints and dependencies.",
+        "Boosted application performance by around 20% through modular splitting, lazy loading, and memoization on the frontend, alongside database query optimization.",
+        "Implemented secure authentication and authorization flows using JWT for user sessions and third-party connector integrations.",
+        "Containerized services with Docker and maintained Jenkins CI/CD pipelines for automated test runs and deployment to AWS.",
       ],
+    },
+    {
+      kind: "ahead",
+      marker: "Now",
+      period: "2025 - 2027 (Expected)",
+      title: "The road ahead",
+      place: "Master of Computer Applications, AI and Machine Learning \u2014 Amity University (Online)",
+      narrative:
+        "Studying for an MCA in AI and Machine Learning alongside the day job, and spending spare cycles on LLM APIs, prompt engineering and RAG. That is the next stretch of road.",
+      points: [],
     },
   ],
 
   achievementsSection: {
-    eyebrow: "Impact",
-    headline: "What I bring to teams",
-    subheadline: "Highlights from the resume that describe how I work, not just what I know.",
+    eyebrow: "Picked up along the way",
+    headline: "What I am taking with me",
+    subheadline: "The things that came out of the drive, beyond the shipped features.",
   },
 
   achievements: [
@@ -212,17 +298,43 @@ export const portfolio = {
   ],
 
   projectsSection: {
-    eyebrow: "Toy Projects",
-    headline: "Selected builds with product thinking",
+    eyebrow: "Detours",
+    headline: "Side roads I took because the problem was interesting",
     subheadline:
-      "A closer look at the architecture, trade-offs, and engineering decisions behind what I build outside of work.",
-    label: "Featured build",
+      "Builds from outside the day job \u2014 the architecture, trade-offs, and engineering decisions behind each one.",
+    label: "Detour",
     liveLabel: "Live site",
     repoLabel: "GitHub",
     detailLabel: "What it covers",
   },
 
   projects: [
+    {
+      name: "Neoathlon",
+      type: "Endurance Training Platform",
+      label: "Side venture",
+      // Pre-launch: the site runs a beta waitlist, so nothing here claims
+      // users, revenue or a shipped release.
+      status: "In development \u00b7 beta waitlist",
+      role: "Founding Engineer",
+      outcome:
+        "Building India's first immersive indoor training platform for cyclists and runners \u2014 virtual routes, structured sessions, and a community to train against, all from a living room.",
+      description:
+        "Neoathlon turns a room into an endurance arena. It pairs with Bluetooth smart trainers for immersive indoor riding, tracks outdoor rides through the mobile app, and wraps both in structured training plans, challenges and city leaderboards. Built for Indian cyclists and riding culture, on a free tier alongside paid Pro and hardware-rental plans.",
+      tech: ["React", "Vite", "Mobile app", "Bluetooth smart trainers", "Subscription billing"],
+      features: [
+        "Immersive virtual routes for indoor riding",
+        "Cycling and running modes",
+        "Bluetooth smart-trainer pairing",
+        "Outdoor ride tracking through the mobile app",
+        "Structured plans with power curve and analytics",
+        "Community challenges and city leaderboards",
+        "Free, Pro and hardware-rental tiers",
+      ],
+      image: neoathlonPreview,
+      imageAlt: "Neoathlon indoor training platform",
+      live: "https://neoathlon.com",
+    },
     {
       name: "JS Visualizer",
       type: "Developer Tool / Educational Platform",
@@ -249,11 +361,26 @@ export const portfolio = {
   ],
 
   skillsSection: {
-    eyebrow: "Skills",
-    headline:
-      "Full-stack engineering across Python services, APIs, data, and interfaces",
+    eyebrow: "What is in the pack",
+    headline: "Everything I picked up on the way here",
     subheadline:
-      "The backend, frontend, database, testing, and deployment tooling I use to build and ship integration-heavy products.",
+      "The backend, frontend, database, testing, and deployment tooling I use to build and ship integration-heavy products \u2014 and the stop on the road where each part of it got packed.",
+  },
+
+  // Where each group joined the trip. Rendered as a note under the group name.
+  skillGroupNotes: {
+    "Languages": "Masai School, 2021 onwards",
+    "Backend (Python)": "Packed at DCKAP, 2022",
+    "Async & Caching": "Packed at DCKAP, 2022",
+    "APIs & Integrations": "Packed at DCKAP, 2022",
+    "Backend (Node)": "Packed at Masai School, 2021",
+    "Frontend": "Packed at Masai School, 2021",
+    "Styling & UI": "Picked up along the way",
+    "Databases": "Masai School, then DCKAP",
+    "Testing": "Packed at DCKAP, 2023",
+    "Cloud & DevOps": "Packed at DCKAP, 2024",
+    "Tooling": "Picked up along the way",
+    "AI tools": "Loading for the road ahead",
   },
 
   skills: [
@@ -321,33 +448,10 @@ export const portfolio = {
     { name: "Gemini", icon: gemini, group: "AI tools" },
   ],
 
-  educationSection: {
-    eyebrow: "Education",
-    headline: "Learning path",
-    subheadline: "Formal education and focused web development training.",
-  },
-
-  education: [
-    {
-      title: "Master of Computer Applications, AI and Machine Learning",
-      place: "Amity University, Uttar Pradesh (Online)",
-      period: "2025 - 2027 (Expected)",
-    },
-    {
-      title: "Bachelor of Commerce, Accounting",
-      place: "Utkal University, Odisha",
-      period: "2017 - 2021",
-    },
-    {
-      title: "MERN Stack Web Development Training",
-      place: "Masai School, India",
-      period: "2021 - 2022",
-    },
-  ],
 
   contact: {
-    eyebrow: "Contact",
-    headline: "Let us build something useful.",
+    eyebrow: "Next stop",
+    headline: "Where should the road go next?",
     subheadline:
       "Share a role, project, or collaboration idea and I will get back to you.",
     form: {
@@ -376,7 +480,7 @@ export const portfolio = {
         external: true,
       },
     ],
-    noteTitle: "Best fit",
+    noteTitle: "Good roads for me",
     note:
       "Full-stack engineering roles built around Python and Flask APIs with React or Next.js on the frontend — integration platforms, async and data-heavy systems, and teams that own their services end to end.",
   },

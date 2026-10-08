@@ -29,6 +29,29 @@
     text-wrap: balance;
 }
 
+/* The job title still has to be the first thing a recruiter reads, so it sits
+   directly under the headline rather than in the route signpost. */
+.hero-role {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 0;
+    color: var(--text);
+    font-size: 1.02rem;
+    font-weight: 800;
+}
+
+.hero-role span {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.hero-role span::before {
+    content: "\00b7";
+    margin-right: 10px;
+}
+
 .role-line {
     min-height: 62px;
     margin: 22px 0 0;
@@ -130,105 +153,102 @@
     align-items: center;
 }
 
-.vector-card {
+/* --- Hero route map ------------------------------------------------------ */
+
+.route-map {
     position: relative;
-    overflow: hidden;
-    padding-bottom: 78px;
+    width: 100%;
+    max-width: 520px;
+    padding: 26px 24px 20px;
     border: 1px solid var(--line);
     border-radius: 8px;
     background: var(--surface);
     box-shadow: var(--shadow);
-    max-width: 560px;
-    width: 100%;
 }
 
-.developer-vector {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.vector-bg {
-    fill: var(--surface-2);
-}
-
-.terminal-window,
-.server-card {
-    fill: var(--surface);
-    stroke: var(--line);
-    stroke-width: 2;
-}
-
-.window-dot.coral {
-    fill: var(--accent-2);
-}
-
-.window-dot.gold {
-    fill: #e0b84f;
-}
-
-.window-dot.green,
-.status-light {
-    fill: var(--accent);
-}
-
-.code-line,
-.bracket,
-.connector {
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.code-line {
-    stroke-width: 18;
-}
-
-.accent-line {
-    stroke: var(--accent);
-}
-
-.muted-line {
-    stroke: var(--muted);
-    opacity: 0.52;
-}
-
-.short {
-    stroke-width: 16;
-}
-
-.bracket {
-    stroke: var(--accent-2);
-    stroke-width: 18;
-}
-
-.connector {
-    stroke: var(--line);
-    stroke-width: 5;
-}
-
-.availability {
-    position: absolute;
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 14px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--glass);
-    color: var(--text);
+.route-map-caption {
+    margin: 0 0 20px;
+    color: var(--accent);
+    font-size: 0.74rem;
     font-weight: 800;
-    backdrop-filter: blur(12px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.availability strong {
-    font-size: 0.88rem;
+.route-map-list {
+    position: relative;
+    display: grid;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* The road the stops hang off. Stops at the last dot, not the list edge. */
+.route-map-list::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    bottom: 22px;
+    left: 5px;
+    width: 2px;
+    background-image: linear-gradient(var(--line) 58%, transparent 0);
+    background-size: 2px 10px;
+}
+
+.route-map-stop {
+    position: relative;
+    display: grid;
+    grid-template-columns: 24px 54px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 10px;
+}
+
+.route-map-dot {
+    position: relative;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    background: var(--surface);
+}
+
+.route-map-stop--here .route-map-dot {
+    border-color: var(--accent-2);
+    box-shadow: 0 0 0 5px rgba(201, 93, 53, 0.14);
+}
+
+.route-map-year {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.route-map-stop--here .route-map-year {
+    color: var(--accent-2);
+}
+
+.route-map-body {
+    display: grid;
+    gap: 3px;
+    min-width: 0;
+}
+
+.route-map-body strong {
+    color: var(--text);
+    font-size: 0.94rem;
     line-height: 1.3;
+}
+
+.route-map-stop--here .route-map-body strong {
     animation: badgeFade 2400ms ease infinite;
+}
+
+.route-map-body > span {
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.35;
 }
 
 @keyframes badgeFade {
@@ -244,14 +264,6 @@
     100% {
         opacity: 0;
     }
-}
-
-.availability span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 5px rgba(127, 208, 105, 0.16);
 }
 
 .hero-stats {
@@ -329,6 +341,16 @@
         min-height: 56px;
     }
 
+    /* Role and location stack on narrow screens; the separator would be left
+       dangling at the start of the wrapped line. */
+    .hero-role {
+        gap: 2px;
+    }
+
+    .hero-role span::before {
+        content: none;
+    }
+
     .role-line {
         font-size: clamp(1rem, 3vw, 1.2rem);
         min-height: 32px;
@@ -352,7 +374,13 @@
         grid-template-columns: 1fr;
     }
 
-    .vector-card {
+    .route-map {
         max-width: 100%;
+        padding: 20px 18px 16px;
+    }
+
+    .route-map-stop {
+        grid-template-columns: 20px 46px minmax(0, 1fr);
+        gap: 8px;
     }
 }

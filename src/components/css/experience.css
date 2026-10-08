@@ -1,13 +1,73 @@
-.experience-grid {
+/* --- The road ------------------------------------------------------------ */
+
+.journey {
+    position: relative;
     display: grid;
-    gap: 16px;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.experience-card {
+.journey-leg {
+    position: relative;
+}
+
+/* The year marker sits back on the shared rail. */
+.journey-marker {
+    position: absolute;
+    top: 30px;
+    left: calc(var(--route-indent) * -1 + (var(--rail-width) / 2));
     display: grid;
-    grid-template-columns: minmax(230px, 0.9fr) minmax(0, 2.6fr);
-    align-items: start;
-    gap: 28px;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    background: var(--bg);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.journey-marker-year {
+    color: var(--accent);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+/* Spur from the marker across to the card. */
+.journey-marker::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(var(--route-indent) - 23px);
+    height: 2px;
+    background: var(--line);
+    transform: translateY(-50%);
+}
+
+.journey-leg--origin .journey-marker,
+.journey-leg--training .journey-marker {
+    border-color: var(--line);
+}
+
+.journey-leg--origin .journey-marker-year,
+.journey-leg--training .journey-marker-year {
+    color: var(--muted);
+}
+
+.journey-leg--ahead .journey-marker {
+    border-color: var(--accent-2);
+    border-style: dashed;
+}
+
+.journey-leg--ahead .journey-marker-year {
+    color: var(--accent-2);
+}
+
+.journey-card {
     padding: 28px;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -15,73 +75,120 @@
     box-shadow: var(--shadow);
 }
 
-.experience-meta span,
-.education-list span {
+/* Waypoints rather than full stops: lighter treatment for the two study legs. */
+.journey-leg--origin .journey-card,
+.journey-leg--training .journey-card,
+.journey-leg--ahead .journey-card {
+    background: var(--soft-fill);
+    box-shadow: none;
+}
+
+.journey-leg--ahead .journey-card {
+    border-style: dashed;
+}
+
+.journey-head {
+    margin-bottom: 16px;
+}
+
+.journey-period {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     color: var(--accent-2);
     font-size: 0.85rem;
     font-weight: 800;
 }
 
-.experience-meta h2,
-.impact-layout h2,
-.education-layout h2 {
-    margin: 10px 0 8px;
-    color: var(--text);
-    font-size: clamp(1.4rem, 3vw, 2.1rem);
-    line-height: 1.1;
+.journey-now {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--ink);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
-.experience-meta p,
-.impact-layout p,
-.education-layout p,
-.education-list p {
+.journey-head h2 {
+    margin: 10px 0 6px;
+    color: var(--text);
+    font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+    line-height: 1.15;
+}
+
+.journey-place {
     margin: 0;
     color: var(--muted);
     line-height: 1.6;
 }
 
-.experience-card ul {
+/* The story sentence: larger than the bullets, so the eye lands here first. */
+.journey-narrative {
     margin: 0;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+    color: var(--text);
+    font-size: clamp(1rem, 1.5vw, 1.12rem);
+    line-height: 1.7;
+}
+
+.journey-points {
+    margin: 20px 0 0;
     padding-left: 18px;
     color: var(--muted);
 }
 
-.experience-card li {
+.journey-points li {
     margin-bottom: 12px;
     line-height: 1.65;
 }
 
-.experience-card li:last-child {
+.journey-points li:last-child {
     margin-bottom: 0;
 }
 
-.impact-layout,
-.education-layout {
+/* --- What I picked up ---------------------------------------------------- */
+
+.impact-layout {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
     align-items: start;
     gap: 18px;
-    margin-top: 18px;
+    margin-top: 26px;
 }
 
 .impact-layout > div:first-child,
-.education-layout > div:first-child,
-.impact-list,
-.education-list {
+.impact-list {
     padding: 26px;
     border: 1px solid var(--line);
     border-radius: 8px;
     background: var(--surface);
 }
 
-.impact-list,
-.education-list {
+.impact-layout h2 {
+    margin: 10px 0 8px;
+    color: var(--text);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    line-height: 1.1;
+}
+
+.impact-layout p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.impact-list {
     display: grid;
     gap: 12px;
 }
 
-.impact-list div,
-.education-list article {
+.impact-list div {
     padding: 18px;
     border-radius: 8px;
     background: var(--surface-2);
@@ -89,26 +196,53 @@
     line-height: 1.6;
 }
 
-.education-list h3 {
-    margin: 0 0 8px;
-    color: var(--text);
-    font-size: 1rem;
-}
-
 @media (max-width: 860px) {
-    .experience-card,
-    .impact-layout,
-    .education-layout {
+    .impact-layout {
         grid-template-columns: 1fr;
     }
 }
 
+@media (max-width: 720px) {
+    /* The rail sits 14px from the edge, so any disc wider than ~28px gets
+       clipped by the viewport. The year is already in the card header here,
+       so the marker drops to a plain dot. */
+    .journey-marker {
+        top: 28px;
+        width: 15px;
+        height: 15px;
+        border-width: 3px;
+    }
+
+    .journey-marker-year {
+        display: none;
+    }
+
+    .journey-marker::after {
+        width: calc(var(--route-indent) - 22px);
+    }
+
+    /* Year badge moves inline with the period instead. */
+    .journey-period::before {
+        content: attr(data-year);
+        display: inline-flex;
+        align-items: center;
+        min-height: 22px;
+        padding: 0 8px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.7rem;
+    }
+}
+
 @media (max-width: 560px) {
-    .experience-card,
+    .journey-card,
     .impact-layout > div:first-child,
-    .education-layout > div:first-child,
-    .impact-list,
-    .education-list {
+    .impact-list {
         padding: 20px;
+    }
+
+    .journey-narrative {
+        padding-left: 13px;
     }
 }

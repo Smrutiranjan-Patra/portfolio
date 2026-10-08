@@ -1,0 +1,215 @@
+/* ---------------------------------------------------------------------------
+   Pit roams: the root is pinned to the viewport origin and moved entirely by
+   transform, which keeps every frame off the layout path. The van is the
+   anchor, and the bubble hangs off whichever side has room.
+--------------------------------------------------------------------------- */
+
+.mascot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 92px;
+    z-index: 1800;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 420ms ease;
+    will-change: transform;
+}
+
+.mascot[data-awake="yes"] {
+    opacity: 1;
+}
+
+/* Out of the way while the resume drawer is open. */
+.mascot[data-hidden="yes"] {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mascot-body {
+    position: relative;
+    width: 92px;
+    /* Flipped to face the direction of travel. */
+    transform: scaleX(var(--facing, 1));
+    transition: transform 220ms ease;
+}
+
+.mascot-van {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Parked: settle, then breathe. */
+.mascot[data-resting="yes"] .mascot-van {
+    animation: mascotIdle 3.2s ease-in-out infinite;
+}
+
+/* Driving: lean into it and let the body jostle. */
+.mascot[data-resting="no"] .mascot-van {
+    animation: mascotDrive 420ms ease-in-out infinite;
+}
+
+@keyframes mascotIdle {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-3px) rotate(0deg); }
+}
+
+@keyframes mascotDrive {
+    0% { transform: translateY(0) rotate(-2.5deg); }
+    50% { transform: translateY(-4px) rotate(1.5deg); }
+    100% { transform: translateY(0) rotate(-2.5deg); }
+}
+
+.mascot[data-resting="no"] .van-wheels {
+    animation: wheelJitter 180ms linear infinite;
+}
+
+@keyframes wheelJitter {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(0.9px); }
+}
+
+/* --- van paintwork ------------------------------------------------------- */
+
+.van-shell { fill: var(--accent-2); }
+.van-roof { fill: var(--accent); }
+
+.van-glass {
+    fill: var(--surface);
+    stroke: rgba(0, 0, 0, 0.12);
+    stroke-width: 1.5;
+}
+
+.van-eye {
+    fill: #ffffff;
+    stroke: rgba(23, 32, 27, 0.35);
+    stroke-width: 1.2;
+}
+
+.van-pupil {
+    fill: #17201b;
+    /* Set from JS as the pointer moves. */
+    transform: translate(var(--pupil-x, 0px), var(--pupil-y, 0px));
+    transition: transform 120ms ease-out;
+}
+
+.van-stripe { fill: var(--surface); opacity: 0.9; }
+.van-stripe--soft { fill: rgba(0, 0, 0, 0.16); opacity: 1; }
+.van-tyre { fill: #23282b; }
+.van-hub { fill: var(--surface); }
+.van-shadow { fill: rgba(0, 0, 0, 0.18); }
+
+/* --- speech bubble ------------------------------------------------------- */
+
+.mascot-bubble {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    width: max-content;
+    max-width: 230px;
+    padding: 12px 30px 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 14px 14px 14px 4px;
+    background: var(--surface);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    pointer-events: auto;
+    transform-origin: left bottom;
+    transition: opacity 240ms ease, transform 240ms ease;
+}
+
+/* Mirrored when he is parked on the right half of the screen. */
+.mascot[data-side="right"] .mascot-bubble {
+    left: auto;
+    right: 0;
+    border-radius: 14px 14px 4px 14px;
+    transform-origin: right bottom;
+}
+
+/* Flipped below the van when he is near the top of the viewport. */
+.mascot[data-bubble-below="yes"] .mascot-bubble {
+    bottom: auto;
+    top: calc(100% + 8px);
+    border-radius: 4px 14px 14px 14px;
+    transform-origin: left top;
+}
+
+.mascot[data-bubble-below="yes"][data-side="right"] .mascot-bubble {
+    border-radius: 14px 4px 14px 14px;
+    transform-origin: right top;
+}
+
+/* He only talks once he has stopped moving. */
+.mascot[data-resting="no"] .mascot-bubble {
+    opacity: 0;
+    transform: scale(0.84);
+    pointer-events: none;
+}
+
+.mascot-bubble p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.86rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.mascot-dismiss {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mascot-dismiss:hover,
+.mascot-dismiss:focus-visible {
+    background: var(--hover);
+    color: var(--text);
+}
+
+@media (max-width: 860px) {
+    .mascot,
+    .mascot-body {
+        width: 70px;
+    }
+
+    .mascot-bubble {
+        max-width: 165px;
+        padding: 9px 26px 9px 11px;
+    }
+
+    .mascot-bubble p {
+        font-size: 0.76rem;
+        line-height: 1.35;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mascot,
+    .mascot-body,
+    .mascot-van,
+    .mascot[data-resting="yes"] .mascot-van,
+    .mascot[data-resting="no"] .mascot-van,
+    .mascot[data-resting="no"] .van-wheels,
+    .mascot-bubble,
+    .van-pupil {
+        animation: none;
+        transition: none;
+    }
+
+    /* Still readable when he is not moving between perches. */
+    .mascot[data-resting="no"] .mascot-bubble {
+        opacity: 1;
+        transform: none;
+    }
+}

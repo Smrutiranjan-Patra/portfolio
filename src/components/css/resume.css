@@ -18,30 +18,29 @@
 
 .skill-group-heading {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    gap: 14px;
+    flex-wrap: wrap;
+    gap: 6px 14px;
     margin-bottom: 18px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--line);
-}
-
-.skill-group-heading span {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    background: var(--accent);
-    color: var(--ink);
-    font-size: 0.86rem;
-    font-weight: 800;
 }
 
 .skill-group-heading h2 {
     margin: 0;
     color: var(--text);
     font-size: 1.2rem;
+}
+
+/* Where this part of the kit got packed. */
+.skill-group-note {
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: right;
+    text-transform: uppercase;
 }
 
 .bdetails {
