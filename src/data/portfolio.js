@@ -61,7 +61,7 @@ export const portfolio = {
 
   hero: {
     eyebrow: "Full Stack Developer",
-    location: "Bhubaneswar, India",
+    location: "Bhubaneswar, Odisha, India",
     headline:
       "I build scalable web applications end to end, from Python APIs and async pipelines to React interfaces.",
     rolePrefix: "Focused on",
@@ -121,7 +121,8 @@ export const portfolio = {
         { year: "2021", label: "Masai School", note: "Learned to build" },
         { year: "2022", label: "Influx Worldwide", note: "First production miles" },
         { year: "2022", label: "DCKAP \u2014 Developer I", note: "Took on the backend" },
-        { year: "2024", label: "DCKAP \u2014 Developer II", note: "Owning the platform" },
+        { year: "2024", label: "DCKAP \u2014 Developer II", note: "Scope went platform-wide" },
+        { year: "2025", label: "Neoathlon \u2014 Founding Engineer", note: "Side hustle, after hours" },
       ],
       hereLabel: "You are here",
     },
@@ -197,7 +198,7 @@ export const portfolio = {
 
   journeySection: {
     eyebrow: "The road so far",
-    headline: "From a commerce degree to owning an iPaaS platform end to end",
+    headline: "From a commerce degree to building an iPaaS platform end to end",
     subheadline:
       "Five years of road, in the order it actually happened. Every leg below is a real stop, with what I was handed and what I shipped.",
   },
@@ -210,7 +211,7 @@ export const portfolio = {
       marker: "2017",
       period: "2017 - 2021",
       title: "Bachelor of Commerce, Accounting",
-      place: "Utkal University, Odisha",
+      place: "Utkal University, Bhubaneswar, Odisha, India",
       narrative:
         "The road does not start in a computer science department. I spent four years on ledgers and balance sheets, and everything I know about building software I picked up afterwards, at a keyboard.",
       points: [],
@@ -220,7 +221,7 @@ export const portfolio = {
       marker: "2021",
       period: "2021 - 2022",
       title: "MERN Stack Web Development Training",
-      place: "Masai School, India",
+      place: "Masai School, Bangalore, Karnataka, India",
       narrative:
         "A full year of nothing but building \u2014 JavaScript, React, Node and Express, every day, until the stack stopped feeling like magic and started feeling like tools I could pick up.",
       points: [],
