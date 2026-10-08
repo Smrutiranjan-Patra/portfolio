@@ -6,7 +6,7 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "scope": "/",
-  "description": "Portfolio of Smrutiranjan Patra, full stack developer.",
+  "description": "Portfolio of Smrutiranjan Patra, full stack developer building Python (Flask) APIs, async services, and React interfaces.",
   "icons": [
     {
       "src": "/fabicon.png",

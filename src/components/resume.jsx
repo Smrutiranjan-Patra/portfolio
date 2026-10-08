@@ -3,6 +3,19 @@ import ReactDOM from "react-dom";
 import "./css/resume.css";
 import { portfolio } from "../data/portfolio";
 
+const renderSkillIcon = (skill) => {
+    if (skill.icon) {
+        return <img src={skill.icon} alt="" />;
+    }
+
+    if (skill.iconComponent) {
+        const Icon = skill.iconComponent;
+        return <Icon className="skill-glyph" style={{ color: skill.iconColor }} />;
+    }
+
+    return <span className="skill-initial">{skill.name.slice(0, 2)}</span>;
+};
+
 const Resume = ({ showPreview, onPreviewClose }) => {
     const { skills, skillsSection, resumeUrl } = portfolio;
     const skillGroups = skills.reduce((groups, skill) => {
@@ -62,11 +75,7 @@ const Resume = ({ showPreview, onPreviewClose }) => {
                             {groupSkills.map((skill) => (
                                 <div className="skill-card" key={skill.name}>
                                     <div className="skill-icon" aria-hidden="true">
-                                        {skill.icon ? (
-                                            <img src={skill.icon} alt="" />
-                                        ) : (
-                                            <span className="skill-initial">{skill.name.slice(0, 2)}</span>
-                                        )}
+                                        {renderSkillIcon(skill)}
                                     </div>
                                     <strong>{skill.name}</strong>
                                 </div>

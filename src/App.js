@@ -51,11 +51,11 @@ function App() {
         const start = viewportHeight * 0.7;
         const end = -rect.height * 0.3;
         const ratio = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
-        const depth = ratio * 36;
-        const elevation = ratio * -22;
-        const scale = 1 + ratio * 0.02;
-        section.style.transform = `translateZ(${depth}px) translateY(${elevation}px) scale(${scale})`;
-        section.style.zIndex = `${1000 + Math.round(ratio * 100) + index}`;
+        // Translate only. Scaling or translateZ grows the section box, which makes
+        // tall sections bleed over the next section's heading.
+        const elevation = ratio * -14;
+        section.style.transform = `translateY(${elevation}px)`;
+        section.style.zIndex = `${1000 + index}`;
       });
       ticking = false;
     };

@@ -1,12 +1,18 @@
 import {
   jsVisualizerPreview, html, css, js, node, express, npm, mongo, psql, msql, react, redux, github, typescript, tailwind, antd, next, jest, rtl, glab, jira, postman, docker, copilot, chatgpt, gemini
 } from "../assets/index.js"
+import {
+  SiPython, SiFlask, SiSqlalchemy, SiGunicorn, SiCelery, SiRedis, SiJsonwebtokens,
+  SiAuth0, SiSwagger, SiPytest, SiVitest, SiJenkins, SiNginx, SiSass, SiShadcnui, SiBootstrap
+} from "react-icons/si";
+import { FaAws, FaDatabase } from "react-icons/fa";
+import { TbApi, TbWebhook, TbPlugConnected, TbArrowsExchange } from "react-icons/tb";
 
 export const portfolio = {
   name: "Smrutiranjan Patra",
   shortName: "Smrutiranjan",
   initials: "SP",
-  role: "Full Stack Product Developer",
+  role: "Full Stack Developer",
   resumeLabel: "Resume",
   resumeUrl: "/Smrutiranjan_Patra_Resume.pdf",
   footer: "Built by Smrutiranjan Patra",
@@ -25,34 +31,34 @@ export const portfolio = {
   ],
 
   hero: {
-    eyebrow: "Full Stack Engineer",
+    eyebrow: "Full Stack Developer",
     headline:
-      "I build scalable full-stack applications with modern frontend systems, backend services, and reliable architecture.",
+      "I build scalable web applications end to end, from Python APIs and async pipelines to React interfaces.",
     rolePrefix: "Focused on",
     focusItems: [
       {
-        label: "full-stack application architecture",
+        label: "Python and Flask backend services",
+        availability: "Open to full-stack and backend-heavy roles",
+      },
+      {
+        label: "REST API design and system integrations",
+        availability: "Open to API and integration engineering work",
+      },
+      {
+        label: "asynchronous processing with Celery and Redis",
+        availability: "Open to distributed and data-heavy systems",
+      },
+      {
+        label: "React and Next.js application architecture",
         availability: "Open to product engineering roles",
       },
       {
-        label: "React and Next.js systems",
-        availability: "Open to frontend and full-stack roles",
-      },
-      {
-        label: "backend APIs and database design",
-        availability: "Open to backend-integrated product work",
-      },
-      {
-        label: "performance optimization and scalability",
-        availability: "Open to high-scale engineering teams",
-      },
-      {
-        label: "testing, reliability, and developer experience",
-        availability: "Open to quality-focused engineering roles",
+        label: "containerized delivery with Docker, Jenkins, and AWS",
+        availability: "Open to teams that own what they ship",
       },
     ],
     description:
-      "I am Smrutiranjan Patra, a full-stack engineer with 4+ years of experience building scalable web applications using React.js, Node.js, Express.js, and MongoDB. I specialize in frontend architecture, backend APIs, database optimization, and enterprise-grade systems.",
+      "I am Smrutiranjan Patra, a full-stack developer with 4+ years of experience building scalable web applications with Python (Flask), Node.js, and React/Next.js. I currently build DCKAP Integrator, an iPaaS platform that connects B2B distributors with ERP, e-commerce, and EDI systems — designing REST APIs, async workflows with Celery and Redis, secure JWT and OAuth 2.0 flows, and the relational data models behind them.",
     actions: [
       { label: "View projects", href: "#project", variant: "primary" },
       {
@@ -76,75 +82,75 @@ export const portfolio = {
         href: "mailto:guessme.smruti@gmail.com",
       },
     ],
-    availability: "Open to full-stack and product engineering roles",
+    availability: "Open to full-stack engineering roles",
     illustrationLabel: "Full-stack developer workspace illustration",
-    illustrationTitle: "Developer building a full-stack application",
+    illustrationTitle: "Developer building APIs, services, and interfaces",
     stats: [
       { value: "4+", label: "Years of experience" },
-      { value: "20%", label: "Speed improvement delivered" },
+      { value: "20%", label: "Application performance gained" },
       { value: "40%", label: "Onboarding time reduced" },
     ],
   },
 
   about: {
     eyebrow: "About",
-    headline: "Product-minded engineer with enterprise delivery experience.",
+    headline: "Full-stack developer building integration platforms end to end.",
     subheadline:
-      "I care about scalable systems, clean architecture, performant user experiences, and reliable backend services.",
+      "I own features from the database schema and Flask API through the async workers to the React interface on top.",
     description:
-      "My work spans enterprise applications, reusable component systems, backend APIs, workflow automation, and performance-sensitive full-stack platforms. I have worked across EDI and e-commerce systems using React.js, Next.js, Node.js, Express.js, MongoDB, and modern engineering practices to improve scalability, maintainability, and team productivity.",
+      "Most of my work lives inside DCKAP Integrator, an iPaaS platform that moves data between ERPs, e-commerce storefronts, and EDI partners for B2B distributors. That means designing REST APIs with Flask and SQLAlchemy, modelling data in PostgreSQL, running long jobs through Celery and Redis, securing access with JWT and OAuth 2.0, and building the React and Next.js interfaces that sit in front of it all. I ship it with pytest and Jest coverage, Docker containers, and Jenkins pipelines deploying to AWS.",
     metrics: [
-      { value: "4+", label: "Years building production apps" },
-      { value: "20%", label: "Application speed improvement delivered" },
+      { value: "4+", label: "Years building production systems" },
+      { value: "20%", label: "Application performance improvement" },
       { value: "40%", label: "Onboarding time reduction through docs" },
-      { value: "3", label: "Product roles across enterprise teams" },
+      { value: "3", label: "Engineering roles across product teams" },
     ],
     highlights: [
       {
         number: "01",
-        title: "Full-stack architecture",
+        title: "Backend services and APIs",
         description:
-          "Build scalable full-stack systems with reusable frontend components, backend services, and maintainable architecture.",
+          "Design REST APIs with Flask, Flask-RESTful, and SQLAlchemy, with Marshmallow and Pydantic validation, Alembic migrations, and JWT or OAuth 2.0 authentication.",
       },
       {
         number: "02",
-        title: "Performance and scalability",
+        title: "Async and data processing",
         description:
-          "Optimize frontend rendering, backend processing, database queries, and application scalability for large-scale systems.",
+          "Move long-running work off the request path with Celery and Celery Beat on Redis, and keep large datasets responsive with server-side pagination and query optimization.",
       },
       {
         number: "03",
-        title: "Reliability and DX",
+        title: "Frontend architecture",
         description:
-          "Write unit tests, document internal APIs, mentor developers, and create patterns that improve engineering efficiency.",
+          "Build React and Next.js interfaces with reusable component systems, Redux Toolkit or Zustand state, code splitting, lazy loading, and memoization.",
       },
       {
         number: "04",
-        title: "Backend APIs and databases",
+        title: "Delivery and reliability",
         description:
-          "Design and implement RESTful APIs, optimize database queries, and ensure secure and scalable backend systems.",
+          "Containerize services with Docker, automate test and deploy through Jenkins to AWS, and back it with pytest, Jest, Vitest, and React Testing Library suites.",
       },
     ],
     workflow: [
       {
-        title: "Map the product flow",
+        title: "Model the data and the flow",
         description:
-          "Understand users, edge cases, data movement, and where the application can reduce effort.",
+          "Start with the schema, the integration contract, and how data actually moves between systems before writing a line of API code.",
       },
       {
-        title: "Design reusable systems",
+        title: "Build the API, then the interface",
         description:
-          "Break applications into scalable frontend modules, backend services, and maintainable architecture patterns.",
+          "Ship versioned REST endpoints with validation and clear error contracts, then build the React layer against them.",
       },
       {
-        title: "Optimize the experience",
+        title: "Push the slow work off the request",
         description:
-          "Use caching, memoization, pagination, testing, and query optimization to keep systems fast and reliable.",
+          "Hand long jobs to Celery workers, cache with Redis, paginate on the server, and optimize queries so the product stays fast under load.",
       },
       {
-        title: "Document and hand off",
+        title: "Test, containerize, and document",
         description:
-          "Leave APIs, architecture decisions, workflows, and implementation details clear for the next developer.",
+          "Cover the behaviour with pytest and Jest, run it through Docker and Jenkins, and leave the API documented for the next developer.",
       },
     ],
   },
@@ -157,23 +163,27 @@ export const portfolio = {
 
   experience: [
     {
-      company: "DCKAP Technologies",
+      company: "DCKAP Technologies — DCKAP Integrator (iPaaS)",
       role: "Product Developer II",
       period: "July 2024 - Present",
       points: [
-        "Architected scalable full-stack application systems with reusable frontend architecture, backend integrations, and maintainable engineering patterns.",
-        "Implemented frontend and backend performance improvements such as code splitting, memoization, and API optimization, delivering around 20% improvement in application speed.",
-        "Designed a custom system management utility for API versioning and deprecation, helping phase out legacy dependencies and reduce technical debt.",
+        "Designed and built a system versioning and deprecation management service, reducing technical debt through the controlled phase-out of legacy endpoints and dependencies.",
+        "Boosted application performance by around 20% through modular splitting, lazy loading, and memoization on the frontend, alongside database query optimization.",
+        "Implemented secure authentication and authorization flows using JWT for user sessions and third-party connector integrations.",
+        "Containerized services with Docker and maintained Jenkins CI/CD pipelines for automated test runs and deployment to AWS.",
       ],
     },
     {
-      company: "DCKAP Technologies",
+      company: "DCKAP Technologies — DCKAP Integrator (iPaaS)",
       role: "Product Developer I",
       period: "August 2022 - July 2024",
       points: [
-        "Built a unified Projects module for managing shared and personal assets, improving workflow efficiency through simpler navigation and optimized data handling.",
-        "Created automated credential mapping plus import and export flows that reduced manual configuration effort for users.",
-        "Engineered reusable frontend modules, backend integrations, and standardized error-handling patterns while improving stability for large datasets.",
+        "Built a unified Projects module end to end, covering Flask APIs, the database schema for shared and personal assets with access control, and the React interface on top.",
+        "Developed automated credential mapping and bulk import/export of integration configurations, using Celery and Redis to process long-running jobs asynchronously.",
+        "Engineered a reusable Snippets UI system and a standardized error-handling contract between the API and frontend layers, eliminating redundant logic across the platform.",
+        "Implemented server-side pagination and optimized database queries to keep performance smooth on large datasets, and refactored legacy React class components into hooks.",
+        "Established documentation standards for internal APIs and UI libraries, reducing new-hire onboarding time by around 40%.",
+        "Introduced automated unit and integration tests with pytest, Jest, Vitest, and React Testing Library, increasing stability and mitigating production defects.",
       ],
     },
     {
@@ -181,8 +191,9 @@ export const portfolio = {
       role: "Associate Software Developer",
       period: "April 2022 - August 2022",
       points: [
-        "Automated dynamic report generation from user inputs, reducing manual effort and improving operational efficiency.",
-        "Resolved production bugs, improved backend reliability, and optimized build configuration for better maintainability.",
+        "Automated dynamic report generation based on user inputs, reducing manual effort and streamlining operational workflows.",
+        "Identified and resolved critical production bugs, strengthening platform uptime.",
+        "Optimized build configuration with Babel, improving bundle execution speed and maintainability.",
       ],
     },
   ],
@@ -194,17 +205,17 @@ export const portfolio = {
   },
 
   achievements: [
-    "Awarded Employee of the Quarter for consistent delivery and high-quality full-stack engineering contributions.",
-    "Mentored junior developers and improved team productivity, code quality, and shared engineering standards.",
-    "Implemented unit testing with Jest and React Testing Library to improve reliability and reduce production issues.",
-    "Established documentation standards for internal APIs and engineering libraries, reducing onboarding time for new hires by about 40%.",
+    "Honored as Employee of the Quarter (Q3 2025) at DCKAP Technologies for consistent delivery and high-impact full-stack contributions.",
+    "Promoted from Product Developer I to Product Developer II in July 2024.",
+    "Mentored 2 junior developers on full-stack best practices, code reviews, and testing standards.",
+    "Established documentation standards for internal APIs and UI libraries, reducing new-hire onboarding time by around 40%.",
   ],
 
   projectsSection: {
     eyebrow: "Toy Projects",
     headline: "Selected builds with product thinking",
     subheadline:
-      "A closer look at full-stack systems, application architecture, and the engineering decisions behind each project.",
+      "A closer look at the architecture, trade-offs, and engineering decisions behind what I build outside of work.",
     label: "Featured build",
     liveLabel: "Live site",
     repoLabel: "GitHub",
@@ -215,7 +226,7 @@ export const portfolio = {
     {
       name: "JS Visualizer",
       type: "Developer Tool / Educational Platform",
-      role: "Full Stack Developer",
+      role: "Creator and Developer",
       outcome:
         "Built an interactive JavaScript execution visualizer to simulate the event loop, call stack, and asynchronous behavior for better learning and debugging.",
       description:
@@ -240,36 +251,71 @@ export const portfolio = {
   skillsSection: {
     eyebrow: "Skills",
     headline:
-      "Full-stack engineering across frontend, backend, and databases",
+      "Full-stack engineering across Python services, APIs, data, and interfaces",
     subheadline:
-      "Building scalable applications using modern frontend frameworks, backend APIs, databases, testing, and deployment tooling.",
+      "The backend, frontend, database, testing, and deployment tooling I use to build and ship integration-heavy products.",
   },
 
   skills: [
-    { name: "JavaScript ES6+", icon: js, group: "Language" },
-    { name: "TypeScript", icon: typescript, group: "Language" },
+    { name: "Python", iconComponent: SiPython, iconColor: "#3776AB", group: "Languages" },
+    { name: "JavaScript ES6+", icon: js, group: "Languages" },
+    { name: "TypeScript", icon: typescript, group: "Languages" },
+    { name: "SQL", iconComponent: FaDatabase, iconColor: "#336791", group: "Languages" },
+
+    { name: "Flask", iconComponent: SiFlask, iconColor: "#17202b", group: "Backend (Python)" },
+    { name: "Flask-RESTful", iconComponent: SiFlask, iconColor: "#17202b", group: "Backend (Python)" },
+    { name: "SQLAlchemy", iconComponent: SiSqlalchemy, iconColor: "#D71F00", group: "Backend (Python)" },
+    { name: "Alembic Migrations", iconComponent: TbArrowsExchange, iconColor: "#D71F00", group: "Backend (Python)" },
+    { name: "Marshmallow / Pydantic", iconComponent: SiPython, iconColor: "#E92063", group: "Backend (Python)" },
+    { name: "Gunicorn", iconComponent: SiGunicorn, iconColor: "#499848", group: "Backend (Python)" },
+
+    { name: "Celery", iconComponent: SiCelery, iconColor: "#37814A", group: "Async & Caching" },
+    { name: "Celery Beat", iconComponent: SiCelery, iconColor: "#37814A", group: "Async & Caching" },
+    { name: "Redis", iconComponent: SiRedis, iconColor: "#DC382D", group: "Async & Caching" },
+
+    { name: "REST API Design", iconComponent: TbApi, iconColor: "#17202b", group: "APIs & Integrations" },
+    { name: "OpenAPI / Swagger", iconComponent: SiSwagger, iconColor: "#85EA2D", group: "APIs & Integrations" },
+    { name: "JWT", iconComponent: SiJsonwebtokens, iconColor: "#17202b", group: "APIs & Integrations" },
+    { name: "OAuth 2.0", iconComponent: SiAuth0, iconColor: "#EB5424", group: "APIs & Integrations" },
+    { name: "Webhooks", iconComponent: TbWebhook, iconColor: "#C95D35", group: "APIs & Integrations" },
+    { name: "ERP, E-commerce & EDI", iconComponent: TbPlugConnected, iconColor: "#327A47", group: "APIs & Integrations" },
+
+    { name: "Node.js", icon: node, group: "Backend (Node)" },
+    { name: "Express.js", icon: express, group: "Backend (Node)" },
+
     { name: "React.js", icon: react, group: "Frontend" },
     { name: "Next.js", icon: next, group: "Frontend" },
-    { name: "Redux Toolkit", icon: redux, group: "State" },
-    { name: "Zustand", group: "State" },
-    { name: "HTML5", icon: html, group: "Interface" },
-    { name: "CSS3 / SASS", icon: css, group: "Interface" },
-    { name: "Tailwind CSS", icon: antd, group: "Styling" },
-    { name: "Ant Design", icon: tailwind, group: "Styling" },
+    { name: "Redux Toolkit", icon: redux, group: "Frontend" },
+    { name: "Zustand", group: "Frontend" },
+    { name: "HTML5", icon: html, group: "Frontend" },
+    { name: "CSS3", icon: css, group: "Frontend" },
+
+    { name: "SASS", iconComponent: SiSass, iconColor: "#CC6699", group: "Styling & UI" },
+    { name: "Tailwind CSS", icon: tailwind, group: "Styling & UI" },
+    { name: "shadcn/ui", iconComponent: SiShadcnui, iconColor: "#17202b", group: "Styling & UI" },
+    { name: "Ant Design", icon: antd, group: "Styling & UI" },
+    { name: "Bootstrap", iconComponent: SiBootstrap, iconColor: "#7952B3", group: "Styling & UI" },
+
+    { name: "PostgreSQL", icon: psql, group: "Databases" },
+    { name: "MySQL", icon: msql, group: "Databases" },
+    { name: "MongoDB", icon: mongo, group: "Databases" },
+
+    { name: "pytest", iconComponent: SiPytest, iconColor: "#0A9EDC", group: "Testing" },
     { name: "Jest", icon: jest, group: "Testing" },
+    { name: "Vitest", iconComponent: SiVitest, iconColor: "#6E9F18", group: "Testing" },
     { name: "React Testing Library", icon: rtl, group: "Testing" },
-    { name: "Node.js", icon: node, group: "Backend" },
-    { name: "Express.js", icon: express, group: "Backend" },
-    { name: "REST APIs", group: "Backend" },
-    { name: "PostgreSQL", icon: psql, group: "Database" },
-    { name: "MongoDB", icon: mongo, group: "Database" },
-    { name: "MySQL", icon: msql, group: "Database" },
-    { name: "GitHub", icon: github, group: "Workflow" },
-    { name: "GitLab", icon: glab, group: "Workflow" },
-    { name: "Docker", icon: docker, group: "DevOps" },
-    { name: "Jira", icon: jira, group: "Workflow" },
+
+    { name: "AWS (EC2, S3, RDS, Lambda)", iconComponent: FaAws, iconColor: "#FF9900", group: "Cloud & DevOps" },
+    { name: "Docker", icon: docker, group: "Cloud & DevOps" },
+    { name: "Jenkins", iconComponent: SiJenkins, iconColor: "#D24939", group: "Cloud & DevOps" },
+    { name: "Nginx", iconComponent: SiNginx, iconColor: "#009639", group: "Cloud & DevOps" },
+    { name: "GitHub", icon: github, group: "Cloud & DevOps" },
+    { name: "GitLab", icon: glab, group: "Cloud & DevOps" },
+
     { name: "Postman", icon: postman, group: "Tooling" },
+    { name: "Jira", icon: jira, group: "Tooling" },
     { name: "npm", icon: npm, group: "Tooling" },
+
     { name: "copilot", icon: copilot, group: "AI tools" },
     { name: "Chatgpt", icon: chatgpt, group: "AI tools" },
     { name: "Gemini", icon: gemini, group: "AI tools" },
@@ -284,8 +330,8 @@ export const portfolio = {
   education: [
     {
       title: "Master of Computer Applications, AI and Machine Learning",
-      place: "Amity University, Uttar Pradesh",
-      period: "2025 - Present",
+      place: "Amity University, Uttar Pradesh (Online)",
+      period: "2025 - 2027 (Expected)",
     },
     {
       title: "Bachelor of Commerce, Accounting",
@@ -325,13 +371,13 @@ export const portfolio = {
         href: "tel:9776444262",
       },
       {
-        label: "Puri, Odisha",
+        label: "Bhubaneswar, Odisha",
         href: "https://goo.gl/maps/TDDTGna6qYtZFVT17",
         external: true,
       },
     ],
     noteTitle: "Best fit",
     note:
-      "Full-stack engineering roles, product development, scalable web applications, backend systems, frontend architecture, and performance-focused teams.",
+      "Full-stack engineering roles built around Python and Flask APIs with React or Next.js on the frontend — integration platforms, async and data-heavy systems, and teams that own their services end to end.",
   },
 };

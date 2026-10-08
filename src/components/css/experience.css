@@ -5,7 +5,8 @@
 
 .experience-card {
     display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
+    grid-template-columns: minmax(230px, 0.9fr) minmax(0, 2.6fr);
+    align-items: start;
     gap: 28px;
     padding: 28px;
     border: 1px solid var(--line);
@@ -58,6 +59,7 @@
 .education-layout {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
     gap: 18px;
     margin-top: 18px;
 }
